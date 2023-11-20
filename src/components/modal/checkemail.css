@@ -1,0 +1,103 @@
+.account-created-successfully-modal, .account-created-successfully-modal * {
+    box-sizing: border-box;
+    }
+.account-created-successfully-modal {
+   background: var(--bg-white, #fdfdfd);
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 489px;
+    position: relative;
+   }
+
+.frame-1000002686 {
+   display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    position: relative;
+   }
+
+.icons {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.frame-1000002687 {
+   display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.check-your-mail {
+   color: var(--text-500, #111217);
+    text-align: left;
+    font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+    position: relative;
+   }
+
+.password-reset-instructions-have-been-sent-to-your-email-address {
+   color: var(--text-400, #444a5b);
+    text-align: center;
+    font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif);
+    position: relative;
+    align-self: stretch;
+   }
+
+.button-check-email {
+   background: var(--primary-500, #cc3366);
+    border-radius: 8px;
+    padding: 12px 36px 12px 36px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+   }
+
+.button2-check-email {
+   color: var(--text-50, #fafafb);
+    text-align: left;
+    font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+    position: relative;
+   }
+
+   .overlay-modal {
+    /* background: rgba(102, 100, 100, 0.6);
+     flex-shrink: 0;
+     width: 100%;
+     height:100%;
+     position: fixed;
+     transition: all 1.3s; */
+
+     z-index: 9999;
+     width: 100vw;
+     height: 100vh;
+     position: absolute;
+     top: 0;
+     /* background: rgba(52, 51, 51, 0.7); */
+     background: rgba(102, 100, 100, 0.6);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 1.3s ease;
+
+    }
+

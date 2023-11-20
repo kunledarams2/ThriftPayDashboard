@@ -1,0 +1,310 @@
+.request-decline-confirmation-modal, .request-decline-confirmation-modal * {
+    box-sizing: border-box;
+    }
+.request-decline-confirmation-modal {
+   border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 409px;
+    position: relative;
+    overflow: hidden;
+ 
+    margin: 300px 400px 400px 0px;
+   }
+
+.review-request {
+   background: var(--bg-white, #fdfdfd);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+  
+   }
+
+.frame-1000002726 {
+   display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.button-decline {
+   border-radius: 8px;
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+   }
+
+.icons-decline {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.frame-2717 {
+   display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.are-you-sure-you-want-to-decline-john-doe-s-request-to-join-thrift-plan {
+   color: var(--text-500, #111217);
+    text-align: center;
+    font: var(--heading-h-4, 600 18px/20px 'Inter', sans-serif);
+    position: relative;
+    align-self: stretch;
+   }
+
+.divider {
+   align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+    width: 369px;
+    height: 0;
+    border: 1px solid #eee;
+   }
+
+.frame-1000002787 {
+   display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.reason-for-declining-request {
+   color: var(--text-400, #444a5b);
+    text-align: left;
+    font: var(--body-b-1-semi-bold, 600 14px/16px 'Inter', sans-serif);
+    position: relative;
+    align-self: stretch;
+   }
+
+.frame-1000002789 {
+   display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.frame-1000002786 {
+   display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+   /* .custom-radio-but{
+      border: 2px solid #cc3366;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+    
+      justify-content: center;
+      align-items: center;
+      display: inline-block;
+  
+   } */
+
+
+   /* .custom-radio-but .checkmark {
+
+      width: 20px;
+      height: 20px;
+      background-color:  #3333cc;
+      border-radius: 50%;
+      display: inline-block;
+      top: 4px;
+       
+   } */
+
+ .radio-button {
+  
+     opacity: 0;
+
+   }
+
+       
+  .checkmark{
+   position: relative;
+   color: #de0d2f;
+
+   
+   }
+
+
+   .checkmark{
+      content: "";
+      position: relative;
+      height: 17px;
+      width: 17px;
+      border-radius: 50%;
+      border: 2px solid rgb(153, 51, 51);
+      display: inline-block;
+      cursor: pointer;
+      top: 4px;
+ 
+   }
+  
+ .radio-button + .checkmark{
+      display: inline-block;
+      background-color: #ac939b
+     
+     
+   }
+
+   .radio-button:checked + .checkmark{
+        height: 10px;
+      width: 10px;
+      display: inline-block;
+      background-color: #b7164c
+     
+     
+   }
+    
+
+
+.frame-1 {
+   border-radius: 3px;
+    position: absolute;
+    left: 2px;
+   top: 2px;
+    overflow: visible;
+   }
+
+label {
+   color: var(--text-400, #444a5b);
+    text-align: left;
+    font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+    position: relative;
+    flex: 1;
+    margin: 0px;
+    display: block;
+    /* border: 1px solid salmon ; */
+   }
+
+.text-box {
+   background: var(--bg-white, #fdfdfd);
+    border-radius: 8px;
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 1px;
+    padding: 12px 16px 12px 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    height: 80px;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+   }
+
+.add-note {
+   color: var(--text-200, #90949e);
+    text-align: left;
+    font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+    position: relative;
+   }
+
+.frame-1000002724 {
+   background: var(--bg-white, #fdfdfd);
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 0.5px 0px 0px 0px;
+    padding: 16px 20px 16px 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.button2 {
+   border-radius: 8px;
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 1px;
+    padding: 12px 36px 12px 36px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+   }
+
+.button3 {
+   color: var(--text-400, #444a5b);
+    text-align: left;
+    font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+    position: relative;
+   }
+
+.button4 {
+   background: var(--primary-500, #cc3366);
+    border-radius: 8px;
+    padding: 12px 36px 12px 36px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+   }
+
+.button5 {
+   color: var(--text-50, #fafafb);
+    text-align: left;
+    font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+    position: relative;
+   }
+

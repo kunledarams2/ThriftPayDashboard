@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.sign-up-empty {
+    background: #ffffff;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 80%;
+    /* max-width: 800px; */
+    /* height: 1025px; */
+    position: absolute;
+    overflow: hidden;
+  }
+
+.image-login {
+    background: var(--primary-500, #cc3366);
+    flex-shrink: 0;
+    width: 50%;
+    height:  1025px;
+    position: relative;
+    overflow: hidden;
+  }
+  .logo-login {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: calc(50% - 126.7px);
+    top: calc(50% - 48px);
+  }
+
+  .dreallogo-1-2-login {
+    flex-shrink: 0;
+    width: 88.8px;
+    height: 96px;
+    position: relative;
+    overflow: hidden;
+  }
+  .layer-x-0020-1-login {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+  }
+  .deal-thrift-login {
+    color: var(--text-50, #fafafb);
+    text-align: left;
+    font: var(--heading-h-1, 600 32px/40px "Inter", sans-serif);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .content-login {
+    background: var(--bg-white, #ffffff);
+    padding: 64px 200px 64px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 959px;
+    height: 850px;
+    position: relative;
+    overflow: hidden;
+  }

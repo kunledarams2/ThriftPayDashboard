@@ -1,0 +1,39 @@
+{
+  "name": "react-thriftpay-dashboard-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.2.0",
+    "@types/react-datepicker": "^4.15.0",
+    "antd": "^5.9.2",
+    "antd-init": "^0.8.3",
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.1",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-currency-input-field": "^3.6.11",
+    "react-datepicker": "^4.16.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.45.4",
+    "react-otp-input": "^3.0.4",
+    "react-router-dom": "^6.15.0",
+    "react-select": "^5.7.4",
+    "zod": "^3.22.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
+    "esbuild": "^0.19.2",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}

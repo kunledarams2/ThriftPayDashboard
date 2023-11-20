@@ -1,0 +1,121 @@
+.tabs, .tabs * {
+    box-sizing: border-box;
+    }
+.tabs {
+   background: var(--bg-white, #fdfdfd);
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 0px 0px 1px 0px;
+    padding: 16px 24px 0px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 1184px;
+    position: relative;
+    overflow: hidden;
+   }
+
+.tab {
+   background: var(--bg-white, #fdfdfd);
+    padding: 12px 12px 0px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+   }
+
+.frame-1000002689 {
+   display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+   }
+
+.tab-label {
+   color: var(--secondary-500, #02894b);
+    text-align: center;
+    font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+    position: relative;
+   }
+
+.rectangle-3-tab {
+   background: var(--secondary-500, #02894b);
+    align-self: stretch;
+   flex-shrink: 0;
+    height: 2px;
+    position: relative;
+   }
+
+.frame-1000002690 {
+   display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+   }
+
+.tab-label2 {
+   color: var(--text-200, #90949e);
+    text-align: center;
+    font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+    position: relative;
+   }
+
+.rectangle-32-tab {
+   background: var(--border-divider-dark, #c3c6d2);
+    opacity: 0;
+    align-self: stretch;
+   flex-shrink: 0;
+    height: 1px;
+    position: relative;
+   }
+
+.frame-1000002720 {
+   padding: 0px 0px 12px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    flex: 1;
+    position: relative;
+   }
+
+.button-tab {
+   background: var(--primary-500, #cc3366);
+    border-radius: 8px;
+    padding: 8px 16px 8px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+   }
+
+.icons-tab {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.button2-tab {
+   color: var(--text-50, #fafafb);
+    text-align: left;
+    font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+    position: relative;
+   }
+

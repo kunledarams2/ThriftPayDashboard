@@ -1,0 +1,88 @@
+.frame-1000002737 {
+    padding: 20px 0px 120px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-shrink: 0;
+        width: 343px;
+        position: relative;
+        }
+        .your-wallet-is-empty {
+        color: #101828;
+        text-align: center;
+        font: var(--heading-h-3, 600 18px/20px 'Inter', sans-serif);
+        position: relative;
+        align-self: stretch;
+        }
+        .your-wallet-is-empty2 {
+        color: #667085;
+        text-align: center;
+        font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+        position: relative;
+        align-self: stretch;
+        }
+
+
+        /* Radio button */
+
+
+        .modern-radio-container {
+            /* margin: 24px 0; */
+            display: flex;
+            cursor: pointer;
+            user-select: none;
+          }
+          
+          .radio-outer-circle {
+            width: 18px;
+            height: 18px;
+            min-width: 18px;
+            min-height: 18px;
+            border: 2px solid  #b7164c;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            transition: all 0.1s linear;
+          }
+          
+          .radio-inner-circle {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color:  #b7164c;
+            transition: all 0.1s linear;
+          }
+          .unselected {
+            border: 2px solid #666;
+          }
+          .unselected-circle {
+            width: 0;
+            height: 0;
+          }
+          .helper-text {
+
+            color: var(--text-400, #444a5b);
+            text-align: left;
+            font: var(--dashboard-body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+            position: relative;
+            flex: 1;
+            bottom: 3px;
+
+            /* color: #666;
+            padding-right: 8px; */
+          }

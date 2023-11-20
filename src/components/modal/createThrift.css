@@ -1,0 +1,551 @@
+/* .add-thrift-plan, .add-thrift-plan * {
+    box-sizing: border-box;
+    }
+.add-thrift-plan {
+   background: var(--bg-white, #fdfdfd);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 440px;
+    height: 650px;
+    position: relative;
+    box-shadow: var(--shadow-xlarge-box-shadow, 0px 8px 10px -6px rgba(16, 24, 40, 0.10), 0px 20px 25px -5px rgba(16, 24, 40, 0.10));
+    overflow:scroll;
+    margin: 200px 400px 200px 0px;
+   }
+
+.frame-1000002726 {
+   display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.add-thrift-plan2 {
+   color: var(--text-500, #111217);
+    text-align: left;
+    font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+    position: relative;
+    flex: 1;
+   }
+
+.button-create-thrift-plan {
+   border-radius: 8px;
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 1px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+   }
+
+.icons {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.frame-1000002725 {
+   display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.input-text {
+   display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.label {
+   color: var(--text-400, #444a5b);
+    text-align: left;
+    font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif);
+    position: relative;
+    align-self: stretch;
+   }
+
+.field {
+   background: var(--bg-light, #fafafb);
+    border-radius: 8px;
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 1px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    height: 48px;
+    position: relative;
+    
+   }
+
+   .field-select {
+      background: var(--bg-light, #fafafb)!important;
+       border-radius: 8px;
+       border-style: solid;
+       border-color: var(--border-divider-dark, #c3c6d2)!important;
+       border-width: 1px;
+       padding: 6px 10px 6px 16px;
+       display: flex;
+       flex-direction: row;
+       gap: 10px;
+       align-items: center;
+       justify-content: flex-start;
+       align-self: stretch;
+      flex-shrink: 0;
+       height: 48px;
+       width: 400px;
+       position: relative;
+       outline: none;
+      }
+
+.input {
+   color: var(--text-300, #666f89);
+    text-align: left;
+    font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif);
+    position: relative;
+    flex: 1;
+   }
+
+.icons2-create-thrift-plan {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.field2 {
+   background: var(--bg-light, #fafafb);
+    border-radius: 8px;
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 1px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    height: 48px;
+    position: relative;
+   }
+
+.icons3-create-thrift-plan {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.frame-1000002724 {
+   display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+   }
+
+.button2-create-thrift-plan {
+   border-radius: 8px;
+    padding: 8px 24px 8px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 103px;
+    position: relative;
+   }
+
+.button3-create-thrift-plan {
+   color: var(--text-400, #444a5b);
+    text-align: left;
+    font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+    position: relative;
+   }
+
+.button4-create-thrift-plan {
+   background: var(--bg-dark, #e4e5eb);
+    border-radius: 8px;
+    padding: 8px 24px 8px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    position: relative;
+   }
+
+.button5-create-thrift-plan {
+   color: var(--text-200, #90949e);
+    text-align: left;
+    font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+    position: relative;
+   } */
+
+
+
+   .add-thrift-plan, .add-thrift-plan * {
+      box-sizing: border-box;
+      }
+ .add-thrift-plan {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 15px;
+      padding: 20px 20px 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      /* width: 520px; */
+      width: 440px;
+      height: 650px;
+      position: relative;
+      box-shadow: var(--shadow-xlarge-box-shadow, 0px 8px 10px -6px rgba(16, 24, 40, 0.10), 0px 20px 25px -5px rgba(16, 24, 40, 0.10));
+      overflow: hidden;
+      overflow:scroll;
+      margin: 200px 400px 200px 0px;
+     
+     }
+ 
+  .frame-1000002726-create-thrift {
+     display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .add-thrift-plan2 {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  .button-create-thrift  {
+     border-radius: 8px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 1px;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons-create-thrift  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .frame-1000002725-create-thrift  {
+     display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+   
+   
+     }
+ 
+  .input-text-create-thrift  {
+     display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     
+       
+     }
+ 
+  .label-create-thrift  {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-1-regular, 400 14px/20px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     
+     }
+ 
+  .field-create-thrift  {
+     background: var(--bg-light, #fafafb);
+      border-radius: 8px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 1px;
+      padding: 10px 10px 10px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      /* height: 48px; */
+      position: relative;
+      outline: none;
+     }
+ 
+  .input-create-thrift {
+     color: var(--text-300, #666f89)!important;
+      text-align: left;
+      font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+      width: 20px;
+   border: none;
+   outline: none;
+
+      background: var(--bg-light, #FAFAFB)!important;
+     }
+
+ 
+  .frame-1000002792-create-thrift  {
+     display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      
+     }
+ 
+  .input-text2-create-thrift  {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .icons2-create-thrift {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .field2-create-thrift  {
+     background: var(--bg-light, #fafafb);
+      border-radius: 8px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 1px;
+      /* padding: 16px; */
+      padding: 10px 10px 10px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      /* height: 48px; */
+      position: relative;
+     }
+ 
+  .icons3-create-thrift  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .frame-1000002793-create-thrift  {
+     display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons4-create-thrift  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .icons5-create-thrift  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .icons6-create-thrift  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .add-company-user-to-plan-create-thrift  {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-1-regular, 400 14px/24px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+    
+     }
+ 
+  .toggle-create-thrift  {
+     flex-shrink: 0;
+      width: 80px;
+      height: 25px;
+      position: relative;
+  
+     }
+ 
+  .radio-button-create-thrift  {
+     width: 64px;
+      height: 32px;
+      position: absolute;
+      left: 8px;
+     top: 8px;
+      overflow: hidden;
+     }
+ 
+  .rectangle-create-thrift  {
+     background: var(--bg-dark, #e4e5eb);
+      border-radius: 16px;
+      width: 64px;
+      height: 32px;
+      position: absolute;
+      left: calc(50% - 32px);
+      top: calc(50% - 16px);
+     }
+ 
+  .oval-create-thrift  {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      left: calc(50% - 28px);
+     top: calc(50% - 12px);
+     }
+ 
+  .frame-1000002724-create-thrift  {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      padding: 0px;
+      cursor: pointer;
+     }
+ 
+  .button2-create-thrift  {
+     background: var(--bg-dark, #e4e5eb);
+      border-radius: 8px;
+      padding: 12px 36px 12px 36px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .button3-create-thrift  {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+ 
+
+   .overlay-modal-create-plan {
+  
+
+     z-index: 9999;
+     width: 100vw;
+     height: 100vh;
+     position: absolute;
+     top: 0;
+     background: rgba(52, 51, 51, 0.7);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: all 1.3s ease;
+
+    }
+    .drop-down-create-plan {
+
+      background: var(--bg-white, #fdfdfd);
+      border-radius: 10px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 151px;
+      position: relative;
+      box-shadow: var(--shadow-large-box-shadow, 0px 4px 6px -4px rgba(16, 24, 40, 0.10), 0px 10px 15px -3px rgba(16, 24, 40, 0.10));
+      overflow: hidden;
+      margin: 0px;
+     }
+

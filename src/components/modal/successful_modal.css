@@ -1,0 +1,108 @@
+.inline, .inline * {
+   box-sizing: border-box;
+   }
+.inline {
+  background: var(--success-faded-green, #eefff3);
+   border-style: solid;
+   border-color: var(--lined-green, #b1e4bf);
+   border-width: 1px;
+   display: flex;
+   flex-direction: row;
+   gap: 0px;
+   align-items: flex-start;
+   justify-content: flex-end;
+   flex-shrink: 0;
+   width: 657px;
+   position: relative;
+   margin: 0px 600px 600px 0px;
+  }
+
+.right-line-successful {
+  background: var(--success-green, #23a047);
+   align-self: stretch;
+  flex-shrink: 0;
+   width: 4px;
+   position: relative;
+  }
+
+.inline2-successful {
+  padding: 16px;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+   align-items: flex-end;
+   justify-content: flex-start;
+   flex: 1;
+   position: relative;
+  }
+
+.body-container-icon-successful {
+  display: flex;
+   flex-direction: row;
+   gap: 8px;
+   align-items: flex-start;
+   justify-content: flex-start;
+   align-self: stretch;
+  flex-shrink: 0;
+   position: relative;
+  }
+
+.body-container-successful {
+  display: flex;
+   flex-direction: column;
+   gap: 12px;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex: 1;
+   position: relative;
+  }
+
+.alert-title-successful {
+  color: var(--dark-gray, #181818);
+   text-align: left;
+   font: 600 16px/24px 'Inter', sans-serif;
+   position: relative;
+   align-self: stretch;
+  }
+
+.body-successful {
+  display: flex;
+   flex-direction: row;
+   gap: 4px;
+   align-items: flex-start;
+   justify-content: flex-start;
+   align-self: stretch;
+  flex-shrink: 0;
+   position: relative;
+  }
+
+.provide-users-with-non-disruptive-feedback-or-the-status-of-an-action {
+  color: var(--dark-gray, #181818);
+   text-align: left;
+   font: 400 14px/20px 'Inter', sans-serif;
+   position: relative;
+   flex: 1;
+  }
+
+.end-successful {
+  padding: 10px;
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+   align-items: center;
+   justify-content: center;
+   flex-shrink: 0;
+   width: 32px;
+   height: 32px;
+   position: relative;
+  }
+
+.icon-multiply-successful {
+  flex-shrink: 0;
+   position: relative;
+   overflow: visible;
+   cursor: pointer;
+  }
+
+
+

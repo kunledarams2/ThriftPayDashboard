@@ -1,0 +1,209 @@
+.dreallogo12Icon {
+    position: relative;
+    width: 88.8px;
+    height: 96px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .dealthrift {
+    position: relative;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-weight: 600;
+  }
+  .logo {
+    position: absolute;
+    top: calc(50% - 48px);
+    left: calc(50% - 126.7px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-base);
+  }
+  .image {
+    position: relative;
+    background-color: var(--primary-500);
+    width: 481px;
+    height: 1024px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .getStartedBy,
+  .signUp {
+    align-self: stretch;
+    position: relative;
+  }
+  .signUp {
+    letter-spacing: -0.02em;
+    line-height: 40px;
+    font-weight: 600;
+  }
+  .getStartedBy {
+    font-size: var(--body-b1-semi-bold-size);
+    line-height: 24px;
+    color: var(--text-400);
+  }
+  .contentInner,
+  .signUpParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .signUpParent {
+    gap: var(--gap-base);
+  }
+  .contentInner {
+    font-size: var(--heading-h1-size);
+    color: var(--text-500);
+  }
+  .input,
+  .label {
+    position: relative;
+    line-height: 24px;
+  }
+  .label {
+    align-self: stretch;
+  }
+  .input {
+    flex: 1;
+  }
+  .field,
+  .inputtext {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .field {
+    border-radius: var(--br-5xs);
+    background-color: var(--text-50);
+    border: 1px solid var(--border-divider-light);
+    box-sizing: border-box;
+    height: 48px;
+    flex-direction: row;
+    padding: var(--padding-base);
+    align-items: center;
+    color: var(--text-200);
+  }
+  .inputtext {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--gap-5xs);
+  }
+  .icons {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .field3 {
+    align-self: stretch;
+    border-radius: var(--br-5xs);
+    background-color: var(--text-50);
+    border: 1px solid var(--border-divider-light);
+    box-sizing: border-box;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-base);
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-3xs);
+  }
+  .thisIsA {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+  }
+  .fieldParent,
+  .hintField,
+  .inputtextParent {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .hintField {
+    flex-direction: row;
+    padding: var(--padding-5xs);
+    align-items: center;
+    gap: var(--gap-5xs);
+    font-size: var(--body-b2-regular-size);
+    color: var(--text-400);
+  }
+  .fieldParent,
+  .inputtextParent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .fieldParent {
+    color: var(--text-200);
+  }
+  .inputtextParent {
+    gap: 24px;
+  }
+  .button1 {
+    position: relative;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .button {
+    align-self: stretch;
+    border-radius: var(--br-5xs);
+    background-color: var(--primary-500);
+    display: flex;
+    flex-direction: row;
+    padding: var(--padding-xs) var(--padding-17xl);
+    align-items: center;
+    justify-content: center;
+    color: var(--text-50);
+  }
+  .alreadyHaveAn,
+  .login {
+    position: relative;
+    line-height: 24px;
+  }
+  .login {
+    font-weight: 600;
+    color: var(--primary-500);
+  }
+  .alreadyHaveAnAccountParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--gap-5xs);
+  }
+  .content,
+  .signUpempty {
+    background-color: var(--bg-white);
+    height: 1024px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+  }
+  .content {
+    width: 959px;
+    flex-shrink: 0;
+    flex-direction: column;
+    padding: 64px 200px;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 40px;
+    font-size: var(--body-b1-semi-bold-size);
+    color: var(--text-400);
+  }
+  .signUpempty {
+    position: relative;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: var(--heading-h1-size);
+    color: var(--text-50);
+    font-family: var(--body-b1-semi-bold);
+  }
+  

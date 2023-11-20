@@ -1,0 +1,97 @@
+.content, .content * {
+    box-sizing: border-box;
+    }
+.content {
+   background: var(--bg-white, #fdfdfd);
+    padding: 120px 24px 120px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 1184px;
+    height: 866px;
+    position: relative;
+    overflow: hidden;
+   }
+
+.frame-1000002722 {
+   display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+   }
+
+.frame-2714 {
+   display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+   }
+
+.icons {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.text {
+   display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 343px;
+    position: relative;
+   }
+
+.your-wallet-is-empty {
+   color: var(--text-500, #111217);
+    text-align: center;
+    font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+    position: relative;
+    align-self: stretch;
+   }
+
+.your-wallet-is-empty2 {
+   color: var(--text-300, #666f89);
+    text-align: center;
+    font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+    position: relative;
+    align-self: stretch;
+   }
+
+.button-empty-tplan {
+   background: var(--primary-500, #cc3366);
+    border-radius: 8px;
+    padding: 8px 16px 8px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+   }
+
+.icons2-empty-tplan {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.button2-empty-tplan {
+   color: var(--text-50, #fafafb);
+    text-align: left;
+    font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+    position: relative;
+   }
+

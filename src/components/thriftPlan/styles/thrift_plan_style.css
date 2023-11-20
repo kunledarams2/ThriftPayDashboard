@@ -1,0 +1,3361 @@
+
+/* overview search filter switch view */
+
+.thrift-view-wrapper{
+   /* border: 3px solid rgb(25, 4, 2); */
+   overflow: hidden;
+   height: 100vh;
+   }
+.overview-wrapper{
+/* border: 3px solid salmon; */
+overflow: scroll;
+height: 670px;
+}
+
+.frame-2670, .frame-2670 * {
+    box-sizing: border-box;
+    }
+.frame-2670 {
+   display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: stretch;
+   flex-shrink: 0;
+    position: relative;
+    padding: 24px 24px 2px 24px;
+   }
+
+.frame-2660 {
+   display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    position: relative;
+   }
+
+.search-field-thrift-overview {
+   background: var(--bg-light, #fafafb);
+    border-radius: 8px;
+    border-style: solid;
+    border-color: var(--border-divider-dark, #c3c6d2);
+    border-width: 0.5px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    height: 38px;
+    width: 260px;
+    position: relative;
+    cursor: pointer;
+   }
+
+.icons-thrift-overview {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.search-thrift-overview {
+   color: var(--text-200, #90949e);
+    text-align: left;
+    font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+    position: relative;
+    width: 260px;
+   }
+
+.button-thrift-overview {
+   border-radius: 8px;
+    padding: 8px 16px 8px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+   }
+
+.icons2-thrift-overview {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.button2-thrift-overview {
+   color: var(--text-400, #444a5b);
+    text-align: left;
+    font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+    position: relative;
+   }
+
+.frame-2745 {
+   display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+   }
+
+.sort-by-thrift-overview {
+   color: var(--text-300, #666f89);
+    text-align: left;
+    font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+    position: relative;
+   
+   }
+
+.button3-thrift-overview {
+   border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+   }
+
+.recently-added-thrift-overview {
+   color: var(--text-500, #111217);
+    text-align: left;
+    font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+    position: relative;
+   }
+
+.icons-white-thrift-overview {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.switcher-thrift-overview {
+   background: var(--neutral-200, #e4e5eb);
+    border-radius: 10px;
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+   }
+
+.switcher-option-thrift-overview {
+   background: var(--bg-white, #fdfdfd);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    box-shadow: var(--shadow-medium-box-shadow, 0px 2px 4px -2px rgba(16, 24, 40, 0.10), 0px 4px 6px -1px rgba(16, 24, 40, 0.10));
+   }
+
+.icons3-thrift-overview {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+
+.switcher-option2-thrift-overview {
+   background: var(--bg-dark, #e4e5eb);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+   }
+
+.icons4-thrift-overview {
+   flex-shrink: 0;
+    position: relative;
+    overflow: visible;
+   }
+   .wrapper-grid-card {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      padding: 24px;
+      gap: 24px;
+     
+    }
+
+    /* list plan overview */
+    .heading_wrapper{
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      padding: 24px 24px 2px 24px;
+
+    }
+
+    .heading, .heading * {
+      box-sizing: border-box;
+      }
+ .heading {
+     background: var(--bg-light, #fafafb);
+      border-style: solid;
+      border-color: var(--border-divider-light, #d3d6de);
+      border-width: 1px 0px 1px 0px;
+      padding:8px 16px 8px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 1136px;
+      position: relative;
+   
+     }
+ 
+  .thrift-name {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .date-created {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .status {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .start-date {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .amount-per-member {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .no-of-slots {
+     color: var(--text-400, #444a5b);
+      text-align: center;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .filled-slots {
+     color: var(--text-400, #444a5b);
+      text-align: center;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 132.57px;
+     }
+ 
+  .frame-1000002753 {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 160px;
+      position: relative;
+     }
+ 
+  .progress-thrift-overview-list {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 96px;
+     }
+ 
+  .frame-1000002711 {
+     flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      position: relative;
+     }
+
+
+     .thriftplan-card, .thriftplan-card * {
+      box-sizing: border-box;
+      }
+ .thriftplan-card-list {
+     background: var(--bg-white, #fdfdfd);
+      padding: 16px 6px 20px 35px;
+      display: flex;
+      flex-direction: row;
+      /* gap: 16px; */
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 1136px;
+      position: relative;
+      cursor: pointer;
+     }
+     .thriftplan-card-list:hover{
+      background-color: var(--bg-medium, #f4f5f7);
+ 
+      
+     }
+ 
+  .basic-thrift-plan-list {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  .july-14-2023 {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  .frame-2688 {
+     display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .bagde {
+     background: var(--accent-blue, #b1e3ff);
+      border-radius: 20px;
+      padding: 4px 8px 4px 8px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .renter {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      display: flex;
+     align-items: center;
+     justify-content: flex-start}
+ 
+  .n-50-000 {
+     color: var(--text-500, #111217);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+   
+     }
+ 
+  ._5 {
+     color: var(--text-50, #1a1a1a);
+      text-align: center;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  ._0-5 {
+     color: var(--text-500, #111217);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  .frame-1000002754 {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .progress-list-view {
+     display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 128px;
+      position: relative;
+     }
+ 
+  .progress-bar-list-view {
+     border-radius: 10px;
+      /* display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1; */
+      height: 10px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background-color: #edeff5;
+     }
+ 
+  .rectangle-3972 {
+     background: var(--gradient, linear-gradient(90deg, rgba(2, 137, 75, 1.00) 0%,rgba(61, 80, 58, 1.00) 100%));
+      /* align-self: stretch; */
+     /* flex: 1; */
+      /* position: relative; */
+      height: 100%;
+      border-radius: 10px;
+      transition: width 0.5s ease-out;
+     }
+ 
+  /* .rectangle-3973 {
+     background: var(--bg-dark, #e4e5eb);
+      align-self: stretch;
+     flex-shrink: 0;
+      width: 47px;
+      position: relative;
+     } */
+ 
+  ._50 {
+     color: var(--secondary-1-emerald-green, #02894b);
+      text-align: left;
+      font: 500 12px 'Inter', sans-serif;
+      position: relative;
+     }
+ 
+  .icons {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+
+     .wrapper-list-card {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+      padding: 24px;
+      gap: 24px;
+     
+    }
+ 
+    /* filter  */
+
+    .filters, .filters * {
+      box-sizing: border-box;
+      }
+ .filters {
+     display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      padding: 24px;
+     }
+ 
+  .input-text-filter {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 205px;
+      height: 72px;
+      position: relative;
+     }
+ 
+  .label-filter {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .field-filter {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 8px;
+      border-style: solid;
+      border-color: var(--border-divider-dark,  #c3c6d2);
+      border-width: 1px;
+      padding: 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex: 1;
+     height: 30px;
+      position: relative;
+     }
+ 
+  .input-filter {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif)!important;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .icons-filter {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .icons2-filter {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .icons3-filter {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .input2-filter {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  .icons4-filter {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .input-text2-filter {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 194px;
+      height: 72px;
+      position: relative;
+     }
+ 
+  .icons5-filter {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+
+     /* Plan summary */
+
+     .tabs-summary, .tabs-summary * {
+      box-sizing: border-box;
+      }
+ .tabs-summary {
+     background: var(--bg-white, #fdfdfd);
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0px 0px 1px 0px;
+      padding: 12px 20px 0px 0px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 814px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .tab-summary {
+     background: var(--bg-white, #fdfdfd);
+      padding: 12px 12px 0px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .frame-1000002689 {
+     display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .tab-label-summary {
+     color: var(--secondary-500, #02894b);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .rectangle-3-summary {
+     background: var(--secondary-500, #02894b);
+      align-self: stretch;
+     flex-shrink: 0;
+      height: 2px;
+      position: relative;
+     }
+ 
+  .frame-1000002690 {
+     display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .tab-label2-summary {
+     color: var(--text-200, #90949e);
+      text-align: center;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .rectangle-32-summary {
+     background: var(--border-divider-light, #d3d6de);
+      opacity: 0;
+      align-self: stretch;
+     flex-shrink: 0;
+      height: 1px;
+      position: relative;
+     }
+ 
+  .frame-1000002738 {
+     padding: 0px 0px 12px 0px;
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .button-summary {
+     background: var(--bg-dark, #e4e5eb);
+      border-radius: 8px;
+      padding: 8px 16px 8px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons-summary {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .button2-summary  {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .button3-summary  {
+     border-radius: 8px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 1px;
+      padding: 14px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 38px;
+      height: 38px;
+      position: relative;
+     }
+ 
+  .icons2-summary {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+
+     /* breadcrum */
+  
+ .breadcrumb-overview {
+     display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+      padding: 10px 2px 10px 10px;
+      border-color: 3px solid #02894b;
+     }
+ 
+  .breadcrumb2-overview {
+     display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .breadcrumb-style-active-overview {
+     display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .breadcrumb-master-overview {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .container-breadcrumb-overview {
+     display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .content-breadcrumb-overview {
+     display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .label-breadcrumb-overview {
+     color: var(--primary-500, #cc3366);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      display: flex;
+     align-items: center;
+     justify-content: flex-start}
+ 
+  .seperator-breadcrumb-overview {
+     color: var(--text-200, #90949e);
+      text-align: center;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+      width: 20px;
+      height: 20px;
+      display: flex;
+     align-items: center;
+     justify-content: center}
+ 
+  .breadcrumb-style-inactive-overview {
+     display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .label2-breadcrumb-overview {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      display: flex;
+     align-items: center;
+     justify-content: flex-start}
+
+
+     /* Plan -summary-card */
+
+     .frame-1000002705, .frame-1000002705 * {
+      box-sizing: border-box;
+      }
+ .frame-1000002705 {
+     padding: 0px 20px 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .plan-summary {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     flex: 1;
+     }
+ 
+  .overview-summary-card  {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .total-thrift-plans-summary-card  {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 10px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+      position: relative;
+      /* border: 1px solid rebeccapurple; */
+     }
+ 
+  .frame-1000002747 {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-1000002690 {
+     display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      border: 2px so;
+     }
+ 
+  .icon-summary-card  {
+     background: var(--accent-yellow, #ffe999);
+      border-radius: 50px;
+      padding: 4px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons-summary-card  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .frame-1000002691 {
+     display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+    
+     }
+ 
+  .frame-1000002697 {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .total-contribution-summary-card  {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  ._260-000-summary-card  {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .active-thrift-plans-summary-card  {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 10px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .frame-1000002748-summary-card  {
+     display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icon2-summary-card {
+     background: var(--accent-blue, #b1e3ff);
+      border-radius: 50px;
+      padding: 4px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons2-summary-card  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .frame-1000002698 {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .total-payout-summary-card  {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  ._200-000-summary-card {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .frame-1000002749 {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      border: 2px solid teal;
+     }
+ 
+  .icon3-summary-card  {
+     background: var(--error-100, #ffdede);
+      border-radius: 50px;
+      padding: 4px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons3-summary-card  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .total-penalties-summary-card  {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  ._0 {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .frame-1000002750 {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icon4-summary-card  {
+     background: var(--accent-purple, #c6c7f8);
+      border-radius: 50px;
+      padding: 4px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons4-summary-card  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .months-completed-summary-card  {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  ._3-of-5-summary-card  {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+
+     /*  Rightt Side  summary */
+
+     .content-summary-side, .content-summary-side * {
+      box-sizing: border-box;
+      }
+ .content-summary-side {
+      /* background: var(--bg-white, #fdfdfd);
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0px 0px 0px 1px;
+      padding: 24px 0px 24px 0px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 370px;
+      position: relative;
+      overflow: hidden; */
+      background: var(--bg-white, #fdfdfd);
+border-style: solid;
+border-color: var(--border-divider-light, #d3d6de);
+border-width: 0px 0px 0px 1px;
+padding: 24px 0px 24px 0px;
+display: flex;
+flex-direction: column;
+gap: 24px;
+align-items: flex-end;
+justify-content: flex-start;
+flex-shrink: 0;
+width: 370px;
+height: 933px;
+position: relative;
+overflow: hidden;
+     }
+ 
+  .frame-1000002730 {
+     padding: 0px 20px 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .bottom-summary-side {
+     background: var(--bg-medium, #f4f5f7);
+      border-radius: 8px;
+      padding: 12px 20px 12px 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-1000002715 {
+     display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .start-date-summary-side{
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .july-14-2023-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  .bagde-summary-side {
+     background: var(--accent-blue, #b1e3ff);
+      border-radius: 20px;
+      padding: 4px 8px 4px 8px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .renter-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      display: flex;
+     align-items: center;
+     justify-content: flex-start}
+ 
+  .frame-1000002729 {
+     padding: 0px 20px 0px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .thrift-plan-card-summary-side {
+     background: linear-gradient(180deg, rgba(17, 18, 23, 1.00) 0%,rgba(23, 23, 27, 1.00) 100%);
+      border-radius: 8px;
+      padding: 24px 16px 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .basic-thrift-plan-i-summary-side {
+     color: var(--text-50, #fafafb);
+      text-align: left;
+      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .frame-625905 {
+     display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .info-2-summary-side {
+     border-radius: 4px;
+      border-style: solid;
+      border-color: var(--text-400, #444a5b);
+      border-width: 0.5px;
+      padding: 4px 8px 4px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  ._10-000-summary-side{
+     color: var(--text-50, #fafafb);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .amount-per-member-summary-side {
+     color: var(--gray-5, #e0e0e0);
+      text-align: left;
+      font: 400 12px 'Inter', sans-serif;
+      position: relative;
+     }
+ 
+  .info-3-summary-side {
+     border-radius: 4px;
+      border-style: solid;
+      border-color: var(--text-400, #444a5b);
+      border-width: 0.5px;
+      padding: 4px 8px 4px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  ._5-summary-side {
+     color: var(--text-50, #fafafb);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .no-of-slots-summary-side {
+     color: var(--gray-5, #e0e0e0);
+      text-align: left;
+      font: 400 12px 'Inter', sans-serif;
+      position: relative;
+     }
+ 
+  .frame-625906 {
+     display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  ._50-000-summary-side {
+     color: var(--text-50, #fafafb);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .target-remit-monthly-summary-side {
+     color: var(--gray-5, #e0e0e0);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .info-4-summary-side {
+     border-radius: 4px;
+      border-style: solid;
+      border-color: var(--text-400, #444a5b);
+      border-width: 0.5px;
+      padding: 4px 8px 4px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  ._5-5-summary-side {
+     color: var(--text-50, #fafafb);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .filled-slots-summary-side {
+     color: var(--gray-5, #e0e0e0);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .progress-summary-side {
+     display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .progress-bar-summary-side {
+     border-radius: 1000px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+      height: 8px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .rectangle-3972-summary-side {
+     background: var(--text-50, #fafafb);
+      align-self: stretch;
+     flex: 1;
+      position: relative;
+     }
+ 
+  .rectangle-3973-summary-side {
+     background: #4f4f4f;
+      align-self: stretch;
+     flex: 1;
+      position: relative;
+     }
+ 
+  ._50-summary-side {
+     color: var(--text-50, #fafafb);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .divider-summary-side {
+     border-style: solid;
+      border-color: var(--text-400, #444a5b);
+      border-width: 0.5px 0 0 0;
+      align-self: stretch;
+     flex-shrink: 0;
+      height: 0px;
+      position: relative;
+      /* transform-origin: 0 0; */
+      transform: rotate(-180deg) scale(1, 1);
+     }
+ 
+  .frame-1000002736 {
+     display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-625907 {
+     display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .feb-nov-2023-summary-side {
+     color: var(--gray-7-white, #ffffff);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .duration-summary-side {
+     color: var(--gray-5, #e0e0e0);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .frame-625901 {
+     display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .february-summary-side {
+     color: var(--gray-7-white, #ffffff);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .current-month-summary-side {
+     color: var(--gray-5, #e0e0e0);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .thrift-detail-member-summary-side {
+     /* background: var(--bg-white, #4b0b0b); */
+      display: flex;
+      flex-direction: column;
+      /* gap: 16px; */
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      overflow: hidden;;
+     }
+ 
+  .frame-1000002728 {
+     border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0px 0px 1px 0px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: flex-end;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .tab-summary-side {
+     background: var(--bg-white, #fdfdfd);
+      padding: 12px 12px 0px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .frame-1000002690 {
+     display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .tab-label-summary-side {
+     color: var(--text-200, #90949e);
+      text-align: center;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .rectangle-3-summary-side {
+     background: var(--border-divider-light, #d3d6de);
+      opacity: 0;
+      align-self: stretch;
+     flex-shrink: 0;
+      height: 1px;
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .frame-1000002689 {
+     display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      
+     }
+ 
+  .tab-label2-summary-side {
+     color: var(--secondary-500, #02894b);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .rectangle-32-summary-side {
+     background: var(--secondary-500, #02894b);
+      align-self: stretch;
+     flex-shrink: 0;
+      height: 2px;
+      position: relative;
+      cursor: pointer;
+     }
+
+     .summary-right-tab-wrapper{
+      /* border: 3px solid saddlebrown; */
+      height: 255px;
+      width: 100%;
+      overflow: scroll;
+     }
+ 
+  .frame-1000002731 {
+     display: flex;
+      flex-direction: column;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .activity-summary-side{
+     background: var(--bg-white, #fdfdfd);
+      padding: 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-183 {
+     display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .body-summary-side {
+     display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .thrift-plan-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .basic-thrift-plan-i2-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .created-by-summary-side {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .admin-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .jan-8-2023-summary-side {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--caption-regular, 400 10px/16px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .john-doe-summary-side{
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .requested-to-join-summary-side {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .jan-9-2023-summary-side {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--caption-regular, 400 10px/16px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .activity2-summary-side {
+     background: var(--bg-white, #fdfdfd);
+      border-style: solid;
+      border-color: var(--bg-white, #fdfdfd);
+      border-width: 0px 0px 1px 0px;
+      padding: 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .john-doe-s-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .request-to-join-summary-side {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .approved-in-summary-side {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .slot-2-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  ._4-hours-ago-summary-side {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--caption-regular, 400 10px/16px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .frank-john-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .frank-john-s-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .declined-summary-side {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .slots-summary-side {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .completed-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .jan-15-2023-summary-side {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--caption-regular, 400 10px/16px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .to-commence-summary-side {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .feb-3-2023-summary-side {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+
+     .summary-content-empty {
+      background: #ffffff;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 1184px;
+      /* height: 1240vh; */
+      position: relative;
+      overflow: hidden;
+      /* border: solid 2px seagreen; */
+    }
+
+    .frame-1000002745-heading, .frame-1000002745-heading * {
+      box-sizing: border-box;
+      }
+ .frame-1000002745-see-all {
+     background: var(--bg-white, #fdfdfd);
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      padding: 24px;
+     }
+ 
+  .recent-transactions-see-all {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+      width: 686px;
+     }
+ 
+  .button-see-all {
+     border-radius: 8px;
+      padding: 0px 16px 0px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .button2-see-all {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+     .heading-transaction, .heading-transaction * {
+      box-sizing: border-box;
+      }
+ .heading-transaction {
+     background: var(--bg-light, #fafafb)!important;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px 0px 0.5px 0px;
+      padding: 8px 20px 8px 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     width: 771px;
+     }
+ 
+  .member-heading {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 160px;
+   
+     }
+ 
+  .transaction-type-heading {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .date-heading {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 160px;
+     }
+ 
+  .payment-method-heading {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 120px;
+     }
+ 
+  .amount-heading {
+     color: var(--text-400, #444a5b);
+      text-align: right;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 100px;
+     }
+
+     .heading_wrapper-recent-transaction{
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      padding: 4px 24px 2px 24px;
+
+    }
+
+
+     .thriftplan-card-recent-transaction, .thriftplan-card-recent-transaction, * {
+      box-sizing: border-box;
+      }
+ .thriftplan-card-recent-transaction {
+     background: var(--bg-white, #ffffff);
+      /* padding: 16px 24px 16px 24px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative; */
+
+      padding: 8px 20px 8px 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     width: 771px;
+     
+     }
+ 
+  .frank-lampard-recent-transaction  {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+      width: 160px;
+      /* flex: 1; */
+   
+     }
+ 
+  .february-contribution-recent-transaction  {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+      /* width: 160px; */
+    
+      
+  
+ 
+
+     
+     }
+ 
+  .mar-3-2023-recent-transaction  {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      /* flex: 1; */
+      width: 160px;
+ 
+     }
+ 
+  .wallet-recent-transaction  {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      width: 120px;
+      /* flex: 1; */
+     }
+ 
+  .n-10-000-recent-transaction {
+     color: var(--secondary-400, #26a068);
+      text-align: right;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+      width: 100px;
+      /* flex: 1; */
+     }
+
+
+     /* .frame-1000002747, .frame-1000002747 * {
+      box-sizing: border-box;
+      } */
+ .frame-1000002747-transaction-filter {
+     display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      padding: 0px 24px 10px 24px;
+     }
+ 
+  .pills-transaction-filter {
+     flex: 1;
+      height: 34px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .frame-2616 {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: absolute;
+      left: 0px;
+     top: 0px;
+     }
+ 
+  .pill-transaction-filter {
+     background: var(--secondary-500, #02894b);
+      border-radius: 24px;
+      padding: 6px 16px 6px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      height: 34px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .button-label-transaction-filter {
+     color: var(--text-10, #fafafa);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .pill2-transaction-filter {
+     background: var(--bg-medium, #f4f5f7);
+      border-radius: 24px;
+      padding: 6px 16px 6px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      height: 34px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .button-label2-transaction-filter {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .rectangle-227 {
+     background: linear-gradient(-90deg, rgba(255, 255, 255, 1.00) 0%,rgba(255, 255, 255, 0.00) 100%);
+      opacity: 0;
+      width: 37px;
+      position: absolute;
+      left: 29px;
+     bottom: 0px;
+      top: 0px;
+      transform-origin: 0 0;
+      transform: rotate(0deg) scale(-1, 1);
+     }
+ 
+  .icons-chevron-left-transaction-filter {
+     opacity: 0;
+      width: 24px;
+      position: absolute;
+      left: -23px;
+     bottom: 5px;
+      top: 5px;
+     }
+ 
+  .icons-chevron-left2-transaction-filter {
+     position: absolute;
+      left: 0px;
+     top: 0px;
+      overflow: visible;
+     }
+ 
+  .frame-1000002779 {
+     display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .button-transaction-filter {
+     border-radius: 8px;
+      padding: 8px 16px 8px 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons-transaction-filter {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .button2-transaction-filter {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .icons2-transaction-filter {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+
+     .filters, .filters * {
+      box-sizing: border-box;
+      }
+ .filters-transaction {
+     display: flex;
+      flex-direction: row;
+      gap: 24px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+      padding: 0px 24px 24px 24px;
+    
+     }
+ 
+  .input-text-transaction  {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 175px;
+      height: 72px;
+      position: relative;
+     }
+ 
+  .label-transaction  {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .field-transaction  {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 8px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 1px;
+      padding: 6px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex: 1;
+      position: relative;
+     }
+ 
+  .input-transaction  {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  .icons-transaction  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .field2-transaction  {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 8px;
+      border-style: solid;
+      border-color: var(--primary-300, #e085a3);
+      border-width: 1px;
+      padding: 6px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex: 1;
+      position: relative;
+     }
+ 
+  .input2-transaction  {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-1-regular, 400 16px/24px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+      
+     }
+ 
+  .icons2-transaction  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .icons3-transaction  {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+ 
+     /* Plan detail */
+
+     .frame-1000002760, .frame-1000002760 * {
+      box-sizing: border-box;
+      }
+ .frame-1000002760 {
+     display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      padding: 16px 20px 24px 20px;
+     }
+ 
+  .frame-1000002762 {
+     display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-1000002766 {
+     display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-1000002761 {
+     display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .payment-due-date-plan-detail {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 10px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: center;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-1000002750 {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-1000002690 {
+     display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icon-plan-detail {
+     background: var(--accent-blue, #b1e3ff);
+      border-radius: 50px;
+      padding: 4px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons-plan-detail {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .frame-1000002697 {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .total-amount-contributed-for-february-plan-detail {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .frame-1000002763 {
+     display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: center;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  ._10-000-of-50-000-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .progress-plan-detail {
+     display: flex;
+      flex-direction: row;
+      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .progress-bar-plan-detail {
+     border-radius: 10px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+      height: 8px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .rectangle-3972-plan-detail {
+     background: var(--secondary-500, #02894b);
+      align-self: stretch;
+     flex-shrink: 0;
+      width: 62px;
+      position: relative;
+      border-radius: 10px;
+     }
+ 
+  .rectangle-3973-plan-detail {
+     background: var(--bg-medium, #e4e5e7);
+      align-self: stretch;
+     flex-shrink: 0;
+      width: 291px;
+      position: relative;
+      border-radius: 10px;
+     }
+ 
+  ._20-plan-detail {
+     color: var(--secondary-500, #02894b);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .frame-1000002765 {
+     display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .payment-due-date2-plan-detail {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 10px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: center;
+      align-self: stretch;
+     flex-shrink: 0;
+      height: 99px;
+      position: relative;
+     }
+ 
+  .icon2-plan-detail {
+     background: var(--accent-purple, #c6c7f8);
+      border-radius: 50px;
+      padding: 4px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .icons2-plan-detail {
+     flex-shrink: 0;
+      position: relative;
+      overflow: visible;
+     }
+ 
+  .payment-due-date3-plan-detail {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .mar-4-2023-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .member-receiving-payment-plan-detail {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 10px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: center;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-10000026972 {
+     display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      height: 67px;
+      position: relative;
+     }
+ 
+  .member-receiving-payout-plan-detail {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-2-regular, 400 14px/22px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  .frame-1000002740-plan-detail {
+     display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex: 1;
+      position: relative;
+     }
+ 
+  .avatars-plan-detail {
+     background: linear-gradient(to left, #ffffff, #ffffff);
+      border-radius: 50px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .frame-1000002741 {
+     display: flex;
+      flex-direction: column;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .john-doe-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .recent-activities-plan-detail {
+     background: var(--bg-white, #fdfdfd);
+      border-radius: 10px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      width: 360px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .frame-187 {
+     display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .heading-plan-detail {
+     color: var(--text-50, #1a1a1a);
+      text-align: left;
+      font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+      display: flex;
+     align-items: center;
+     justify-content: flex-start}
+ 
+  .frame-2713 {
+     display: flex;
+      flex-direction: column;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .thrift-member-plan-detail {
+     background: var(--bg-white, #fdfdfd);
+      padding: 12px 0px 12px 0px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-10000027402 {
+     display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .frame-10000027412 {
+     display: flex;
+      flex-direction: column;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .bagde-plan-detail {
+     background: var(--accent-purple, #c6c7f8);
+      border-radius: 20px;
+      padding: 4px 8px 4px 8px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .p-aid-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      display: flex;
+     align-items: center;
+     justify-content: flex-start}
+ 
+  .avatars2-plan-detail {
+     background: var(--accent-purple-500, #a491d3);
+      border-radius: 50px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      position: relative;
+     }
+ 
+  .jd-plan-detail {
+     color: var(--neutral-50, #fafafb);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: absolute;
+      left: calc(50% - 8px);
+     top: calc(50% - 11px);
+     }
+ 
+  .avatars3-plan-detail {
+     background: var(--secondary-400, #26a068);
+      border-radius: 50px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      position: relative;
+     }
+ 
+  .jd2-plan-detail {
+     color: var(--neutral-50, #fafafb);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: absolute;
+      left: calc(50% - 9px);
+     top: calc(50% - 11px);
+     }
+ 
+  .bagde2-plan-detail {
+     background: var(--bg-dark, #e4e5eb);
+      border-radius: 20px;
+      padding: 4px 8px 4px 8px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .pending-plan-detail {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      display: flex;
+     align-items: center;
+     justify-content: flex-start}
+ 
+  .jd3-plan-detail {
+     color: var(--neutral-50, #fafafb);
+      text-align: center;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: absolute;
+      left: calc(50% - 11px);
+     top: calc(50% - 11px);
+     }
+ 
+  .avatars4-plan-detail {
+     background: var(--primary-400, #d65c85);
+      border-radius: 50px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      position: relative;
+     }
+ 
+  .frame-1000002764 {
+     display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-1000002745 {
+     background: var(--bg-white, #fdfdfd);
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .transactions-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+      width: 686px;
+     }
+ 
+  .frame-1000002744 {
+     display: flex;
+      flex-direction: column;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .heading2-plan-detail {
+     background: var(--bg-light, #fafafb);
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 0.5px 0px 0.5px 0px;
+      padding: 8px 20px 8px 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .member-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 160px;
+     }
+ 
+  .transaction-type-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      flex: 1;
+     }
+ 
+  .date-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 160px;
+     }
+ 
+  .payment-method-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 120px;
+     }
+ 
+  .amount-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: right;
+      font: var(--caption-all-cap, 500 10px/16px 'Inter', sans-serif);
+      text-transform: uppercase;
+      position: relative;
+      width: 100px;
+     }
+ 
+  .thriftplan-card-plan-detail {
+     background: var(--bg-white, #fdfdfd);
+      padding: 16px 20px 16px 20px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .john-doe2-plan-detail {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+      width: 160px;
+     }
+ 
+  .contribution-plan-detail {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      flex: 1;
+     }
+ 
+  .mar-3-2023-plan-detail {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      width: 160px;
+     }
+ 
+  .bank-transfer-plan-detail {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      width: 120px;
+     }
+ 
+  .n-10-000-plan-detail {
+     color: var(--secondary-400, #26a068);
+      text-align: right;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+      width: 100px;
+     }
+ 
+     /* Thriftplan member */
+
+     .thrift-member, .thrift-member * {
+      box-sizing: border-box;
+      }
+ .thrift-member {
+     background: var(--bg-white, #fdfdfd);
+      padding: 10px 12px 0px 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: center;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-1000002740-member {
+     display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: center;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     
+     }
+ 
+  .avatars-thrift-member{
+     background: linear-gradient(to left, #ffffff, #ffffff);
+      border-radius: 50px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      overflow: hidden;
+     }
+ 
+  .frame-1000002741 {
+     display: flex;
+      flex-direction: column;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .john-doe-thrift-member {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .johndoe-example-com-thrift-member {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--caption-regular, 400 10px/16px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .info-3-thrift-member {
+     border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      width: 120px;
+      position: relative;
+     }
+ 
+  .slot-thrift-member {
+     color: var(--text-200, #90949e);
+      text-align: center;
+      font: var(--caption-regular, 400 10px/16px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+  ._7-thrift-member {
+     color: var(--text-500, #111217);
+      text-align: center;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+
+     /* Plan Request */
+
+     .thrift-join-request, .thrift-join-request * {
+      box-sizing: border-box;
+      }
+ .thrift-join-request {
+     background: var(--bg-white, #fdfdfd);
+      padding: 20px 24px 0px 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .avatars-thrift-join-request {
+     background: linear-gradient(to left, #ffffff, #ffffff);
+      border-radius: 50px;
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+     }
+ 
+  .frame-183-request {
+     display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .frame-2716-request {
+     display: flex;
+      flex-direction: row;
+      gap: 10px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      /* border: 2px solid red; */
+     }
+ 
+  .frame-2717-request {
+     display: flex;
+      flex-direction: column;
+
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+ 
+      position: relative;
+      /* border: 2px solid rgb(89, 0, 255); */
+     }
+ 
+  .john-doe-thrift-join-request {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     
+     }
+ 
+  .requested-to-join-thrift-plan {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+    
+     }
+ 
+  .frame-2718 {
+     display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     
+     }
+ 
+  ._30-mins-ago-thrift-join-request {
+     color: var(--text-200, #90949e);
+      text-align: right;
+      font: var(--overline-regular, 400 10px/14px 'Poppins', sans-serif);
+      position: relative;
+     }
+ 
+  .buttons-thrift-join-request {
+     display: flex;
+      flex-direction: row;
+      gap: 16px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+      cursor: pointer;
+     
+    
+     }
+ 
+  .button-thrift-join-request {
+     background: var(--primary-500, #cc3366);
+      border-radius: 8px;
+      padding: 8px 16px 8px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+      cursor: pointer;
+     }
+ 
+  .button2-thrift-join-request {
+     color: var(--text-50, #fafafb);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .button3-thrift-join-request {
+     border-radius: 8px;
+      border-style: solid;
+      border-color: var(--border-divider-dark, #c3c6d2);
+      border-width: 1px;
+      padding: 8px 16px 8px 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .button4-thrift-join-request {
+     color: var(--text-400, #444a5b);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+      cursor: pointer;
+     }
+
+     /* Thrift plan activity */
+
+     .activity, .activity * {
+      box-sizing: border-box;
+      }
+ .activity-plan-thrift {
+     background: var(--bg-white, #fdfdfd);
+      padding: 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .frame-183 {
+     display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex: 1;
+      position: relative;
+     }
+ 
+  .body-plan-thrift {
+     display: flex;
+      flex-direction: row;
+      gap: 4px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-self: stretch;
+     flex-shrink: 0;
+      position: relative;
+     }
+ 
+  .thrift-plan-plan-thrift {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .basic-thrift-plan-i-plan-thrift {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .created-by-plan-thrift {
+     color: var(--text-300, #666f89);
+      text-align: left;
+      font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .admin-plan-thrift {
+     color: var(--text-500, #111217);
+      text-align: left;
+      font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+      position: relative;
+     }
+ 
+  .jan-8-2023-plan-thrift {
+     color: var(--text-200, #90949e);
+      text-align: left;
+      font: var(--caption-regular, 400 10px/16px 'Inter', sans-serif);
+      position: relative;
+      align-self: stretch;
+     }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

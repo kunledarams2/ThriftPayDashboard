@@ -5,7 +5,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import Wallet from "./components/Wallet";
 import KYC from "./components/KYC";
 import Profile from "./components/Profile";
-import Customers from "./components/Customers";
+import Customers from "./Pages/Customers/Dashboard";
 import ThriftPlan from "./components/thriftPlan/ThriftPlan";
 import ThriftPlanSummary from "./components/thriftPlan/ThriftPlanSummary";
 import ThriftPlanContent from "./components/thriftPlan/ThriftPlanContent";
@@ -34,7 +34,7 @@ const MainAppRoutes = () => {
         </Route>
         <Route path="wallet" element={<WalletOverview />} />
         <Route path="kyc" element={<KYC />} />
-        <Route path="customers" element={<Customers />} />
+        <Route path="user" element={<Customers />} />
         <Route path="profile" element={<Profile />} />
       </Route>
       {/* <Route path="/home" element={<LoginPage />} /> */}

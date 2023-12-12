@@ -11,12 +11,14 @@ const SideBar = ({ handleNavBarClick }: Prop) => {
   const [dashboardSelected, setDashboardSelected] = useState(true);
   const [thriftPlanSelected, setThriftPlanSelected] = useState(false);
   const [walletSelected, setWalletSelected] = useState(false);
+  const [userSelected, setUserSelected] = useState(false);
 
   const dashboard = () => {
     navigate("/");
     setDashboardSelected(true);
     setThriftPlanSelected(false);
     setWalletSelected(false);
+    setUserSelected(false);
     handleNavBarClick("Dashboard");
   };
   const thriftPlan = () => {
@@ -24,6 +26,7 @@ const SideBar = ({ handleNavBarClick }: Prop) => {
     setDashboardSelected(false);
     setThriftPlanSelected(true);
     setWalletSelected(false);
+    setUserSelected(false);
     handleNavBarClick("Thrift Plans");
   };
 
@@ -32,9 +35,17 @@ const SideBar = ({ handleNavBarClick }: Prop) => {
     setDashboardSelected(false);
     setThriftPlanSelected(false);
     setWalletSelected(true);
+    setUserSelected(false);
     handleNavBarClick("Wallet");
   };
-
+  const user = () => {
+    navigate("/user");
+    setDashboardSelected(false);
+    setThriftPlanSelected(false);
+    setWalletSelected(false);
+    setUserSelected(true);
+    handleNavBarClick("User");
+  }
   const signOut = () => {
     navigate("/login");
   };
@@ -266,8 +277,13 @@ const SideBar = ({ handleNavBarClick }: Prop) => {
                 <div className="kyc">KYC </div>
               </div>
             </div>
-            <div className="sidebar-item2">
-              <div className="rectangle-3062"></div>
+            <div 
+              className={userSelected ? "sidebar-item" : "sidebar-item2"}
+              onClick={user}
+              >
+              <div 
+               className={userSelected ? "rectangle-306" : "rectangle-3062"}
+               ></div>
               <div className="frame-2">
                 <svg
                   className="icons5"
@@ -327,7 +343,7 @@ const SideBar = ({ handleNavBarClick }: Prop) => {
                     </clipPath>
                   </defs>
                 </svg>
-                <div className="customers">Customers </div>
+                <div className="customers">Users </div>
               </div>
             </div>
           </div>

@@ -13,6 +13,8 @@ import { Routes, Route } from "react-router-dom";
 import DashboardSlider from "./components/dashboard/DashboardSlider";
 import Dashboard from "./components/dashboard/Dashboard";
 import MainApp from "./components/MainApp";
+import BoardUser from "./Pages/Customers/Dashboard";
+
 
 function App() {
   return (

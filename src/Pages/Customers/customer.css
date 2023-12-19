@@ -1670,23 +1670,17 @@ height: 670px;
 
 .user {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 align-items: flex-start;
 gap: 20px;
 position: relative;
-/* width: auto;  */
+width: 100%; 
 height: 764px;
 /* margin: 10px 0px 24px 84px; */
 position: relative;
 overflow: hidden; 
+height: 200vh;
 
-    /* /* background: #ffffff;
-
-    flex-direction: row;
-    gap: 20px;
-    padding: 10px 24px 10px 24px;
-    align-items: flex-start;
-    justify-content: flex-start; */
   
 
    
@@ -1696,25 +1690,26 @@ overflow: hidden;
 
 .userchart {
     width: 50px;
-    height: 64px;
-    /* padding-right: 3em; */
+    height: 200vh;
+    padding-right: 13em;
     margin: 0px 90px 4px 4px;
     flex: 1;
+    flex-direction: row;
     }
     
-.userdistribution {
-width: 100px;
-height: 64px;
+.userdistribution{
+width: 500px;
+height: 564px;
 align-items: flex-start;
 background-color: var(--bgwhite);
-border: 0.5px solid;
-border-color: var(--border-dividerdark);
+/* border: 0.5px solid; */
+/* border-color: var(--border-dividerdark); */
 border-radius: 15px;
 display: inline-flex;
-flex-direction: column;
+flex-direction: row;
 gap: 40px;
 /* padding: 20px; */
 position: relative;
-margin: 10px 0px 24px 584px;
+margin: 0px 0px 0px 284px;
 flex: 0 0 40%; 
 }

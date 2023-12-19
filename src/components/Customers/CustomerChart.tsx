@@ -7,7 +7,7 @@ const CustomerChart = () => {
   return (
     <>
     <div className="total-wallet-balance-text">
-    <div className="frame">
+    {/* <div className="frame"> */}
       <div className="frame-wrapper">
         <div className="frame-2">
           <div className="frame-3">
@@ -19,7 +19,7 @@ const CustomerChart = () => {
           </div>
         </div>
       </div>
-    </div>
+    {/* </div> */}
 
     <div className="graph-wallet-tranaction">
             <div className="horizontal-lines-wallet-tranaction">

@@ -28,13 +28,12 @@ const CustomerDashboard = () => {
   <CustomerOverview/>
 </div>
 <div className="user">
-<div className="usechart">
+<div className="userchart">
   <CustomerChart/>
-</div>
-
 </div>
 <div className="userdistribution">
   <UserDistribution/>
+</div>
 </div>
     </div>
   )

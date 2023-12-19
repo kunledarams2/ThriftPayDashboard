@@ -201,7 +201,7 @@
     flex: 0 0 auto;
     flex-direction: column;
     gap: 8px;
-    justify-content: start;
+    justify-content: flex-start;
     position: relative;
   }
   

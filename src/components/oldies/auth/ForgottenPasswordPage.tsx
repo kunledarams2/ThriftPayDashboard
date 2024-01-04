@@ -5,8 +5,8 @@ import { z } from "zod";
 import LoginSide from "./LoginSide";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
-import CheckEmail from "../modal/CheckEmail";
-import SuccessMessage from "../modal/SuccessMessage";
+import CheckEmail from "../../modal/CheckEmail";
+import SuccessMessage from "../../modal/SuccessMessage";
 
 const formSchema = z.object({
   emailAddress: z

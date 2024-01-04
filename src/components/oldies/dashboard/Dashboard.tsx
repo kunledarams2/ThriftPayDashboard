@@ -6,7 +6,7 @@ import WalletBalance from "./WalletBalance";
 import RecentActivities from "./RecentActivities";
 import UserPieChart from "./UserPieChart";
 import { Button } from "react-bootstrap";
-import { getThriftPlans, getPlan } from "../../services/thriftPlans";
+import { getThriftPlans, getPlan } from "../../../services/thriftPlans";
 import "./dashboard.css";
 
 const Dashboard = () => {

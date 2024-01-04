@@ -1,38 +1,42 @@
-import { Button, Form } from "react-bootstrap";
-import { SubmitHandler, useForm } from "react-hook-form";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 import { z } from "zod";
-import LoginSide from "./LoginSide";
+import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import LoginSide from "./LoginSide";
+import { signup } from "../../../services/authServices";
+import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import SuccessMessage from "../modal/SuccessMessage";
+import EmailVerificationModal from "../../modal/EmailVerificationModal";
 
-const formSchema = z
-  .object({
-    password: z
-      .string()
-      .min(1, "Password is required ...")
-      .min(8, "Password must have more than 8 characters ....")
-      .regex(
-        /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$/,
-        "Password must contain number, special characters, uppercase and lowercase letter"
-      ),
-    confirmPassword: z.string().min(1, "Password confirmation is required"),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    path: ["confirmPassword"],
-    message: "Passwords do not match",
-  });
-
+const formSchema = z.object({
+  firstName: z.string().min(1, "First name is required..").max(100),
+  lastName: z.string().min(1, "Last name is required..").max(100),
+  emailAddress: z
+    .string()
+    .email("Invalid email address")
+    .min(1, "Email is required..."),
+  password: z
+    .string()
+    .min(1, "Password is required ...")
+    .min(8, "Password must have more than 8 characters ....")
+    .regex(
+      /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$/,
+      "Password must contain number, special characters, uppercase and lowercase letter"
+    ),
+});
 type FormSchemaType = z.infer<typeof formSchema>;
 
-const ResetPassword = () => {
-  const onSubmit: SubmitHandler<FormSchemaType> = (data) => {
-    console.log(data);
-    setOpen(true);
-  };
+type Props = {};
 
+const Registration: React.FC<Props> = () => {
   const [open, setOpen] = useState<boolean>(false);
+
+  const [otp, setOtp] = useState<string>("");
+  const onChange = (value: string) => setOtp(value);
   const closeModalHander = () => setOpen(false);
+  const [email, setEmail] = useState<string>("");
+
   const {
     register,
     handleSubmit,
@@ -40,6 +44,37 @@ const ResetPassword = () => {
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
   });
+
+  let navigate: NavigateFunction = useNavigate();
+
+  const onSubmit: SubmitHandler<FormSchemaType> = (data) => {
+    console.log(data);
+
+    setEmail(data.emailAddress);
+    setOpen(true);
+
+    // signup(
+    //   data.firstName,
+    //   data.firstName,
+    //   data.emailAddress,
+    //   data.password,
+    //   true,
+    //   "Admin@" + data.firstName
+    // ).then(
+    //   (response) => {
+    //     if (response.data.success) {
+    //       {
+    //         setEmail(data.emailAddress);
+    //         setOpen(true);
+    //       }
+    //       // navigate("/login");
+    //     }
+    //   },
+    //   (e) => {
+    //     console.log(e.response);
+    //   }
+    // );
+  };
 
   return (
     <div className="body-component">
@@ -53,18 +88,61 @@ const ResetPassword = () => {
         <div className="content-login">
           <div className="frame-27-login">
             <div className="frame-27-login">
-              <div className="sign-up-login">Reset Your Password</div>
+              <div className="sign-up-login">Sign Up</div>
               <div className="get-started-by-creating-your-admin-account">
-                Set a new password for your account. Your new password must be
-                different from previously used password.
+                Get started by creating your Admin account.
               </div>
               <div className="frame-29">
+                <div className="input-text">
+                  <label className="label">First Name</label>
+                  <input
+                    className="field"
+                    placeholder="Enter first name"
+                    type="text"
+                    {...register("firstName")}
+                  />
+                  {errors.firstName && (
+                    <span className="this-is-an-error">
+                      {errors.firstName?.message}
+                    </span>
+                  )}
+                </div>
+                <div className="input-text">
+                  <label className="label">Last Name </label>
+                  <input
+                    className="field"
+                    placeholder="Enter last name"
+                    type="text"
+                    {...register("lastName")}
+                  />
+                  {errors.lastName && (
+                    <span className="this-is-an-error">
+                      {errors.lastName?.message}
+                    </span>
+                  )}
+                </div>
+
+                <div className="input-text">
+                  <label className="label">Email Address</label>
+                  <input
+                    className="field"
+                    placeholder="Enter email address"
+                    type="email"
+                    {...register("emailAddress")}
+                  />
+                  {errors.emailAddress && (
+                    <span className="this-is-an-error">
+                      {errors.emailAddress?.message}
+                    </span>
+                  )}
+                </div>
+
                 <div className="frame-3">
-                  <label className="label">Enter New Password</label>
+                  <label className="label">Password</label>
                   <div className="field">
                     <input
                       className="input"
-                      placeholder="Enter  Password"
+                      placeholder="Create a password"
                       type="password"
                       {...register("password")}
                     />
@@ -128,75 +206,46 @@ const ResetPassword = () => {
                       characters.
                     </div>
                   </div>
+                  <Button
+                    className="button"
+                    variant="primary"
+                    type="submit"
+                    disabled={isSubmitting}
+                  >
+                    Continue
+                  </Button>
                 </div>
-
-                <div className="frame-3">
-                  <label className="label">Confirm Password</label>
-                  <div className="field">
-                    <input
-                      className="input"
-                      placeholder="Re-enter Password"
-                      type="password"
-                      {...register("confirmPassword")}
-                    />
-
-                    <i>
-                      <svg
-                        className="icons"
-                        width="16"
-                        height="16"
-                        viewBox="0 0 16 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g clipPath="url(#clip0_973_947)">
-                          <path
-                            d="M15.4569 7.7975C15.435 7.74813 14.9056 6.57375 13.7287 5.39687C12.1606 3.82875 10.18 3 7.99999 3C5.81999 3 3.83937 3.82875 2.27124 5.39687C1.09437 6.57375 0.562494 7.75 0.543119 7.7975C0.51469 7.86144 0.5 7.93064 0.5 8.00062C0.5 8.0706 0.51469 8.1398 0.543119 8.20375C0.564994 8.25312 1.09437 9.42688 2.27124 10.6038C3.83937 12.1713 5.81999 13 7.99999 13C10.18 13 12.1606 12.1713 13.7287 10.6038C14.9056 9.42688 15.435 8.25312 15.4569 8.20375C15.4853 8.1398 15.5 8.0706 15.5 8.00062C15.5 7.93064 15.4853 7.86144 15.4569 7.7975ZM7.99999 10.5C7.50554 10.5 7.02219 10.3534 6.61107 10.0787C6.19995 9.80397 5.87951 9.41352 5.6903 8.95671C5.50108 8.49989 5.45157 7.99723 5.54803 7.51227C5.64449 7.02732 5.8826 6.58186 6.23223 6.23223C6.58186 5.8826 7.02732 5.6445 7.51227 5.54804C7.99722 5.45157 8.49989 5.50108 8.9567 5.6903C9.41352 5.87952 9.80396 6.19995 10.0787 6.61107C10.3534 7.0222 10.5 7.50555 10.5 8C10.5 8.66304 10.2366 9.29893 9.76776 9.76777C9.29892 10.2366 8.66304 10.5 7.99999 10.5Z"
-                            fill="#444A5B"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_973_947">
-                            <rect width="16" height="16" fill="white" />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </i>
-                  </div>
-                  <div className="hint-field">
-                    {" "}
-                    {errors.confirmPassword && (
-                      <span className="this-is-an-error">
-                        {errors.confirmPassword?.message}
-                      </span>
-                    )}
-                  </div>
-                </div>
-
                 <div className="frame-26">
-                  <div className="already-have-an-account"></div>
-                  <div className="login"></div>
+                  <div className="already-have-an-account">
+                    Already Have an account?
+                  </div>
+                  <div className="login">
+                    <Link className="login" to={"/login"}>
+                      {" "}
+                      Login
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <Button
-                className="button"
-                variant="primary"
-                type="submit"
-                disabled={isSubmitting}
-              >
-                Submit
-              </Button>
             </div>
           </div>
         </div>
       </Form>
       {open && (
         <>
-          <SuccessMessage open={open} close={closeModalHander} route="/login" />
+          <EmailVerificationModal
+            emailAddress={email}
+            open={open}
+            close={closeModalHander}
+            valueLength={4}
+            value={otp}
+            onChange={onChange}
+          />
+          {/* <SuccessMessage open={open} close={closeModalHander} /> */}
         </>
       )}
     </div>
   );
 };
 
-export default ResetPassword;
+export default Registration;

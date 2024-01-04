@@ -1,0 +1,57 @@
+.card {
+    /* width: 49%; */
+    /* height:147.65px; */
+    /* background-color: tomato; */
+    display: flex;
+    padding: 15px;
+    border: 1px solid #C3C6D2;
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.card > div:first-child{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 12px;
+    font-weight:400;
+    color: #666F89;
+}
+
+.amount {
+    font-size: 24px;
+    font-weight:600;
+}
+
+.card > div:last-child{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 3px;
+}
+
+.perc {
+    /* color: green; */
+    font-size:10px;
+    font-weight: 400;
+}
+
+.period {
+    font-size: 10px;
+    font-weight: 400;
+    color: #90949E;
+}
+
+.red {
+    color: red;
+
+}
+
+.green {
+    color: green;
+}

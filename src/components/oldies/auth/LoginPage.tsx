@@ -6,9 +6,9 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { createRoot } from "react-dom/client";
 import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import { login } from "../../services/authServices";
-import SuccessMessage from "../modal/SuccessMessage";
-import EmailVerificationModal from "../modal/EmailVerificationModal";
+import { login } from "../../../services/authServices";
+import SuccessMessage from "../../modal/SuccessMessage";
+import EmailVerificationModal from "../../modal/EmailVerificationModal";
 // import "./auth.css";
 
 const formSchema = z.object({

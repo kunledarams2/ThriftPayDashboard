@@ -1,0 +1,23 @@
+.search {
+    border: 1px solid #C3C6D2;
+    border-radius: 8px;
+    background-color: #F4F5F7;
+    display: flex;
+    /* align-items: center; */
+    
+    width: 40%;
+    gap:0.3rem;
+    padding: 6px 10px 4px 10px;
+}
+
+
+.search > span:last-of-type {
+    /* background-color: purple; */
+    flex-grow: 1;
+}
+.search input {
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #F4F5F7;
+}

@@ -1,0 +1,46 @@
+.select {
+    /* background-color: pink; */
+    width: 130px;
+    
+}
+
+.select > button {
+ width: 100%;
+ display: flex;
+align-items: center;
+ background-color: white;
+ justify-content:space-between;
+ padding: 8px 17px;
+ border: 1px solid #C3C6D2;
+ border-radius: 5px;
+ font-weight: 600;
+ color: #444A5B;
+ font-size: 14px;
+ cursor: pointer;
+ text-align: center;
+}
+
+.select > ul{
+    list-style-type: none;
+    border: 1px solid #C3C6D2;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #444A5B;
+    /* display: none; */
+    font-size: 14px;
+    position: absolute;
+    width: 130px;
+    background-color: white;
+}
+
+.select > ul li {
+    /* background-color:pink; */
+    padding: 5px 0 5px 10px;
+    cursor: pointer;
+
+}
+.select > ul li:hover {
+    background-color:#444a5b1a;
+    
+}

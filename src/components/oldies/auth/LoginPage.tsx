@@ -1,5 +1,5 @@
 import { Button, Form, Modal } from "react-bootstrap";
-import LoginSide from "./LoginSide";
+// import LoginSide from "./LoginSide";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -9,7 +9,8 @@ import React, { useState } from "react";
 import { login } from "../../../services/authServices";
 import SuccessMessage from "../../modal/SuccessMessage";
 import EmailVerificationModal from "../../modal/EmailVerificationModal";
-// import "./auth.css";
+import "../../../App.css";
+import LoginSide from "./authside/LoginSide";
 
 const formSchema = z.object({
   emailAddress: z
@@ -48,7 +49,7 @@ const LoginPage: React.FC<Props> = () => {
       (respo) => {
         console.log(respo.data.user.is_staff);
         if (respo.data.user.is_staff) {
-          navigate("/");
+          navigate("/dashboard");
         } else {
           setLoading(false);
           setMessage("Access not allow..");
@@ -89,7 +90,7 @@ const LoginPage: React.FC<Props> = () => {
         noValidate
         onSubmit={handleSubmit(onSubmit)}
       >
-        <LoginSide />
+        {/* <LoginSide /> */}
 
         <div className="content-login">
           <div className="frame-27-login">

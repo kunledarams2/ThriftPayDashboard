@@ -6,13 +6,13 @@
     border-style: solid;
     border-color: var(--border-divider-dark, #c3c6d2);
     border-width: 0px 0px 1px 0px;
-    padding: 16px 24px 0px 24px;
+    /* padding: 16px 24px 0px 24px; */
     display: flex;
     flex-direction: row;
-    gap: 8px;
+    /* gap: 8px; */
     align-items: flex-end;
     justify-content: flex-start;
-    width: 1184px;
+    /* width: 1184px; */
     position: relative;
     overflow: hidden;
    }

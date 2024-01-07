@@ -3,11 +3,11 @@ import Button from "react-bootstrap/Button";
 import { z } from "zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import LoginSide from "./LoginSide";
 import { signup } from "../../../services/authServices";
 import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import EmailVerificationModal from "../../modal/EmailVerificationModal";
+import LoginSide from "./authside/LoginSide";
 
 const formSchema = z.object({
   firstName: z.string().min(1, "First name is required..").max(100),
@@ -83,7 +83,7 @@ const Registration: React.FC<Props> = () => {
         noValidate
         onSubmit={handleSubmit(onSubmit)}
       >
-        <LoginSide />
+        {/* <LoginSide /> */}
 
         <div className="content-login">
           <div className="frame-27-login">

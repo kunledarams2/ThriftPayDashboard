@@ -1,10 +1,12 @@
+import classes from "./authside.module.css";
+
 const LoginSide = () => {
   return (
-    <div className="image-login">
-      <div className="logo-login">
-        <div className="dreallogo-1-2-login">
+    <div className={classes.authSide}>
+      <div className={classes.authSidelogo}>
+        <div className={classes.authSidedreallogo}>
           <svg
-            className="layer-x-0020-1-login"
+            className={classes.authSidelayer}
             width="90"
             height="96"
             viewBox="0 0 90 96"
@@ -25,7 +27,7 @@ const LoginSide = () => {
             />
           </svg>
         </div>
-        <div className="deal-thrift-login">ThriftPay</div>
+        <div className={classes.dealthriftslider}>ThriftPay</div>
       </div>
     </div>
   );

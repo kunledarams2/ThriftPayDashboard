@@ -1,15 +1,15 @@
 
 /* overview search filter switch view */
-
+/* 
 .thrift-view-wrapper{
-   /* border: 3px solid rgb(25, 4, 2); */
+   border: 3px solid rgb(25, 4, 2);
    overflow: hidden;
    height: 100vh;
-   }
+   } */
 .overview-wrapper{
 /* border: 3px solid salmon; */
 overflow: scroll;
-height: 670px;
+/* height: 670px; */
 }
 
 .frame-2670, .frame-2670 * {
@@ -230,7 +230,7 @@ height: 670px;
       align-items: center;
       justify-content: flex-start;
       flex-shrink: 0;
-      width: 1136px;
+      width: 100%;
       position: relative;
    
      }
@@ -338,7 +338,7 @@ height: 670px;
       align-items: center;
       justify-content: flex-start;
       flex-shrink: 0;
-      width: 1136px;
+      /* width: 1136px; */
       position: relative;
       cursor: pointer;
      }
@@ -628,7 +628,7 @@ height: 670px;
       align-items: flex-end;
       justify-content: flex-start;
       flex-shrink: 0;
-      width: 814px;
+      /* width: 814px; */
       position: relative;
       overflow: hidden;
      }
@@ -878,7 +878,7 @@ height: 670px;
       justify-content: flex-start;
       align-self: stretch;
      flex-shrink: 0;
-      position: relative;
+      /* position: relative; */
      }
  
   .plan-summary {
@@ -1183,17 +1183,17 @@ height: 670px;
       overflow: hidden; */
       background: var(--bg-white, #fdfdfd);
 border-style: solid;
-border-color: var(--border-divider-light, #d3d6de);
+border-color: var(--border-divider-light, #3a3b3c);
 border-width: 0px 0px 0px 1px;
-padding: 24px 0px 24px 0px;
+/* padding: 24px 0px 24px 0px; */
 display: flex;
 flex-direction: column;
 gap: 24px;
 align-items: flex-end;
 justify-content: flex-start;
 flex-shrink: 0;
-width: 370px;
-height: 933px;
+/* width: 370px; */
+/* height: 933px; */
 position: relative;
 overflow: hidden;
      }
@@ -1868,7 +1868,7 @@ overflow: hidden;
       gap: 0px;
       align-items: flex-start;
       justify-content: flex-start;
-      width: 1184px;
+      /* width: 1184px; */
       /* height: 1240vh; */
       position: relative;
       overflow: hidden;

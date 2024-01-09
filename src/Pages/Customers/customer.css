@@ -7,7 +7,7 @@ height: 670px;
     box-sizing: border-box;
     }
 .tabs {
-   background: var(--bg-white, #fdfdfd);
+   background: var(--bg-white, #b31515);
     border-style: solid;
     border-color: var(--border-divider-dark, #c3c6d2);
     border-width: 0px 0px 1px 0px;

@@ -17,6 +17,7 @@ const ThriftPlanSummaryTab = () => {
     setOverview(true);
     navigate("/thrift/summary/overview", { state: { data: data } });
   };
+
   return (
     <div>
       {" "}

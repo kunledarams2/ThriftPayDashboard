@@ -1,0 +1,279 @@
+.availableWalletBalance1 {
+  	position: relative;
+  	line-height: 22px;
+}
+.icons1 {
+  	position: relative;
+  	width: 20px;
+  	height: 20px;
+  	overflow: hidden;
+  	flex-shrink: 0;
+  	display: none;
+}
+.availableWalletBalanceParent {
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;
+  	gap: 16px;
+}
+.div {
+  	position: relative;
+  	font-size: 28px;
+  	letter-spacing: -0.02em;
+  	line-height: 34px;
+  	font-weight: 600;
+  	color: #111217;
+  	text-align: left;
+}
+.frameGroup {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-start;
+  	gap: 8px;
+}
+.wemaBank37837836383 {
+  	position: relative;
+  	font-weight: 600;
+}
+.wemaBank37837836383Wrapper {
+  	border-radius: 4px;
+  	background-color: #ffe999;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: center;
+  	padding: 4px 8px;
+  	text-align: left;
+  	font-size: 8px;
+  	color: #111217;
+}
+.frameParent {
+  	width: 100%;
+  	position: relative;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	justify-content: flex-end;
+  	gap: 6px;
+  	text-align: center;
+  	font-size: 14px;
+  	color: #666f89;
+  	font-family: Inter;
+}
+
+.recentTransactions {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    line-height: 23px;
+    font-weight: 600;
+    }
+    .buttonLabel {
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+    font-size: 10px;
+    }
+
+    .button2 {
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0px 24px;
+        color: #444a5b;
+        }
+        .recentTransactionsParent {
+        width: 100%;
+        position: relative;
+        background-color: #fdfdfd;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 16px;
+        text-align: left;
+        font-size: 14px;
+        color: #111217;
+        font-family: Inter;
+        }
+        .user {
+            position: relative;
+            line-height: 18px;
+            font-weight: 600;
+            }
+            .headerCell {
+            width: 220px;
+            height: 42px;
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 16px;
+            box-sizing: border-box;
+            gap: 12px;
+            }
+            .headerCell1 {
+            width: 140px;
+            height: 42px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 16px;
+            box-sizing: border-box;
+            }
+            .headerCell2 {
+            flex: 1;
+            height: 42px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 16px;
+            box-sizing: border-box;
+            }
+            .headerCell5 {
+            width: 160px;
+            height: 42px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 12px 16px;
+            box-sizing: border-box;
+            }
+            .headerCell6 {
+            width: 84px;
+            height: 42px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 12px 16px;
+            box-sizing: border-box;
+            }
+            .headingChild {
+            flex: 1;
+            display: none;
+            }
+            .heading {
+            width: 100%;
+            position: relative;
+            background-color: #fafafb;
+            border-top: 0.5px solid #c3c6d2;
+            border-bottom: 0.5px solid #c3c6d2;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            font-size: 12px;
+            color: #444a5b;
+            font-family: Inter;
+            }
+
+            .tableCell1 {
+                background-color: #fdfdfd;
+                width: 220px;
+                height: 64px;
+                display: none;
+          }
+          .tableCell2 {
+                width: 140px;
+                height: 64px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 16px;
+                box-sizing: border-box;
+          }
+          .deposit {
+                position: relative;
+                line-height: 18px;
+          }
+          .tableCell3 {
+                flex: 1;
+                height: 64px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 16px;
+                box-sizing: border-box;
+          }
+          .completed {
+                position: relative;
+                line-height: 16px;
+                text-transform: uppercase;
+                font-weight: 500;
+          }
+          .bagde {
+                border-radius: 20px;
+                background-color: #b5fedc;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 4px 8px;
+          }
+          .tableCell5 {
+                flex: 1;
+                height: 64px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 16px;
+                box-sizing: border-box;
+                font-size: 10px;
+                color: #016236;
+          }
+          .tableCell6 {
+                width: 160px;
+                height: 64px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 16px;
+                box-sizing: border-box;
+          }
+          .n20000 {
+                position: relative;
+                line-height: 18px;
+                font-weight: 600;
+          }
+          .tableCell7 {
+                height: 64px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 16px;
+                box-sizing: border-box;
+          }
+          .thriftplanCard {
+                width: 100%;
+                position: relative;
+                background-color: #fdfdfd;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+                text-align: left;
+                font-size: 12px;
+                color: #444a5b;
+                font-family: Inter;
+          }
+          
+          
+            
+

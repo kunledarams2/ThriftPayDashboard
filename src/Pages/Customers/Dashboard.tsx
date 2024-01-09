@@ -1,15 +1,19 @@
-import React from 'react'
-import CustomerChart from '../../components/Customers/CustomerChart';
-import CustomerOverview from '../../components/Customers/customerOverview';
-import UserDistribution from '../../components/Customers/UserDistribution';
-import "./customer.css";
+import React from "react";
+// import CustomerChart from "../../components/Customers/CustomerChart";
+// import CustomerOverview from "../../components/Customers/customerOverview";
+// import UserDistribution from "../../components/Customers/UserDistribution";
+import "../Customers/customer.css";
+// import styles from "./usercontent.module.css";
 
-
+// import UserSubTab from "../../components/Customers/Usertab";
+// import UserListHeader from "../../components/Customers/UserListHeader";
+// import UserListView from "../../components/Customers/UserListView";
+import { Outlet } from "react-router-dom";
 
 const CustomerDashboard = () => {
   return (
     <div>
-         <div className="tabs">
+      <div className="tabs">
         <div className="tab">
           <div className="frame-1000002689">
             <div className="tab-label">Overview </div>
@@ -23,20 +27,26 @@ const CustomerDashboard = () => {
           <div className="rectangle-32"></div>
         </div>
       </div>
+      <Outlet />
+      {/* <div className={styles.content}>
+        <UserSubTab />
+        <UserListHeader />
+        <UserListView />
+      </div> */}
 
-      <div className="info">
-  <CustomerOverview/>
-</div>
-<div className="user">
-<div className="userchart">
-  <CustomerChart/>
-</div>
-<div className="userdistribution">
-  <UserDistribution/>
-</div>
-</div>
+      {/* <div className="info">
+        <CustomerOverview />
+      </div>
+      <div className="user">
+        <div className="userchart">
+          <CustomerChart />
+        </div>
+        <div className="userdistribution">
+          <UserDistribution />
+        </div>
+      </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default CustomerDashboard
+export default CustomerDashboard;

@@ -36,6 +36,13 @@ import DashboardRoot from "./Pages/DashRoot/DashBoardRoot";
 import ThriftPlanContent from "./components/thriftPlan/ThriftPlanContent";
 import ThriftPlanInfoContent from "./components/thriftPlan/ThriftPlanInfoContent";
 import ThriftPlanDetail from "./components/thriftPlan/ThriftPlanDetail";
+import UserOverview from "./Pages/Customers/UserOverview";
+import UserContent from "./Pages/Customers/UserContent";
+import UserContentList from "./Pages/Customers/UserContentList";
+import UserContentDetail from "./Pages/Customers/UserContentDetail";
+import UserThriftPlan from "./Pages/Customers/UserThriftPlan";
+import UserWallet from "./Pages/Customers/UserWallet";
+import UserKYC from "./Pages/Customers/UserKYC";
 
 const router = createBrowserRouter([
   {
@@ -70,7 +77,42 @@ const router = createBrowserRouter([
           //   element: <Navigate to="/login" replace />,
           // },
           { path: "/dashboard", element: <Dashboard /> },
-          { path: "users", element: <Customers /> },
+          {
+            element: <Customers />,
+            children: [
+              {
+                path: "users/overview",
+                element: <UserOverview />,
+              },
+              {
+                element: <UserContent />,
+                children: [
+                  {
+                    path: "users/all",
+                    element: <UserContentList />,
+                  },
+                  {
+                    // path: "users/detail",
+                    element: <UserContentDetail />,
+                    children: [
+                      {
+                        path: "users/detail/plan",
+                        element: <UserThriftPlan />,
+                      },
+                      {
+                        path: "users/detail/wallet",
+                        element: <UserWallet />,
+                      },
+                      {
+                        path: "users/detail/kyc",
+                        element: <UserKYC />,
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
           {
             element: <ThriftPlanContent />,
             children: [

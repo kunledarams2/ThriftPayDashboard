@@ -1,0 +1,144 @@
+.icons2 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.nextOfKin1 {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+}
+.completed {
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.bagde {
+    border-radius: 4px;
+    background-color: #b5fedc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    font-size: 10px;
+    color: #016236;
+}
+.nextOfKinParent {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.iconsParent {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    z-index: 0;
+}
+.button1 {
+    border-radius: 8px;
+    border: 1px solid #c3c6d2;
+    display: none;
+    z-index: 1;
+}
+.icons3 {
+    position: absolute;
+    margin: 0 !important;
+    top: 9px;
+    left: 738px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+    z-index: 2;
+}
+.frameGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    gap: 40px;
+}
+.firstName {
+    position: relative;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    flex-shrink: 0;
+}
+.john {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+    color: #111217;
+}
+.firstNameParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+.lastName1 {
+    align-self: stretch;
+    position: relative;
+    line-height: 22px;
+}
+.daramola {
+    align-self: stretch;
+    position: relative;
+    line-height: 22px;
+    color: #111217;
+}
+.lastNameGroup {
+    align-self: stretch;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.frameDiv {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    color: #666f89;
+}
+.frameParent {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    border: 0.5px solid #c3c6d2;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    gap: 24px;
+    text-align: left;
+    font-size: 14px;
+    color: #111217;
+    font-family: Inter;
+}
+

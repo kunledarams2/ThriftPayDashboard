@@ -14,26 +14,10 @@ const ThriftPlanSummarySide = () => {
   console.log(data);
 
   let navigate: NavigateFunction = useNavigate();
-  const [details, setDetails] = useState(false);
-  const [overview, setOverview] = useState(true);
-  const handelViewPlanDetail = () => {
-    setDetails(true);
-    setOverview(false);
-    navigate("/thrift/summary/detail", { state: { data: data } });
-  };
-  const handelViewPlanOverview = () => {
-    setDetails(false);
-    setOverview(true);
-    navigate("/thrift/summary/overview", { state: { data: data } });
-  };
 
   const [activity, setActivityTab] = useState(false);
   const [request, setRequestTab] = useState(false);
   const [member, setMemberTab] = useState(true);
-
-  function handleTabClickListener(arg0: string): void {
-    throw new Error("Function not implemented.");
-  }
 
   const [progress, setProgress] = useState(0);
   useEffect(() => {
@@ -43,6 +27,22 @@ const ThriftPlanSummarySide = () => {
         100
     );
   });
+
+  const handleTabClickListener = (tabName: string) => {
+    if (tabName === "activity") {
+      setActivityTab(true);
+      setRequestTab(false);
+      setMemberTab(false);
+    } else if (tabName === "request") {
+      setActivityTab(false);
+      setRequestTab(true);
+      setMemberTab(false);
+    } else {
+      setActivityTab(false);
+      setRequestTab(false);
+      setMemberTab(true);
+    }
+  };
 
   return (
     <div className="content-summary-side">
@@ -203,14 +203,3 @@ const ThriftPlanSummarySide = () => {
 };
 
 export default ThriftPlanSummarySide;
-// function setDetails(arg0: boolean) {
-//   throw new Error("Function not implemented.");
-// }
-
-// function setOverview(arg0: boolean) {
-//   throw new Error("Function not implemented.");
-// }
-
-// function useState(arg0: boolean): [any, any] {
-//   throw new Error("Function not implemented.");
-// }

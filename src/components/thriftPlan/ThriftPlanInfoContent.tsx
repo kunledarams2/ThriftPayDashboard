@@ -109,22 +109,6 @@ const ThriftPlanInfoContent = () => {
   //   );
   // }, []);
 
-  const handleTabClickListener = (tabName: string) => {
-    if (tabName === "activity") {
-      setActivityTab(true);
-      setRequestTab(false);
-      setMemberTab(false);
-    } else if (tabName === "request") {
-      setActivityTab(false);
-      setRequestTab(true);
-      setMemberTab(false);
-    } else {
-      setActivityTab(false);
-      setRequestTab(false);
-      setMemberTab(true);
-    }
-  };
-
   const [open, setOpen] = useState(false);
 
   const handleOpenReview = () => true;

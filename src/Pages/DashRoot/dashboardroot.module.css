@@ -17,7 +17,8 @@
 
 .outlet > div {
     /* background-color:pink; */
-    padding: 20px;
+    /* padding: 20px; */
+    /* padding: 0px 6px 0px 16px; */
     width: 100%;
     flex-grow: 1;
     overflow-y: scroll;

@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    /* width:100px; */
+    /* background-color:tomato; */
+    /* justify-content: center; */
+    align-items: center;
+    gap: 6px;
+}
+
+.container > span:first-of-type{
+    border-radius: 3px;
+
+}
+
+.container > span:last-of-type {
+    color:#666F89;
+}
+
+.sm > span:first-of-type {
+    width: 10px;
+    height: 10px;
+}
+
+.sm > span:last-of-type {
+    font-size: 10px;
+    
+}
+
+.md > span:first-of-type {
+    width: 15px;
+    height: 15px;
+}
+
+.md > span:last-of-type {
+    font-size: 13px;
+    
+}

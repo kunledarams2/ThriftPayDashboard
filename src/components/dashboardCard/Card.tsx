@@ -1,19 +1,31 @@
-import clsx from 'clsx'
-import userY from '../../assets/dashboard/userY.png'
+// import clsx from 'clsx'
+// import userY from '../../assets/dashboard/userY.png'
 import classes from './Card.module.css'
-const Card = () => {
+// import { GoArrowUp, GoArrowDown } from "react-icons/go";
+import Pnl from '../profit-n-loss/Pnl'
+import { cardProps } from '../../utils/types/Types'
+// interface props {
+//   icon: string,
+//   trend: 'up'|'down'
+//   title:string,
+//   amount: number,
+//   pnl:string,
+//   period: string
+// }
+const Card = ({icon,title,amount,pnl,trend,period}:cardProps) => {
 
-    const up =true;
+  
+    
   return (
     <div className={classes.card}>
        <div>
-        <img src={userY} alt="" width={40} height={40}/>
-        <span className={classes.title}>Total users</span>
-        <span className={classes.amount}>250</span>
+        <img src={icon} width={40} height={40}/>
+        <span className={classes.title}>{title}</span>
+        <span className={classes.amount}>{amount}</span>
        </div>
        <div>
-        <span className={clsx(classes.perc, up && classes.green)}>+2.5%</span>
-        <span className={classes.period}>Last 7 days</span>
+        <Pnl trend={trend} pnl={pnl} />
+        <span className={classes.period}>{period}</span>
 
        </div>
     </div>

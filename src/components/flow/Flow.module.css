@@ -1,0 +1,37 @@
+.flow {
+    width:50%;
+    /* background-color: pink; */
+    border: 1px solid #C3C6D2;
+    border-radius:10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 10px 10px;
+    height:70px;
+
+}
+
+.total{
+    display: flex;
+    /* flex-direction: row; */
+    width: fit-content;
+    /* background-color: yellow; */
+    align-items: center;
+    gap: 10px;
+}
+.total > p {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.total > p span:first-of-type {
+    /* background-color:tomato; */
+    font-size: 12px;
+    font-weight:400;
+    color: #90949E;
+}
+
+.total > p span:last-of-type {
+    font-size: 16px;
+    font-weight:600;
+}

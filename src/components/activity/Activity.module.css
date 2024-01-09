@@ -1,0 +1,26 @@
+.activityContainer {
+    padding: 0 5px;
+}
+.activityContainer > p{
+    margin-bottom: 8px;
+}
+
+.activityContainer > p strong{
+    font-size: 12px;
+}
+.activityContainer > p span{
+    font-size: 12px;
+    color: #90949E;
+}
+
+.activityContainer > p b{
+    font-size: 12px;
+    color: #444a5b;
+}
+
+.activityContainer > span {
+    font-size: 12px;
+    color: #90949E;
+    /* font-weight:400; */
+}
+

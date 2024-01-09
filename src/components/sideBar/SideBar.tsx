@@ -115,7 +115,7 @@
 //             </div>
 //             <div
 //               className={false ? "sidebar-item" : "sidebar-item2"}
-              
+
 //             >
 //               <div
 //                 className={
@@ -186,7 +186,7 @@
 //             </div>
 //             <div
 //               className={true ? "sidebar-item" : "sidebar-item2"}
-              
+
 //             >
 //               <div
 //                 className={true ? "rectangle-306" : "rectangle-3062"}
@@ -274,11 +274,11 @@
 //                 <div className="kyc">KYC </div>
 //               </div>
 //             </div>
-//             <div 
+//             <div
 //               className={true ? "sidebar-item" : "sidebar-item2"}
-              
+
 //               >
-//               <div 
+//               <div
 //                className={true ? "rectangle-306" : "rectangle-3062"}
 //                ></div>
 //               <div className="frame-2">
@@ -395,28 +395,53 @@
 
 // export default SideBar;
 
-
-
-import NavItem from '../navItems/NavItem'
-import classes from './siderbar.module.css'
-import Dreallogo from '../../assets/Dreallogo.svg'
-import {wallet,walletAc,users,usersAc,dashboard,dashboardAc,thriftPlans,thriftPlansAc} from '../../assets/nav'
+import NavItem from "../navItems/NavItem";
+import classes from "./siderbar.module.css";
+import Dreallogo from "../../assets/Dreallogo.svg";
+import {
+  wallet,
+  walletAc,
+  users,
+  usersAc,
+  dashboard,
+  dashboardAc,
+  thriftPlans,
+  thriftPlansAc,
+} from "../../assets/nav";
 const SideBar = () => {
   return (
     <div className={classes.sidebar}>
       <header className={classes.header}>
-    <p><img src={Dreallogo} alt="Dreal" /></p>
-    <p>DealThrift</p>
+        <p>
+          <img src={Dreallogo} alt="Dreal" />
+        </p>
+        <p>DealThrift</p>
       </header>
       <nav>
-    <NavItem to='/dashboard' inActiveicon={dashboard} activeIcon={dashboardAc}>Dashboard</NavItem>
-    <NavItem to='/thrift-plans' inActiveicon={thriftPlans} activeIcon={thriftPlansAc}>Thrift Plans</NavItem>
-    <NavItem to='/wallets' inActiveicon={wallet} activeIcon={walletAc} >Wallets</NavItem>
-    <NavItem to='/users' inActiveicon={users} activeIcon={usersAc} >Users</NavItem>
+        <NavItem
+          to="/dashboard"
+          inActiveicon={dashboard}
+          activeIcon={dashboardAc}
+        >
+          Dashboard
+        </NavItem>
+        <NavItem
+          to="/thrift"
+          inActiveicon={thriftPlans}
+          activeIcon={thriftPlansAc}
+        >
+          Thrift Plans
+        </NavItem>
+        <NavItem to="/wallets" inActiveicon={wallet} activeIcon={walletAc}>
+          Wallets
+        </NavItem>
+        <NavItem to="/users/overview" inActiveicon={users} activeIcon={usersAc}>
+          Users
+        </NavItem>
       </nav>
       <div>logout</div>
     </div>
-  )
-}
+  );
+};
 
-export default SideBar
+export default SideBar;

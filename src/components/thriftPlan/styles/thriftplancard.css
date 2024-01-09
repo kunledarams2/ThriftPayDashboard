@@ -1,6 +1,6 @@
-.thriftplan-card, .thriftplan-card * {
+/* .thriftplan-card, .thriftplan-card * {
     box-sizing: border-box;
-    }
+    } */
 .thriftplan-card {
    background: var(--gradient, linear-gradient(90deg, rgba(2, 137, 75, 1.00) 0%,rgba(61, 80, 58, 1.00) 100%));
     border-radius: 10px;

@@ -1,21 +1,18 @@
 import SideBar from "../../components/sideBar/SideBar";
 import Header from "../../components/header/Header";
-import classes from "./Root.module.css";
+import classes from "../Root/Root.module.css";
 import { Outlet } from "react-router-dom";
-import LoginPage from "../../components/oldies/auth/LoginPage";
 import LoginSide from "../../components/oldies/auth/authside/LoginSide";
 
-const Root = () => {
+const AuthRoot = () => {
   return (
     <div className={classes.container}>
-      <Outlet />
-      {/* <LoginSide />
+      <LoginSide />
       <div className={classes.outlet}>
-        <Header />
-       
-      </div> */}
+        <Outlet />
+      </div>
     </div>
   );
 };
 
-export default Root;
+export default AuthRoot;

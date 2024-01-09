@@ -1,0 +1,45 @@
+
+
+.authSide {
+    background: var(--primary-500, #cc3366);
+    flex-shrink: 0;
+    width: 481px;
+  
+    padding-top: 200px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .authSidelogo {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: calc(50% - 126.7px);
+    top: calc(50% - 48px);
+  }
+
+  .authSidedreallogo{
+    flex-shrink: 0;
+    width: 88.8px;
+    height: 96px;
+    position: relative;
+    overflow: hidden;
+  }
+  .authSidelayer{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: visible;
+  }
+  .dealthriftslider {
+    color: var(--text-50, #fafafb);
+    text-align: left;
+    font: var(--heading-h-1, 600 32px/40px "Inter", sans-serif);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }

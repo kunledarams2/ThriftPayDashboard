@@ -7,12 +7,13 @@ import ThriftPlanTab from "./ThriftPlanTab";
 
 const ThriftPlan = () => {
   return (
-    <div className="thrift-view-wrapper">
-      <>
-        <ThriftPlanTab />
-        <ThriftPlanOverview />
-      </>
-    </div>
+    <>
+      <ThriftPlanTab />
+      <ThriftPlanOverview />
+    </>
+    // <div className="thrift-view-wrapper">
+
+    // </div>
   );
 };
 

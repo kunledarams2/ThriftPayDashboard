@@ -17,7 +17,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         flex-shrink: 0;
-        width: 343px;
+        /* width: 343px; */
         position: relative;
         }
         .your-wallet-is-empty {

@@ -1,15 +1,15 @@
 
 /* overview search filter switch view */
-
+/* 
 .thrift-view-wrapper{
-   /* border: 3px solid rgb(25, 4, 2); */
+   border: 3px solid rgb(25, 4, 2);
    overflow: hidden;
    height: 100vh;
-   }
+   } */
 .overview-wrapper{
 /* border: 3px solid salmon; */
 overflow: scroll;
-height: 670px;
+/* height: 670px; */
 }
 
 .frame-2670, .frame-2670 * {
@@ -230,7 +230,7 @@ height: 670px;
       align-items: center;
       justify-content: flex-start;
       flex-shrink: 0;
-      width: 1136px;
+      width: 100%;
       position: relative;
    
      }
@@ -338,7 +338,7 @@ height: 670px;
       align-items: center;
       justify-content: flex-start;
       flex-shrink: 0;
-      width: 1136px;
+      /* width: 1136px; */
       position: relative;
       cursor: pointer;
      }
@@ -628,7 +628,7 @@ height: 670px;
       align-items: flex-end;
       justify-content: flex-start;
       flex-shrink: 0;
-      width: 814px;
+      /* width: 814px; */
       position: relative;
       overflow: hidden;
      }
@@ -878,7 +878,7 @@ height: 670px;
       justify-content: flex-start;
       align-self: stretch;
      flex-shrink: 0;
-      position: relative;
+      /* position: relative; */
      }
  
   .plan-summary {
@@ -1181,9 +1181,9 @@ height: 670px;
       width: 370px;
       position: relative;
       overflow: hidden; */
-      background: var(--bg-white, #fdfdfd);
+      /* background: var(--bg-white, #ae1313); */
 border-style: solid;
-border-color: var(--border-divider-light, #d3d6de);
+border-color: var(--border-divider-light, #c3c6d2);
 border-width: 0px 0px 0px 1px;
 padding: 24px 0px 24px 0px;
 display: flex;
@@ -1192,8 +1192,8 @@ gap: 24px;
 align-items: flex-end;
 justify-content: flex-start;
 flex-shrink: 0;
-width: 370px;
-height: 933px;
+/* width: 100%; */
+/* height: 100%; */
 position: relative;
 overflow: hidden;
      }
@@ -1571,13 +1571,13 @@ overflow: hidden;
      flex-shrink: 0;
       position: relative;
      }
- 
+ /* #fdfdfd */
   .tab-summary-side {
      background: var(--bg-white, #fdfdfd);
-      padding: 12px 12px 0px 12px;
+      padding: 12px 12px 0px 24px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      /* gap: 10px; */
       align-items: flex-start;
       justify-content: flex-start;
       flex-shrink: 0;
@@ -1643,7 +1643,7 @@ overflow: hidden;
 
      .summary-right-tab-wrapper{
       /* border: 3px solid saddlebrown; */
-      height: 255px;
+      /* height: 300px; */
       width: 100%;
       overflow: scroll;
      }
@@ -1862,14 +1862,14 @@ overflow: hidden;
      }
 
      .summary-content-empty {
-      background: #ffffff;
+      /* background: #ffffff; */
       display: flex;
       flex-direction: row;
       gap: 0px;
       align-items: flex-start;
       justify-content: flex-start;
-      width: 1184px;
-      /* height: 1240vh; */
+      width: 100%;
+      /* height: 100%; */
       position: relative;
       overflow: hidden;
       /* border: solid 2px seagreen; */
@@ -2716,7 +2716,7 @@ overflow: hidden;
      }
  
   .thrift-member-plan-detail {
-     background: var(--bg-white, #fdfdfd);
+     /* background: var(--bg-white, #fdfdfd); */
       padding: 12px 0px 12px 0px;
       display: flex;
       flex-direction: row;
@@ -2851,7 +2851,7 @@ overflow: hidden;
   .frame-1000002764 {
      display: flex;
       flex-direction: column;
-      gap: 20px;
+      /* gap: 40px; */
       align-items: flex-start;
       justify-content: flex-start;
       align-self: stretch;
@@ -2863,7 +2863,7 @@ overflow: hidden;
      background: var(--bg-white, #fdfdfd);
       display: flex;
       flex-direction: row;
-      gap: 16px;
+      /* gap: 16px; */
       align-items: flex-start;
       justify-content: flex-start;
       align-self: stretch;
@@ -2877,7 +2877,7 @@ overflow: hidden;
       font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
       position: relative;
       align-self: stretch;
-      width: 686px;
+      /* width: 686px; */
      }
  
   .frame-1000002744 {

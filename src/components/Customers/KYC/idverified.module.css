@@ -1,0 +1,105 @@
+.icons2 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.idVerification {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+}
+.completed {
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.bagde {
+    border-radius: 4px;
+    background-color: #b5fedc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    font-size: 10px;
+    color: #016236;
+}
+.idVerificationParent {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.iconsParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.icons3 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+}
+.idType {
+    position: relative;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    flex-shrink: 0;
+}
+.idTypeParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+.div {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+    color: #111217;
+}
+.frameGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    color: #666f89;
+}
+.frameParent {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    border: 0.5px solid #c3c6d2;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    gap: 24px;
+    text-align: left;
+    font-size: 14px;
+    color: #111217;
+    font-family: Inter;
+}
+

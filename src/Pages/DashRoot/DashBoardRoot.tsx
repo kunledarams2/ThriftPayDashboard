@@ -1,21 +1,21 @@
 import SideBar from "../../components/sideBar/SideBar";
 import Header from "../../components/header/Header";
-import classes from "./Root.module.css";
+import classes from "./dashboardroot.module.css";
 import { Outlet } from "react-router-dom";
 import LoginPage from "../../components/oldies/auth/LoginPage";
 import LoginSide from "../../components/oldies/auth/authside/LoginSide";
+import { Slider } from "antd";
 
-const Root = () => {
+const DashboardRoot = () => {
   return (
     <div className={classes.container}>
-      <Outlet />
-      {/* <LoginSide />
+      <SideBar />
       <div className={classes.outlet}>
         <Header />
-       
-      </div> */}
+        <Outlet />
+      </div>
     </div>
   );
 };
 
-export default Root;
+export default DashboardRoot;

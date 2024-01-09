@@ -1,0 +1,101 @@
+.checkboxChild {
+    position: absolute;
+    height: 83.33%;
+    width: 83.33%;
+    top: 8.33%;
+    right: 8.33%;
+    bottom: 8.33%;
+    left: 8.33%;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 2px solid #c3c6d2;
+    box-sizing: border-box;
+}
+.checkbox {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.user {
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    display: none;
+}
+.headerCell {
+    flex: 1;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    box-sizing: border-box;
+    gap: 12px;
+}
+.phoneNo {
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+}
+.headerCell1 {
+    width: 140px;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    box-sizing: border-box;
+}
+.headerCell2 {
+    width: 132px;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    box-sizing: border-box;
+}
+.headerCell3 {
+    width: 160px;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 16px;
+    box-sizing: border-box;
+}
+.headerCell6 {
+    width: 120px;
+    height: 42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 12px 16px;
+    box-sizing: border-box;
+}
+.headingChild {
+    flex: 1;
+    display: none;
+}
+.heading {
+    width: 100%;
+    position: relative;
+    background-color: #fafafb;
+    border-top: 0.5px solid #c3c6d2;
+    border-bottom: 0.5px solid #c3c6d2;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 12px;
+    color: #444a5b;
+    font-family: Inter;
+}
+

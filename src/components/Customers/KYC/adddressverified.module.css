@@ -1,0 +1,186 @@
+.icons3 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.addressVerification {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+}
+.completed {
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.bagde {
+    border-radius: 4px;
+    background-color: #b5fedc;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    font-size: 10px;
+    color: #016236;
+}
+.addressVerificationParent {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.iconsParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.icons4 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+}
+.address {
+    position: relative;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    width: 200px;
+    flex-shrink: 0;
+}
+.addressParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+}
+.kogi {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+    color: #111217;
+}
+.johnDoeElectricity1 {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.icons5 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+}
+.bxsfilePdfParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    z-index: 0;
+}
+.digitalMarketingServicesAgr1 {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    border-radius: 4px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+.clickToView1 {
+    position: absolute;
+    top: calc(50% - 11px);
+    left: calc(50% - 43px);
+    line-height: 22px;
+}
+.clickToViewWrapper {
+    position: absolute;
+    margin: 0 !important;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 278px;
+    height: 40px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 2;
+    color: #fafafb;
+}
+.doc {
+    border-radius: 8px;
+    background-color: #f4f5f7;
+    width: 278px;
+    height: 270px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px 12px 12px;
+    box-sizing: border-box;
+    position: relative;
+    gap: 12px;
+    color: #111217;
+}
+.utilityBillParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.frameGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    color: #666f89;
+}
+.frameParent {
+    width: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    border: 0.5px solid #c3c6d2;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    gap: 40px;
+    text-align: left;
+    font-size: 14px;
+    color: #111217;
+    font-family: Inter;
+}
+

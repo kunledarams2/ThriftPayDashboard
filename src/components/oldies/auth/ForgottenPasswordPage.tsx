@@ -2,7 +2,7 @@ import { Button, Form } from "react-bootstrap";
 
 import { SubmitHandler, useForm } from "react-hook-form";
 import { z } from "zod";
-import LoginSide from "./LoginSide";
+import LoginSide from "./authside/LoginSide";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import CheckEmail from "../../modal/CheckEmail";
@@ -45,7 +45,7 @@ const ForgottenPasswordPage = () => {
         noValidate
         onSubmit={handleSubmit(onSubmit)}
       >
-        <LoginSide />
+        {/* <LoginSide /> */}
 
         <div className="content-login">
           <div className="frame-27-login">

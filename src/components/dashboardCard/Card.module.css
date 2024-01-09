@@ -32,14 +32,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 3px;
+    gap: 15px;
 }
 
-.perc {
-    /* color: green; */
-    font-size:10px;
-    font-weight: 400;
-}
+
 
 .period {
     font-size: 10px;
@@ -47,11 +43,3 @@
     color: #90949E;
 }
 
-.red {
-    color: red;
-
-}
-
-.green {
-    color: green;
-}

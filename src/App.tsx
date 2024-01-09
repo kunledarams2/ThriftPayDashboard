@@ -31,7 +31,7 @@ const router = createBrowserRouter([{path:'/',element:<Root/>,errorElement:<Erro
   element: <Navigate to="/dashboard" replace />,
 },{
   path:'/dashboard',element:<Dashboard />
-},{path:'thrift-plans',element:<ThriftPlan/>},{path:'/thrift/summary/overview',element:<ThriftPlanSummary/>},{path:'wallets',element:<div>This is the wallet page</div>},{path:'users',element:<Customers/>}]}])
+},{path:'thrift-plans',element:<div>Yo</div>},{path:'/thrift/summary/overview',element:<div>Hello</div>},{path:'wallets',element:<div>This is the wallet page</div>},{path:'users',element:<Customers/>}]}])
 
 function App() {
 

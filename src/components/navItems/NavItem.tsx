@@ -11,7 +11,7 @@ const LinkChild = ({icon, title}:linkChild) => {
     return(
 <div className={`${classes.navItem}`}>
         <span>
-            <img src={icon} alt={title} />
+            <img src={icon}  />
         </span>
         <span>{title}</span>
         </div>

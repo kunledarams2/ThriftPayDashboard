@@ -1,0 +1,42 @@
+.perc {
+    /* color: green; */
+    font-size:10px;
+    font-weight: 400;
+    /* background-color: aqua; */
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* background-color: aqua; */
+    gap: 2px;
+    
+}
+
+.red {
+    color: red;
+
+}
+
+.green {
+    color: green;
+}
+
+/* .badge {
+    
+    
+} */
+
+.redBadge {
+    background-color:rgb(250, 200, 200);
+    width: fit-content;
+    border-radius: 5px;
+    padding: 3px 5px;
+
+}
+.greenBadge {
+    /* background-color:green; */
+    background-color: #E3FFF2;
+    width: fit-content;
+    height:18px;
+    border-radius: 4px;
+    padding: 0px 3px;
+}

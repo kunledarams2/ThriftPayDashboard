@@ -39,11 +39,13 @@
     /* background-color:pink; */
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    gap: 15px;
+    /* justify-content: space-between; */
+
 }
 
 .overview > div {
-    width:49%;
+    width:50%;
     /* height: 200px; */
     
     /* background-color:purple; */
@@ -61,5 +63,134 @@
 }
 
 .overview > div:last-child {
-    background-color: rgb(12, 223, 223);
+    padding: 25px;
+    /* background-color: rgb(12, 223, 223); */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    border: 1px solid #C3C6D2;
+    border-radius: 10px;
+}
+
+.legend {
+    /* background-color:pink; */
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    gap: 28px;
+    /* align-items: space-between; */
+    width: 40%;
+
+}
+
+.legend p {
+    display: flex;
+    justify-content:space-between;
+}
+
+.legend > p > span {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.walletActivities {
+    width: 100%;
+    /* border-radius:25px; */
+    display: flex;
+    margin-top:20px;
+    gap: 15px;
+    /* height: 300px; */
+    /* background-color: palevioletred; */
+}
+.wallet {
+    width: 65%;
+    height: 100%;
+    border: 1px solid #C3C6D2;
+    border-radius: 15px;
+    padding: 20px;
+    /* background-color: slateblue; */
+}
+
+/* .ccc {
+    background-color: brown;
+} */
+
+.walletHeader {
+    /* background-color: slategray; */
+    display: flex;
+    justify-content: space-between;
+    /* height: 100px; */
+}
+.walletHeader > div:first-of-type {
+    display: flex;
+    /* background-color: purple; */
+    align-items: center;
+    gap:  20px;
+}
+.walletHeader > div:first-of-type p {
+    /* background-color:pink; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.balText {
+    font-size:12px;
+    font-weight: 600;
+}
+
+.balance {
+    font-weight: 600;
+    font-size:28px;
+}
+
+.walletHeader > div:last-of-type {
+    /* background-color:yellow; */
+    display: flex;
+    gap: 20px;
+}
+
+.flowContainer {
+    width: 100%;
+    height: 60px;
+    /* background-color: yellow; */
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.activities {
+    width:35%;
+    border: 1px solid #C3C6D2;
+    border-radius: 15px;
+    padding: 20px;
+    /* height: fit-content; */
+}
+
+.activitiesHeader {
+    /* background-color:yellow; */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.activitiesHeader > span:first-of-type {
+    font-weight:600;
+    font-size: 16px;
+}
+.activitiesHeader > span:last-of-type {
+    padding-top:7px;
+    font-weight:600;
+    font-size: 12px;
+    color: #444A5B;
+    cursor: pointer;
+}
+
+.activitiesContent {
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }

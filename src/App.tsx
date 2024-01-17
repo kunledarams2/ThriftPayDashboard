@@ -46,6 +46,7 @@ import UserThriftPlan from "./Pages/Customers/UserThriftPlan";
 import UserWallet from "./Pages/Customers/UserWallet";
 import UserKYC from "./Pages/Customers/UserKYC";
 import { fetchDashboardStat } from "./services/dashboardService";
+import Wallet from "./components/Wallet";
 
 const router = createBrowserRouter([
   {
@@ -139,6 +140,10 @@ const router = createBrowserRouter([
               },
               { path: "/thrift", element: <ThriftPlan /> },
             ],
+          },
+          {
+            path: "/wallets",
+            element: <Wallet />,
           },
         ],
       },

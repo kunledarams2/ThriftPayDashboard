@@ -10,6 +10,8 @@
     font-size: 20px;
     color: #fff;
     font-family: Inter;
+    padding:24px;
+    flex-grow: 1;
     }
 
     .tabsParent {

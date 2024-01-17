@@ -18,4 +18,15 @@ export var getInitials = function (string: string) {
         currency: "NGN",
       }
     );
-  };
+ };
+  
+
+ export var range = function(start: number, end: number, step: number = 1): number[] {
+  const result: number[] = [];
+  
+  for (let i = start; i <= end; i += step) {
+      result.push(i);
+  }
+
+  return result;
+}

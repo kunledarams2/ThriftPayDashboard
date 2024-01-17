@@ -1,0 +1,222 @@
+.heading {
+    position: relative;
+    letter-spacing: -0.01em;
+    line-height: 23px;
+    font-weight: 600;
+}
+.heading1 {
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666f89;
+}
+.headingParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.nigeria1Child {
+    position: absolute;
+    height: 99.99%;
+    width: 99.87%;
+    top: -0.01%;
+    right: 0.04%;
+    bottom: 0.02%;
+    left: 0.09%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.title {
+    flex: 1;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+}
+.header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.subtext {
+    align-self: stretch;
+    position: relative;
+    line-height: 18px;
+    color: #c3c6d2;
+    text-align: left;
+}
+.content {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px;
+}
+.pointer {
+    flex: 1;
+    position: relative;
+    height: 29.33px;
+    transform:  rotate(90deg);
+}
+.pointerIcon {
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 8px;
+    object-fit: contain;
+}
+.bottomFrame {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tooltipMaster {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.tooltipStyleBottomPoint {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.tooltip {
+    width: 88px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.frameChild {
+    position: relative;
+    border-radius: 50%;
+    background-color: #cc3366;
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1);
+    border: 3px solid #fdfdfd;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+}
+.tooltipParent {
+    position: absolute;
+    top: 61.48px;
+    left: 90px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.nigeria1 {
+    position: relative;
+    width: 500px;
+    /* height: 450px; */
+    top: 5px;
+    height: fit-content;
+    overflow: hidden;
+    /* background-color: #cc3366; */
+    flex-shrink: 0;
+}
+.topStates {
+    position: relative;
+    line-height: 24px;
+    font-weight: 600;
+}
+.lagos {
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    width: 48px;
+    flex-shrink: 0;
+}
+.k {
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+.lagosParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.frameParent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    color: #666f89;
+}
+.topStatesParent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: left;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+.nigeria1Parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 32px;
+}
+.usersDistributionInner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 12px;
+    color: #fafafb;
+}
+.usersDistribution {
+    position: relative;
+    border-radius: 15px;
+    background-color: #fdfdfd;
+    border: 0.5px solid #c3c6d2;
+    box-sizing: border-box;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    /* gap: 40px; */
+    text-align: left;
+    font-size: 20px;
+    color: #1a1a1a;
+    font-family: Inter;
+}
+

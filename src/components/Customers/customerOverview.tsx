@@ -4,11 +4,40 @@ import { ArrowPointer } from "../../assets/IconsExtension/ArrowPointer";
 import { InactiveUsers } from "../../assets/IconsExtension/InactiveUsers";
 import { TotalUsers } from "../../assets/IconsExtension/TotalUsers";
 import "../Customers/overview.css";
+import Card from "../dashboardCard/Card";
+import totalUsers from "../../assets/dashboard/totalUsers.png";
 
 const CustomerOverview = () => {
   return (
     <div className="frame">
-      <div className="total-thrift-plans">
+      <div className="totalThriftPlansParent">
+        <Card
+          icon={totalUsers}
+          title="Total Users"
+          amount={250}
+          trend="up"
+          period="Last 7 days"
+          pnl="+2.5"
+        />
+        <Card
+          icon={totalUsers}
+          title="Total Users"
+          amount={250}
+          trend="up"
+          period="Last 7 days"
+          pnl="+2.5"
+        />
+        <Card
+          icon={totalUsers}
+          title="Total Users"
+          amount={250}
+          trend="up"
+          period="Last 7 days"
+          pnl="+2.5"
+        />
+      </div>
+
+      {/* <div className="total-thrift-plans">
         <div className="div">
           <div className="icon-wrapper">
             <div className="icon">
@@ -69,7 +98,7 @@ const CustomerOverview = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

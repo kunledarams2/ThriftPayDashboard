@@ -26,7 +26,7 @@
     align-self: stretch;
     display: flex;
     flex: 0 0 auto;
-    flex-direction: column;
+    flex-direction: row;
     gap: 16px;
     position: relative;
     width: 100%;
@@ -732,4 +732,21 @@
     flex: 1;
      position: relative;
     }
+
+
+
+    .totalThriftPlansParent {
+      flex: 1;
+      width: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 20px;
+      text-align: left;
+      font-size: 12px;
+      color: #666f89;
+      font-family: Inter;
+      }
  

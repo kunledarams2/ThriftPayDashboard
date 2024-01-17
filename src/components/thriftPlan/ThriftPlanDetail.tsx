@@ -38,6 +38,7 @@ const ThriftPlanDetail = () => {
   const [empty, setEmpty] = useState(false);
   const [progress, setProgress] = useState(0);
   const [status, setStatus] = useState(false);
+
   const [thriftPlanActive, setthriftPlanActive] = useState<
     ActiveThriftPlanData | undefined
   >(undefined);
@@ -82,7 +83,7 @@ const ThriftPlanDetail = () => {
     );
   }, []);
 
-  useEffect(() => {});
+  // useEffect(() => {});
 
   return (
     <>
@@ -227,7 +228,7 @@ const ThriftPlanDetail = () => {
                                     Payment Due Date{" "}
                                   </div>
                                   <div className="mar-4-2023-plan-detail">
-                                    Mar. 4, 2023{" "}
+                                    HD Mar. 4, 2023{" "}
                                   </div>
                                 </div>
                               </div>

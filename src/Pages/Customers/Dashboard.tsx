@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import CustomerChart from "../../components/Customers/CustomerChart";
 // import CustomerOverview from "../../components/Customers/customerOverview";
 // import UserDistribution from "../../components/Customers/UserDistribution";
@@ -8,23 +8,39 @@ import "../Customers/customer.css";
 // import UserSubTab from "../../components/Customers/Usertab";
 // import UserListHeader from "../../components/Customers/UserListHeader";
 // import UserListView from "../../components/Customers/UserListView";
-import { Outlet } from "react-router-dom";
+import { NavigateFunction, Outlet, useNavigate } from "react-router-dom";
 
 const CustomerDashboard = () => {
+  let navigate: NavigateFunction = useNavigate();
+  const [details, setDetails] = useState(false);
+  const [overview, setOverview] = useState(true);
+
+  const handelViewDetail = () => {
+    setDetails(true);
+    setOverview(false);
+    navigate("/users/all");
+  };
+  const handelViewOverview = () => {
+    setDetails(false);
+    setOverview(true);
+    navigate("/users/overview");
+  };
   return (
     <div>
       <div className="tabs">
-        <div className="tab">
+        <div className="tab" onClick={handelViewOverview}>
           <div className="frame-1000002689">
-            <div className="tab-label">Overview </div>
+            <div className={overview ? "tab-label" : "tab-label2"}>
+              Overview{" "}
+            </div>
           </div>
-          <div className="rectangle-3"></div>
+          <div className={overview ? "rectangle-3" : "rectangle-32"}></div>
         </div>
-        <div className="tab">
+        <div className="tab" onClick={handelViewDetail}>
           <div className="frame-1000002690">
-            <div className="tab-label2">Users </div>
+            <div className={details ? "tab-label" : "tab-label2"}>Users </div>
           </div>
-          <div className="rectangle-32"></div>
+          <div className={details ? "rectangle-3" : "rectangle-32"}></div>
         </div>
       </div>
       <Outlet />

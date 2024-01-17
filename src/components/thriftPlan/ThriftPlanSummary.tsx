@@ -87,6 +87,9 @@ const ThriftPlanSummary = () => {
   const [thriftPlanOverview, setthriftPlanOverview] = useState<
     Data | undefined
   >(undefined);
+  const totalContribution =
+    parentState.response?.data.total_contribution! +
+    parentState.response?.data?.total_payout!;
 
   return (
     <>
@@ -138,13 +141,10 @@ const ThriftPlanSummary = () => {
                               Total Contribution{" "}
                             </div>
                             <div className="_260-000-summary-card ">
-                              {parentState.response?.data.total_contribution.toLocaleString(
-                                "en-NG",
-                                {
-                                  style: "currency",
-                                  currency: "NGN",
-                                }
-                              )}{" "}
+                              {totalContribution.toLocaleString("en-NG", {
+                                style: "currency",
+                                currency: "NGN",
+                              })}{" "}
                             </div>
                           </div>
                         </div>

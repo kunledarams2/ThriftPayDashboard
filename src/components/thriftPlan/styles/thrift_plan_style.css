@@ -1281,6 +1281,7 @@ overflow: hidden;
       justify-content: flex-start;
       align-self: stretch;
      flex-shrink: 0;
+     width: 400px;
       position: relative;
      }
  

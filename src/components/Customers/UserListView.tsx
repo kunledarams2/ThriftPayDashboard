@@ -1,10 +1,16 @@
 import React from "react";
 
 import styles from "../Customers/UserListView.module.css";
+import { NavigateFunction, useNavigate } from "react-router-dom";
 
 const UserListView = () => {
+  let navigate: NavigateFunction = useNavigate();
+
   return (
-    <div className={styles.thriftplanCard}>
+    <div
+      onClick={() => navigate("/users/detail/plan")}
+      className={styles.thriftplanCard}
+    >
       <div className={styles.tableCell}>
         <div className={styles.checkbox}>
           <div className={styles.checkboxChild} />

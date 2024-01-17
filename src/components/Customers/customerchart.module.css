@@ -1,0 +1,539 @@
+.heading {
+    align-self: stretch;
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+    display: none;
+}
+.heading1 {
+    align-self: stretch;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    line-height: 23px;
+    font-weight: 600;
+    color: #111217;
+}
+.headingParent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+}
+.icons {
+    position: relative;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.div {
+    position: relative;
+    line-height: 16px;
+}
+.change {
+    border-radius: 4px;
+    background-color: #e3fff2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 4px 8px;
+    gap: 4px;
+    font-size: 10px;
+    color: #02894b;
+}
+.frameGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+.frameWrapper {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.01));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #1a1a1a;
+}
+.tipChild {
+    position: relative;
+    border-radius: 3px;
+    background-color: #111217;
+    width: 10px;
+    height: 10px;
+}
+.inflow {
+    position: relative;
+}
+.tip {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.tipItem {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border-radius: 3px;
+    background-color: #cc3366;
+    width: 10px;
+    height: 10px;
+}
+.outflow {
+    position: absolute;
+    top: 0px;
+    left: 16px;
+}
+.tip1 {
+    position: relative;
+    width: 62px;
+    height: 18px;
+}
+.tipParent {
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 12px;
+    font-family: Poppins;
+}
+.input {
+    flex: 1;
+    position: relative;
+    line-height: 22px;
+}
+.field {
+    align-self: stretch;
+    flex: 1;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    border: 0.5px solid #c3c6d2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px;
+    gap: 10px;
+}
+.inputtext {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.01);
+    width: 139px;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.frameParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.div1 {
+    align-self: stretch;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 29px;
+    flex-shrink: 0;
+}
+.verticalChild {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    border-top: 0.5px solid #d3d6de;
+}
+.vertical {
+    align-self: stretch;
+    flex: 1;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+    color: #444a5b;
+}
+.div3 {
+    position: relative;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    flex-shrink: 0;
+}
+.vertical2 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    text-align: center;
+}
+.div6 {
+    position: relative;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    flex-shrink: 0;
+}
+.vertical5 {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.div9 {
+    position: relative;
+    line-height: 18px;
+    white-space: pre-wrap;
+    display: flex;
+    align-items: center;
+    width: 30px;
+    flex-shrink: 0;
+}
+.am {
+    align-self: stretch;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    display: inline-block;
+    width: 29px;
+    flex-shrink: 0;
+}
+.horizontalLines {
+    position: absolute;
+    height: calc(100% - 26px);
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 26px;
+    left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+}
+.frameChild {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    border-right: 0.5px solid #d3d6de;
+}
+.verticalLinesInner {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.verticalLines {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 48px);
+    top: 0px;
+    right: -1.5px;
+    bottom: 0px;
+    left: 49.5px;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 40px;
+}
+.maskGroupIcon {
+    position: absolute;
+    height: calc(100% + 65px);
+    width: calc(100% + 19px);
+    top: -62px;
+    right: -20px;
+    bottom: -3px;
+    left: 1px;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+}
+.title {
+    flex: 1;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+}
+.closeIcon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.header {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.subtext {
+    align-self: stretch;
+    position: relative;
+    line-height: 18px;
+    color: #c3c6d2;
+}
+.text {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.content {
+    align-self: stretch;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px;
+}
+.pointer {
+    flex: 1;
+    position: relative;
+    height: 37px;
+    transform:  rotate(90deg);
+}
+.pointerIcon {
+    flex: 1;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 8px;
+    object-fit: contain;
+}
+.bottomFrame {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tooltipMaster {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.tooltipStyleBottomPoint {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.tooltip {
+    width: 111px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.ellipseDiv {
+    position: relative;
+    border-radius: 50%;
+    background-color: #111217;
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1);
+    border: 3px solid #fdfdfd;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+}
+.tooltipParent {
+    position: absolute;
+    top: -37px;
+    left: 271.5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.lineGraph {
+    position: absolute;
+    height: calc(100% - 89px);
+    width: calc(100% - 80px);
+    top: 49px;
+    right: 23.5px;
+    bottom: 40px;
+    left: 56.5px;
+    color: #fafafb;
+}
+.mon {
+    position: relative;
+    line-height: 18px;
+}
+.aug {
+    position: relative;
+    line-height: 18px;
+    display: none;
+}
+.monParent {
+    position: absolute;
+    width: calc(100% - 54px);
+    right: 0.5px;
+    bottom: 0px;
+    left: 53.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.graph {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    background-color: #fdfdfd;
+}
+.tip2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    font-family: Poppins;
+}
+.n12340 {
+    position: relative;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #111217;
+}
+.div10 {
+    flex: 1;
+    position: relative;
+    line-height: 16px;
+}
+.change2 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.last7Days {
+    position: relative;
+    line-height: 16px;
+    color: #90949e;
+    display: none;
+}
+.change1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    font-size: 10px;
+    color: #26a068;
+}
+.tipGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.rectangleDiv {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    border-radius: 3px;
+    background-color: #26a068;
+    width: 10px;
+    height: 10px;
+}
+.tip3 {
+    position: relative;
+    width: 62px;
+    height: 18px;
+    font-family: Poppins;
+}
+.change3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    font-size: 10px;
+    color: #f50202;
+}
+.button {
+    border-radius: 8px;
+    border: 1px solid #c3c6d2;
+    display: none;
+}
+.inflowoutflow {
+    align-self: stretch;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 40px;
+    gap: 16px;
+}
+.totalWalletBalance {
+    flex: 1;
+    /* width: 100%; */
+    position: relative;
+    border-radius: 15px;
+    background-color: #fdfdfd;
+    border: 0.5px solid #c3c6d2;
+    box-sizing: border-box;
+  
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px;
+    gap: 40px;
+    text-align: left;
+    font-size: 12px;
+    color: #666f89;
+    font-family: Inter;
+}
+
+
+

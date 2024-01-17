@@ -1,21 +1,20 @@
 interface activityProps {
-    children: React.ReactNode,
-    time: Date
+  children: React.ReactNode;
+  time: Date;
 }
 
-import classes from './Activity.module.css'
-import TimeAgo from 'timeago-react';
+import classes from "./Activity.module.css";
+import TimeAgo from "timeago-react";
 
-
-const Activity = ({children,time}:activityProps) => {
+const Activity = ({ children, time }: activityProps) => {
   return (
     <div className={classes.activityContainer}>
       <p>{children}</p>
       <span>
-      <TimeAgo datetime={time} live={false}/>
+        <TimeAgo datetime={time} live={false} />
       </span>
     </div>
-  )
-}
+  );
+};
 
-export default Activity
+export default Activity;

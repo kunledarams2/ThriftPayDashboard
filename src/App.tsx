@@ -15,6 +15,8 @@
 // import MainApp from "./components/MainApp";
 // import BoardUser from "./Pages/Customers/Dashboard";
 // import SideBar from './components/dashboard/SideBar'
+
+import "react-tooltip/dist/react-tooltip.css";
 import Root from "./Pages/Root/Root";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Customers from "./Pages/Customers/Dashboard";
@@ -43,6 +45,7 @@ import UserContentDetail from "./Pages/Customers/UserContentDetail";
 import UserThriftPlan from "./Pages/Customers/UserThriftPlan";
 import UserWallet from "./Pages/Customers/UserWallet";
 import UserKYC from "./Pages/Customers/UserKYC";
+import { fetchDashboardStat } from "./services/dashboardService";
 
 const router = createBrowserRouter([
   {
@@ -72,41 +75,44 @@ const router = createBrowserRouter([
     },
 
       {
+        // path: "",
+
         element: <DashboardRoot />,
         children: [
-          // {
-          //   index: true,
-          //   element: <Navigate to="/login" replace />,
-          // },
-          { path: "/dashboard", element: <Dashboard /> },
           {
+            loader: () => fetchDashboardStat(),
+            path: "/dashboard",
+            element: <Dashboard />,
+          },
+          {
+            path: "/users",
             element: <Customers />,
             children: [
               {
-                path: "users/overview",
+                path: "overview",
                 element: <UserOverview />,
               },
               {
                 element: <UserContent />,
                 children: [
                   {
-                    path: "users/all",
+                    path: "all",
                     element: <UserContentList />,
                   },
                   {
-                    // path: "users/detail",
+                    path: "detail",
                     element: <UserContentDetail />,
                     children: [
                       {
-                        path: "users/detail/plan",
+                        path: "plan",
                         element: <UserThriftPlan />,
                       },
                       {
-                        path: "users/detail/wallet",
+                        path: "wallet",
                         element: <UserWallet />,
                       },
                       {
-                        path: "users/detail/kyc",
+                        path: "kyc",
                         element: <UserKYC />,
                       },
                     ],
@@ -120,14 +126,15 @@ const router = createBrowserRouter([
             children: [
               { path: "/thrift", element: <ThriftPlan /> },
               {
+                path: "/thrift/summary",
                 element: <ThriftPlanInfoContent />,
                 children: [
                   {
-                    path: "/thrift/summary/overview",
+                    path: "overview",
                     element: <ThriftPlanSummary />,
                   },
                   {
-                    path: "thrift/summary/detail",
+                    path: "detail",
                     element: <ThriftPlanDetail />,
                   },
                 ],
@@ -135,23 +142,11 @@ const router = createBrowserRouter([
               { path: "/thrift", element: <ThriftPlan /> },
             ],
           },
-
-// <<<<<<< feat/dashboard
-// const router = createBrowserRouter([{path:'/',element:<Root/>,errorElement:<ErrorPage/>,children:[{
-//   index: true,
-//   element: <Navigate to="/dashboard" replace />,
-// },{
-//   path:'/dashboard',element:<Dashboard />
-// },{path:'thrift-plans',element:<div>Yo</div>},{path:'/thrift/summary/overview',element:<div>Hello</div>},{path:'wallets',element:<div>This is the wallet page</div>},{path:'users',element:<Customers/>}]}])
-// =======
-//           { path: "wallets", element: <div>This is the wallet page</div> },
-//           // { path: "users", element: <Customers /> },
-//         ],
-//       },
-//     ],
-//   },
-// ]);
-// >>>>>>> main
+        ],
+      },
+    ],
+  },
+]);
 
 function App() {
   return <RouterProvider router={router} />;

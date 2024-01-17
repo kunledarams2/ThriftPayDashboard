@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.2.0",
+    "@svg-maps/nigeria": "^1.0.0",
     "@types/react-datepicker": "^4.15.0",
     "antd": "^5.9.2",
     "antd-init": "^0.8.3",
@@ -17,6 +18,7 @@
     "bootstrap": "^5.3.1",
     "chart.js": "^4.4.1",
     "clsx": "^2.0.0",
+    "d3-geo": "^3.1.0",
     "flowbite": "^2.2.1",
     "moment": "^2.29.4",
     "react": "^18.2.0",
@@ -31,6 +33,9 @@
     "react-otp-input": "^3.0.4",
     "react-router-dom": "^6.15.0",
     "react-select": "^5.8.0",
+    "react-simple-maps": "^3.0.0",
+    "react-timeago": "^7.2.0",
+    "react-tooltip": "^5.25.2",
     "tailwindcss-font-inter": "^3.0.1",
     "timeago-react": "^3.0.6",
     "zod": "^3.22.1"
@@ -38,6 +43,7 @@
   "devDependencies": {
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@types/react-simple-maps": "^3.0.4",
     "@vitejs/plugin-react": "^3.1.0",
     "esbuild": "^0.19.2",
     "postcss": "^8.4.16",

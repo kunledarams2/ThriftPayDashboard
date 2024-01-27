@@ -2,18 +2,20 @@
     padding: 0 5px;
 }
 .activityContainer > p{
-    margin-bottom: 8px;
+    /* margin-bottom: 5px; */
+    margin: 0 0 5px 0;
 }
 
 .activityContainer > p strong{
     font-size: 12px;
+    
 }
 .activityContainer > p span{
     font-size: 12px;
     color: #90949E;
 }
 
-.activityContainer > p b{
+.activityContainer > p b {
     font-size: 12px;
     color: #444a5b;
 }

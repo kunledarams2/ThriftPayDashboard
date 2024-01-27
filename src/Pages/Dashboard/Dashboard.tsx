@@ -1,7 +1,8 @@
 import classes from "./Dashboard.module.css";
 import Card from "../../components/dashboardCard/Card";
 import Select from "../../components/select/Select";
-import DoughnutChart from "../../components/Charts/DoughnutChart";
+// import DoughnutChart from "../../components/Charts/DoughnutChart";
+import DoughnutOverview from "../../components/fullDoughnutChart/DoughnutOverview";
 import Status from "../../components/status/Status";
 import totalUsers from "../../assets/dashboard/totalUsers.png";
 import activeUsers from "../../assets/dashboard/activeUsers.png";
@@ -127,8 +128,9 @@ const Dashboard = () => {
             pnl="-2.5"
           />
         </div>
+
         <div>
-          <DoughnutChart
+          {/* <DoughnutChart
             activePlan={dashboardStat?.total_active_thrift_plan!}
             pendingPlan={dashboardStat?.total_pending_thrift_plan!}
             completedPlan={dashboardStat?.total_completed_thrift_plan!}
@@ -155,7 +157,10 @@ const Dashboard = () => {
               </Status>
               <span>{dashboardStat?.total_completed_thrift_plan}</span>
             </p>
-          </div>
+          </div> */}
+          <div >
+      <DoughnutOverview options={[{dataTitle:'Active',dataColor:'#111217',data:dashboardStat?.total_active_thrift_plan!},{dataTitle:'Pending',dataColor:'#FFE999',data:dashboardStat?.total_pending_thrift_plan!},{dataTitle:'Completed',dataColor:'#B1E3FF',data:dashboardStat?.total_completed_thrift_plan!}]} title="Total Thrift Plans"></DoughnutOverview>
+      </div>
         </div>
       </section>
       <section className={classes.walletActivities}>

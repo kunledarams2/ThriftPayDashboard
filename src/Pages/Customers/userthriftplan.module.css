@@ -255,3 +255,12 @@
     color: #111217;
     font-family: Inter;
     }
+    .frameParent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 24px;
+        color: #111217;
+        }

@@ -1,11 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CustomerOverview from "../../components/Customers/customerOverview";
 import CustomerChart from "../../components/Customers/CustomerChart";
 import UserDistribution from "../../components/Customers/UserDistribution";
 import "../Customers/customer.css";
 import styles from "./useroverview.module.css";
+import { Convert, DashboardStatsData } from "../../services/dashboardService";
+import { number } from "zod";
 
 const UserOverview = () => {
+  const [inActiveUser, setInActiveUser] = useState(0);
+  const [dashboardStat, setDashboardStat] = useState<
+    DashboardStatsData | undefined
+  >(undefined);
+
+  useEffect(() => {
+    const items = localStorage.getItem("dashStats");
+    const responseData = Convert.toDashboardstats(items!);
+    if (responseData.success) {
+      setDashboardStat(responseData.data);
+      const inActiveUser =
+        responseData.data.total_users - responseData.data.total_active_users;
+      setInActiveUser(inActiveUser);
+    }
+
+    // if (responseData) {
+    //   setDashStat(responseData);
+    // }
+  }, []);
   return (
     <>
       <div className={styles.content}>
@@ -21,7 +42,9 @@ const UserOverview = () => {
                 <div className={styles.frameGroup}>
                   <div className={styles.totalUsersParent}>
                     <div className={styles.totalUsers}>Total Users</div>
-                    <div className={styles.div}>3200</div>
+                    <div className={styles.div}>
+                      {dashboardStat?.total_users}
+                    </div>
                   </div>
                   <div className={styles.change}>
                     <div className={styles.change1}>
@@ -72,7 +95,9 @@ const UserOverview = () => {
                 <div className={styles.frameGroup}>
                   <div className={styles.totalUsersParent}>
                     <div className={styles.totalUsers}>Active Users</div>
-                    <div className={styles.div}>237</div>
+                    <div className={styles.div}>
+                      {dashboardStat?.total_active_users}
+                    </div>
                   </div>
                   <div className={styles.change}>
                     <div className={styles.change1}>
@@ -101,7 +126,7 @@ const UserOverview = () => {
                 <div className={styles.frameGroup}>
                   <div className={styles.totalUsersParent}>
                     <div className={styles.totalUsers}>Inactive Users</div>
-                    <div className={styles.div}>45</div>
+                    <div className={styles.div}>{inActiveUser}</div>
                   </div>
                   <div className={styles.change}>
                     <div className={styles.change1}>

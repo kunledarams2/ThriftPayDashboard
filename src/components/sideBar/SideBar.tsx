@@ -435,7 +435,7 @@ const SideBar = () => {
         <NavItem to="/wallets" inActiveicon={wallet} activeIcon={walletAc}>
           Wallets
         </NavItem>
-        <NavItem to="/users/overview" inActiveicon={users} activeIcon={usersAc}>
+        <NavItem to="/users" inActiveicon={users} activeIcon={usersAc}>
           Users
         </NavItem>
       </nav>

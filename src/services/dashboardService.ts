@@ -42,7 +42,8 @@ export async function fetchDashboardStat() {
       );
 
         const stringJson = JSON.stringify(data, null, 4)
-        const responseData = Convert.toDashboardstats(stringJson)
+      const responseData = Convert.toDashboardstats(stringJson)
+      localStorage.setItem('dashStats', JSON.stringify(data));
     
       console.log( responseData);
   

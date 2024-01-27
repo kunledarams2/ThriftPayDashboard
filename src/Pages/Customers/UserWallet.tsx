@@ -1,6 +1,13 @@
 import React from "react";
 import styles from "./userwallet.module.css";
+import { useLocation } from "react-router-dom";
+import { useUser } from "../Customers/UserContentDetail";
 const UserWallet = () => {
+  // const { state } = useLocation();
+  // const { data } = state;
+  console.log("user", useUser);
+  const { state } = useLocation();
+  const data = state ? state.data : null;
   return (
     <>
       <div className={styles.frameParent}>

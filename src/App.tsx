@@ -205,8 +205,13 @@ import UserThriftPlan from "./Pages/Customers/UserThriftPlan";
 import UserWallet from "./Pages/Customers/UserWallet";
 import UserKYC from "./Pages/Customers/UserKYC";
 import { fetchDashboardStat } from "./services/dashboardService";
+
 import Wallet from "./Pages/Wallet/WalletOverview";
 import WalletOverview from "./Pages/Wallet/overview/Overview"
+
+<!-- import Wallet from "./components/Wallet"; -->
+import { fetchAllUser } from "./services/userServices";
+
 
 const router = createBrowserRouter([
   {
@@ -244,17 +249,19 @@ const router = createBrowserRouter([
             element: <Dashboard />,
           },
           {
-            path: "/users",
+            // path: "/users",
             element: <Customers />,
             children: [
               {
-                path: "overview",
+                path: "/users",
                 element: <UserOverview />,
               },
               {
+                path: "/users/info",
                 element: <UserContent />,
                 children: [
                   {
+                    loader: () => fetchAllUser(),
                     path: "all",
                     element: <UserContentList />,
                   },
@@ -265,6 +272,11 @@ const router = createBrowserRouter([
                       {
                         path: "plan",
                         element: <UserThriftPlan />,
+                        // loader: async ({ params }) => {
+                        //   return fetch(
+                        //     `https://thriftpay.onrender.com/api/thrift/user/${params.userId}/plans.json`
+                        //   );
+                        // },
                       },
                       {
                         path: "wallet",
@@ -302,7 +314,8 @@ const router = createBrowserRouter([
             ],
           },
           {
-            path: "wallets",
+
+            path: "/wallets",
             element: <Wallet />,
             // errorElement: <ErrorPage/>,
             children: [
@@ -317,6 +330,10 @@ const router = createBrowserRouter([
               path:"transactions",
               element: <div>Transactions</div>
             }]
+
+<!--             path: "/wallets",
+            element: <Wallet />, -->
+
           },
         ],
       },

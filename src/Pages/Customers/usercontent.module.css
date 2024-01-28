@@ -15,3 +15,20 @@
     color: #111217;
     font-family: Inter;
     }
+
+    .contentList {
+        width: 100%;
+        position: relative;
+
+        height: 600px;
+  
+        display: flex;
+        overflow: scroll;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* padding: 24px; */
+        box-sizing: border-box;
+        /* gap: 24px; */
+        
+        }

@@ -18,12 +18,12 @@ const CustomerDashboard = () => {
   const handelViewDetail = () => {
     setDetails(true);
     setOverview(false);
-    navigate("/users/all");
+    navigate("/users/info/all");
   };
   const handelViewOverview = () => {
     setDetails(false);
     setOverview(true);
-    navigate("/users/overview");
+    navigate("/users");
   };
   return (
     <div>

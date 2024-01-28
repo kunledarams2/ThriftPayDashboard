@@ -54,11 +54,13 @@ const Map = ({ setTooltipContent }: Props) => {
       latitude: 6.43313,
       longitude: 3.52478,
       name: "Lagos",
+      users: 3000,
     },
     {
       latitude: 7.01845,
       longitude: 3.29255,
       name: "Ogun",
+      users: 2000,
     },
     // ["Rivers", 10,
     // latitude :  "4.9979"
@@ -103,6 +105,7 @@ const Map = ({ setTooltipContent }: Props) => {
                   const stateName = stateData.find(
                     (s) => s.name === geo.properties.name
                   );
+
                   // console.log("data", geo);
                   return (
                     <Geography
@@ -120,7 +123,10 @@ const Map = ({ setTooltipContent }: Props) => {
                         console.log(geo.properties.name);
 
                         setTooltipContent(
-                          geo.properties.name + "\n" + "\n20 Users"
+                          geo.properties.name +
+                            "\n" +
+                            stateName?.users +
+                            " Users"
                         );
                       }}
                       onMouseLeave={() => {

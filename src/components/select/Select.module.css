@@ -1,6 +1,7 @@
 .select {
     /* background-color: pink; */
     width: 130px;
+    position: relative;
     
 }
 
@@ -32,6 +33,8 @@ align-items: center;
     position: absolute;
     width: 130px;
     background-color: white;
+    padding: 0 !important;
+    /* bc there is a default set padding from bootstrap pr some' */
 }
 
 .select > ul li {

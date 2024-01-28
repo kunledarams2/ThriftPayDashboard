@@ -9,26 +9,54 @@
     justify-content: space-between;
 }
 
-.card > div:first-child{
+.dashboardCard, .overviewCard {
     /* background-color: aqua; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+.dashboardCard > img {
+    width:40px;
+    height: 40px;
+    /* background-color: pink; */
+}
+
+.overviewCard > img {
+    width:32px;
+    height: 32px;
+    /* background-color: pink; */
+}
+
 .title {
     font-size: 12px;
+    /* background-color: white; */
     font-weight:400;
     color: #666F89;
 }
 
-.amount {
+.dashboardCard > span:last-of-type {
     font-size: 24px;
     font-weight:600;
+    /* background-color: purple; */
 }
 
-.card > div:last-child{
-    /* background-color: aqua; */
+
+.overviewCard > span:last-of-type {
+    font-size: 20px;
+    font-weight:600;
+    /* margin: 0; */
+    /* background-color: purple; */
+    /* height: fit-content; */
+    line-height: 1;
+
+}
+
+
+
+
+.right{
+    /* background-color: purple; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

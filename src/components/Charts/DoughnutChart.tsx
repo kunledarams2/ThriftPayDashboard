@@ -2,13 +2,15 @@ import { Doughnut } from "react-chartjs-2";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-interface Props {
-  activePlan: Number;
-  pendingPlan: Number;
-  completedPlan: Number;
-}
+// interface Props {
+//   activePlan: Number;
+//   pendingPlan: Number;
+//   completedPlan: Number;
+// }
+import classes from './doughbutChart.module.css'
+import { doughnutChartProps } from "../../utils/types/Types";
 
-const DoughnutChart = ({ activePlan, pendingPlan, completedPlan }: Props) => {
+const DoughnutChart = ({ chartData,title}: doughnutChartProps) => {
   // const data = {
   //     labels: ['Label 1', 'Label 2', 'Label 3'],
   //     datasets: [
@@ -19,7 +21,15 @@ const DoughnutChart = ({ activePlan, pendingPlan, completedPlan }: Props) => {
   //       },
   //     ],
   //   };
-
+  // const zz = [2,34,5,6,7]
+  const dataValues = chartData.map(data => data.data)
+  
+  // values.forEach(val => console.log(typeof(val)))
+  // values.forEach(val => console.log('holla',val));
+  const total = dataValues.reduce((acc,current)=>acc+ current, 0)
+  // const total = values[0]
+  // const total = 4
+  // console.log('hola',total);
   const innerLabel = {
     id: "innerLabel",
     beforeDatasetDraw(chart: any, args: any, pluginOptions: any) {
@@ -34,27 +44,28 @@ const DoughnutChart = ({ activePlan, pendingPlan, completedPlan }: Props) => {
       ctx.font = "14px sans-serif";
       ctx.fillStyle = "#90949E";
       ctx.textBaseline = "middle";
-      ctx.fillText("Total Thrift Plans", xCoor, yCoor - 15);
+      ctx.fillText(title, xCoor, yCoor - 15);
 
       ctx.font = "bolder 25px sans-serif";
       ctx.fillStyle = "black";
-      ctx.fillText("2", xCoor, yCoor + 20);
+      ctx.fillText(0, xCoor, yCoor + 20);
 
       // ctx.restore();
     },
   };
   const data = {
-    labels: ["Active", "Pending", "Completed"],
+    labels: chartData.map(data => data.dataTitle),
     datasets: [
       {
         label: "Total Thrift Plans",
-        data: [activePlan, pendingPlan, completedPlan],
-        backgroundColor: ["#111217", "#FFE999", "#B1E3FF"],
+        data: dataValues,
+        backgroundColor: chartData.map(data => data.dataColor),
         // hoverOffset: 4,
         borderWidth: 0,
         spacing: 10,
         borderRadius: 10,
         radius: 100,
+        
       },
     ],
   };
@@ -62,36 +73,37 @@ const DoughnutChart = ({ activePlan, pendingPlan, completedPlan }: Props) => {
   const options = {
     // You can customize additional options here
     cutout: "70%",
-
+    responsive: true,
+    // maintainAspectRatio: true,
     plugins: {
       legend: {
         display: false,
-        position: "right",
-        responsive: true,
-        labels: {
-          boxWidth: 10,
-          boxHeight: 10,
-          padding: 10,
-          font: {
-            size: 14,
-          },
-        },
+        // position: "right",
+        // responsive: true,
+        // labels: {
+        //   boxWidth: 10,
+        //   boxHeight: 10,
+        //   padding: 10,
+        //   font: {
+        //     size: 14,
+        //   },
+        // },
       },
     },
   };
 
   return (
-    <div
-      style={{
-        width: "50%",
-        backgroundColor: "white",
-        display: "flex",
-        alignItems: "center",
-      }}
+    <div className={classes.container}
     >
-      <Doughnut data={data} options={options} plugins={[innerLabel]} />
+      <div>
+        <p className={classes.title}>{title}</p>
+        <p className={classes.total}>{total}</p>
+      </div>
+      <div>
+      <Doughnut data={data} options={options}  />
+      </div>
     </div>
   );
 };
-
+// plugins={[innerLabel]}
 export default DoughnutChart;

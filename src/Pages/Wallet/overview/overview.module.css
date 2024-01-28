@@ -1,0 +1,112 @@
+.overview {
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    /* justify-content:space-between; */
+    gap: 20px;
+}
+
+.chart {
+    width:58%;
+    /* background-color: pink; */
+    border: 1px solid #C3C6D2;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.overview > div:last-child {
+    width: 45%;
+    display: grid;
+    /* background-color: aqua; */
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+
+}
+.walletActivities {
+    width: 100%;
+    /* border-radius:25px; */
+    
+    margin-top:30px;
+    
+    /* height: 300px; */
+    /* background-color: palevioletred; */
+}
+
+.wallet {
+    width: 100%;
+    /* height: 100%; */
+    border: 1px solid #C3C6D2;
+    border-radius: 15px;
+    padding: 20px;
+    /* background-color: slateblue; */
+}
+
+.walletHeader {
+    /* background-color: slategray; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 100px; */
+}
+.walletHeader > div:first-of-type {
+    display: flex;
+    /* background-color: purple; */
+    align-items: center;
+    gap:  20px;
+}
+.walletHeader > div:first-of-type p {
+    /* background-color:pink; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    
+
+}
+
+.balText {
+    font-size:12px;
+    font-weight: 600;
+}
+
+.balance {
+    font-weight: 600;
+    font-size:28px;
+}
+
+.statuses {
+    /* background-color:yellow; */
+    display: flex;
+    gap: 20px;
+}
+
+.flowContainer {
+    width: 100%;
+    height: 60px;
+    /* background-color: yellow; */
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.transactions {
+    margin-top: 30px;
+}
+.transactionsHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.transactionsHeader > p {
+    margin: 0;
+}
+.transactionsHeader > p:first-of-type {
+    font-size: 18px;
+    font-weight: 600;
+}
+.transactionsHeader > p:last-of-type {
+    font-size: 14px;
+    color: #444A5B;
+    font-weight: 600;
+}

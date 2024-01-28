@@ -1,6 +1,6 @@
 export interface pnlProps {
-    trend: 'up'|'down',
-    pnl: string,
+    trend?: 'up'|'down',
+    pnl?: string,
     badge?: boolean
 }
 
@@ -8,7 +8,8 @@ export interface cardProps extends pnlProps {
     icon: string,
     title:string,
     amount: number,
-    period: string
+    period?: string,
+    
   }
 
 export interface flowProps {
@@ -17,3 +18,33 @@ export interface flowProps {
     pnl:pnlProps,
     children: React.ReactNode
 }
+
+type data= {
+    dataTitle: string,
+    dataColor: string,
+    data: number
+}
+export interface doughnutProps {
+    options: data[],
+    title: string,
+    // total: number
+}
+export interface doughnutChartProps {
+    chartData: data[],
+    title: string,
+    // totalData: number
+}
+
+export interface transactionsProp {
+    transactions:{
+        username: string,
+        email: string,
+        tnxId: string,
+        tnxType: string,
+        date: string,
+        status: string,
+        refNum: string,
+        amount:number
+    } []
+}
+

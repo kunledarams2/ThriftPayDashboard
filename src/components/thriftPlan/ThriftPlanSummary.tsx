@@ -102,9 +102,9 @@ const ThriftPlanSummary = () => {
         </div>
       ) : (
         <div className="summary-content-empty">
-          <div>
+          <div className="tabsParent">
+            <ThriftPlanSummaryTab />
             <>
-              <ThriftPlanSummaryTab />
               {seeAll ? null : (
                 <div className="frame-1000002705">
                   <div className="plan-summary">Plan Summary </div>

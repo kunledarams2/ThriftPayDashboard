@@ -9,6 +9,7 @@ import "../Customers/customer.css";
 // import UserListHeader from "../../components/Customers/UserListHeader";
 // import UserListView from "../../components/Customers/UserListView";
 import { NavigateFunction, Outlet, useNavigate } from "react-router-dom";
+import { UserStateProvider } from "./UserStateProvider";
 
 const CustomerDashboard = () => {
   let navigate: NavigateFunction = useNavigate();
@@ -43,7 +44,10 @@ const CustomerDashboard = () => {
           <div className={details ? "rectangle-3" : "rectangle-32"}></div>
         </div>
       </div>
-      <Outlet />
+      <UserStateProvider>
+        <Outlet />
+      </UserStateProvider>
+
       {/* <div className={styles.content}>
         <UserSubTab />
         <UserListHeader />

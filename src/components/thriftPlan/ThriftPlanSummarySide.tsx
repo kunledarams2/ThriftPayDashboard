@@ -96,7 +96,7 @@ const ThriftPlanSummarySide = () => {
             </div>
             <div className="info-4-summary-side">
               <div className="_5-5-summary-side">
-                {data.available_slot}/{data.total_slot}
+                {data.locked_slot}/{data.total_slot}
               </div>
               <div className="filled-slots-summary-side">Filled Slots </div>
             </div>

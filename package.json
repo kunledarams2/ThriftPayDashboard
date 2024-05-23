@@ -46,6 +46,7 @@
     "@types/react-simple-maps": "^3.0.4",
     "@vitejs/plugin-react": "^3.1.0",
     "esbuild": "^0.19.2",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.16",
     "postcss-cli": "^9.1.0",
     "postcss-preset-env": "^9.3.0",

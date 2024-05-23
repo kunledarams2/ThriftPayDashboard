@@ -19,7 +19,7 @@ const ThriftPlanSummaryTab = () => {
   };
 
   return (
-    <div>
+    <>
       {" "}
       <div className="tabs-summary">
         <div onClick={handelViewPlanOverview} className="tab-summary">
@@ -142,7 +142,7 @@ const ThriftPlanSummaryTab = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

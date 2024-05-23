@@ -9,6 +9,7 @@ interface Props {
 
 const CheckEmail = ({ open, close }: Props) => {
   let navigate: NavigateFunction = useNavigate();
+
   const handelButtonClick = () => {
     close = false;
     navigate("/forgot/password/reset");

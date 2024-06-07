@@ -15,11 +15,16 @@ import inflow from "../../../assets/dashboard/inflow.png";
 import outflow from "../../../assets/dashboard/outflow.png";
 import LineChart from "../../../components/Charts/LineChart";
 import Select from '../../../components/select/Select'
-import Transactions  from '../../../components/transactions/Transactions'
+import Transactionlist  from '../../../components/transactions/Transactionlist'
 import { dummyTnxs } from '../../../utils/dummyData'
+import { useEffect } from 'react'
 const Overview = () => {
+  useEffect(()=>{
+    console.log('here')
+  },[])
   
   return (
+
     <div>
         <section className={classes.overview}>
     <div className={classes.chart}>
@@ -92,7 +97,7 @@ const Overview = () => {
                 <p>Recent Transactions</p>
                 <p> <Link to={'../transactions'}> See All </Link></p>
             </div>
-            <Transactions transactions={dummyTnxs}/>
+            <Transactionlist transactions={dummyTnxs}/>
         </section>
     </div>
   )

@@ -1,0 +1,19 @@
+.header {
+    /* background-color: pink; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-weight: 600;
+    text-transform: capitalize;
+    /* background-color: yellow; */
+}
+
+.mid {
+    display: flex;
+    column-gap: 15px;
+    width: 50%;
+    /* background-color: aqua; */
+}

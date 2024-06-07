@@ -48,3 +48,11 @@ export interface transactionsProp {
     } []
 }
 
+export interface btnProps {
+    logo: string,
+    className?:string,
+    children: React.ReactNode,
+    onClick: () => void
+
+}
+

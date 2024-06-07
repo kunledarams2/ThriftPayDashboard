@@ -208,8 +208,9 @@ import { fetchDashboardStat } from "./services/dashboardService";
 
 import Wallet from "./Pages/Wallet/WalletOverview";
 import WalletOverview from "./Pages/Wallet/overview/Overview"
+import Transactions from "./Pages/Wallet/transactions/Transactions";
 
-<!-- import Wallet from "./components/Wallet"; -->
+// <!-- import Wallet from "./components/Wallet"; -->
 import { fetchAllUser } from "./services/userServices";
 
 
@@ -328,11 +329,11 @@ const router = createBrowserRouter([
               element: <WalletOverview/>
             },{
               path:"transactions",
-              element: <div>Transactions</div>
+              element: <Transactions />
             }]
 
-<!--             path: "/wallets",
-            element: <Wallet />, -->
+// <!--             path: "/wallets",
+//             element: <Wallet />, -->
 
           },
         ],

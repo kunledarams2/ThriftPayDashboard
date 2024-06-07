@@ -1,12 +1,12 @@
 import TransactionStatus from '../transactionStatus/TransactionStatus';
-import classes from './transactions.module.css'
+import classes from './transactionlist.module.css'
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
 import { transactionsProp } from '../../utils/types/Types';
 const CheckBox = () => {
     return (<MdCheckBoxOutlineBlank style={{color:'#C3C6D2',width:20,height:20}}/>)
 }
 
-const Transactions = ({transactions}:transactionsProp) => {
+const Transactionlist = ({transactions}:transactionsProp) => {
   return (
     <div className={classes.tableContainer}>
         <table>
@@ -86,4 +86,4 @@ const Transactions = ({transactions}:transactionsProp) => {
   )
 }
 
-export default Transactions
+export default Transactionlist

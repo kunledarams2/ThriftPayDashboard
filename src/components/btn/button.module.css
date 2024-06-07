@@ -1,0 +1,15 @@
+.btn {
+    display: flex;
+    /* width: 100px; */
+    /* background-color: yellow; */
+    border: none;
+    justify-content: space-between;
+    align-items: center;
+    column-gap:10px ;
+    font-weight: 600;
+    color: #444A5B;
+    background-color: transparent;
+    
+
+}
+

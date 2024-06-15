@@ -23,7 +23,7 @@ const Header = () => {
         {capitalizedValue == "Thrift" ? "Thrift Plan" : capitalizedValue}
       </div>
       {/* <div className={}>form</div> */}
-      <Search />
+      {/* <Search/> */}
       <AdminPanel />
     </header>
   );

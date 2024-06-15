@@ -1,4 +1,5 @@
 .container {
     padding: 24px;
+    overflow: scroll;
     /* background-color:yellow; */
 }

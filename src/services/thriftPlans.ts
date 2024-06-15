@@ -427,13 +427,23 @@ export class NotificationConvert {
   }
 }
 
-export async function fetchNotification(){
+
+export type notificationQuery={
+  destination: string;
+ 
+
+}
+
+export async function fetchNotification(queryParams:notificationQuery){
 
   try {
    
     
     const { data, status } = await axios.get(
-        API_URL +"notifications", { headers: authHeader() }
+      API_URL + "notifications", {
+        headers: authHeader(),
+        params: queryParams 
+         }
     
     );
     const stringJson = JSON.stringify(data, null, 4);

@@ -11,6 +11,7 @@ import {
   ThriftNotification,
   ThriftNotificationDatum,
   fetchNotification,
+  notificationQuery,
 } from "../../services/thriftPlans";
 import { UserStateProvider, useUser } from "../Customers/UserStateProvider";
 
@@ -68,9 +69,13 @@ export const NotificationPage = () => {
   // const { parentState, setParentState } = useUser();
   console.log(tnotification?.length);
 
+  const queryparams: notificationQuery = {
+    destination: "",
+  };
+
   useEffect(() => {
     if (loading) {
-      fetchNotification().then(
+      fetchNotification(queryparams).then(
         (data) => {
           const stringJson = JSON.stringify(data);
 

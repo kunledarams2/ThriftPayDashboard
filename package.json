@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
+  "homepage": "https://kunledarams2.github.io/ThriftPayDashboard",
   "scripts": {
     "start": "react-scripts start",
 

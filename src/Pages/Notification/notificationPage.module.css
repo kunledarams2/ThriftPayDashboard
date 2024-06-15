@@ -1,0 +1,282 @@
+.buttonLabel {
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+}
+.pill4 {
+    border-radius: 24px;
+    background-color: #02894b;
+    height: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    color: #fafafa;
+}
+.buttonLabel1 {
+    position: relative;
+    line-height: 22px;
+}
+.pill5 {
+    border-radius: 24px;
+    background-color: #f4f5f7;
+    height: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.pill8 {
+    border-radius: 24px;
+    background-color: #f4f5f7;
+    height: 34px;
+    overflow: hidden;
+    display: none;
+}
+.pillParent {
+    /* width: 100%; */
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    text-align: left;
+    font-size: 14px;
+    color: #666f89;
+    font-family: Inter;
+}
+
+.basicThriftPlan1 {
+    flex: 1;
+    position: relative;
+    letter-spacing: -0.01em;
+    line-height: 23px;
+    font-weight: 600;
+}
+.icons1 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.frameParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 8px;
+    font-size: 20px;
+}
+
+.frameParent {
+
+    align-items: center;
+    justify-content: flex-start;
+    padding:40px;
+    gap: 200px;
+    /* width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+ 
+    gap: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    font-family: Inter;
+  
+    flex-grow: 1; */
+    }
+
+    .tabsParent {
+        height: 620px;
+        flex: 1;
+        width: 784px ;
+        border-radius: 10px;
+        border: 0.5px solid #b7b7b7;
+        box-sizing: border-box;
+        position: relative;
+   
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px;
+        gap: 20px;
+        /* text-align: left;
+        font-size: 14px;
+        color: #90949e;
+        font-family: Inter; */
+        
+        }
+
+        .thriftJoinRequest {
+            width: 100%;
+            background: var(--bg-white, #fdfdfd);
+             padding: 20px 24px 0px 12px;
+             display: flex;
+             flex-direction: row;
+             gap: 12px;
+             align-items: flex-start;
+             justify-content: flex-start;
+             align-self: stretch;
+            flex-shrink: 0;
+             position: relative;
+             /* border: 2px solid red; */
+            }
+
+            .avatarstRequest {
+                background: linear-gradient(to left, #ffffff, #ffffff);
+                 border-radius: 50px;
+                 flex-shrink: 0;
+                 width: 42px;
+                 height: 42px;
+                 position: relative;
+                 overflow: hidden;
+                 cursor: pointer;
+                }
+
+
+
+                 
+  .frameRequest {
+    display: flex;
+     flex-direction: column;
+     gap: 24px;
+     align-items: flex-start;
+     justify-content: flex-start;
+     flex: 1;
+     position: relative;
+   
+    }
+
+ .frameRequest2 {
+    display: flex;
+    width: 550px;
+     flex-direction: row;
+     gap: 20px;
+     align-items: flex-start;
+     justify-content: flex-start;
+     align-self: stretch;
+     flex-shrink: 0;
+     position: relative;
+     /* border: 2px solid red; */
+    }
+/* 
+ .frame-2717-request {
+    display: flex;
+     flex-direction: column;
+
+     align-items: flex-start;
+     justify-content: flex-start;
+     flex: 1;
+
+     position: relative;
+     border: 2px solid rgb(89, 0, 255);
+    } */
+
+ .requestTextHeader {
+    color: var(--text-500, #111217);
+     text-align: left;
+     font: var(--body-b-2-semi-bold, 600 14px/22px 'Inter', sans-serif);
+     position: relative;
+     align-self: stretch;
+    
+     /* white-space: normal; */
+     word-wrap: break-word;
+     width: 400px;
+    
+    }
+
+ .requestTextSub {
+    color: var(--text-200, #90949e);
+     text-align: left;
+     font: var(--body-b-3-regular, 400 12px/18px 'Inter', sans-serif);
+     position: relative;
+     align-self: stretch;
+   
+    }
+
+    .frameTime {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        gap: 10px;
+        /* align-self: stretch; */
+         /* flex-direction: column;
+       
+        
+       
+        flex-shrink: 0;
+        
+         overflow: hidden;
+         cursor: pointer; */
+        
+        }
+    
+     .requestTime {
+        color: var(--text-200, #90949e);
+         text-align: right;
+         font: var(--overline-regular, 400 10px/14px 'Poppins', sans-serif);
+         position: relative;
+        }
+    
+     .buttonsJoinRequest {
+        display: flex;
+         flex-direction: row;
+         gap: 16px;
+         align-items: flex-start;
+         justify-content: flex-start;
+         align-self: stretch;
+        flex-shrink: 0;
+         position: relative;
+         cursor: pointer;
+        
+       
+        }
+        .circleRe{
+            background: var(--primary-500, #cc3366);
+         border-radius: 6px;
+         padding: 6px;
+         display: flex;
+         flex-direction: row;
+         gap: 4px;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+         position: relative;
+        }
+    
+     .button-thrift-join-request {
+        background: var(--primary-500, #cc3366);
+         border-radius: 8px;
+         padding: 8px 16px 8px 16px;
+         display: flex;
+         flex-direction: row;
+         gap: 4px;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+         position: relative;
+         cursor: pointer;
+        }
+    
+     .button2-thrift-join-request {
+        color: var(--text-50, #fafafb);
+         text-align: left;
+         font: var(--body-b-3-semi-bold, 600 12px/18px 'Inter', sans-serif);
+         position: relative;
+        }

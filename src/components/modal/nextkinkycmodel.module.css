@@ -1,0 +1,365 @@
+.overlayModal {
+    /* background: rgba(102, 100, 100, 0.6);
+     flex-shrink: 0;
+     width: 100%;
+     height:100%;
+     position: fixed;
+     transition: all 1.3s; */
+
+     z-index: 9999;
+     width: 100vw;
+     height: 100vh;
+     position: absolute;
+     top: 0;
+
+     /* background: rgba(52, 51, 51, 0.7); */
+     background: rgba(102, 100, 100, 0.6);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   
+     transition: all 1.3s ease;
+     /* ma: 200px,200px,300px, 400px; */
+
+    }
+
+    .frameParent {
+        width: 540px;
+        position: relative;
+        border-radius: 8px;
+        background-color: #fdfdfd;
+        border: 0.5px solid #c3c6d2;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 16px;
+        gap: 24px;
+        text-align: left;
+        font-size: 14px;
+        color: #111217;
+        font-family: Inter;
+        overflow: hidden;
+        margin: 40px 200px 200px 00px;
+    }
+    .frameHeader {
+        display: flex;
+         flex-direction: row;
+         gap: 0px;
+         align-items: center;
+         justify-content: flex-start;
+         align-self: stretch;
+        flex-shrink: 0;
+         position: relative;
+        }
+
+    .headText {
+        color: var(--text-500, #111217);
+         text-align: left;
+         font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+         position: relative;
+         flex: 1;
+        }
+
+        .buttonClose  {
+            border-radius: 8px;
+             border-style: solid;
+             border-color: var(--border-divider-dark, #c3c6d2);
+             border-width: 1px;
+             padding: 10px;
+             display: flex;
+             flex-direction: row;
+             gap: 4px;
+             align-items: center;
+             justify-content: center;
+             flex-shrink: 0;
+             position: relative;
+             cursor: pointer;
+            }
+
+    .firstName {
+        position: relative;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        width: 200px;
+        flex-shrink: 0;
+    }
+    .john {
+        flex: 1;
+        position: relative;
+        line-height: 22px;
+        color: #111217;
+    }
+    .firstNameParent {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
+    }
+    .lastName1 {
+        align-self: stretch;
+        position: relative;
+        line-height: 22px;
+    }
+    .daramola {
+        align-self: stretch;
+        position: relative;
+        line-height: 22px;
+        color: #111217;
+    }
+    .lastNameGroup {
+        align-self: stretch;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+    .frameDiv {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 16px;
+        color: #666f89;
+    }
+
+    .frameBut {
+        background: var(--bg-white, #fdfdfd);
+         border-style: solid;
+         border-color: var(--border-divider-dark, #c3c6d2);
+         border-width: 0.5px 0px 0px 0px;
+         padding: 16px 20px 16px 20px;
+         display: flex;
+         flex-direction: row;
+         gap: 16px;
+         align-items: flex-start;
+         justify-content: flex-start;
+         align-self: stretch;
+        flex-shrink: 0;
+         position: relative;
+        }
+     
+     .button4Open {
+        background: var(--primary-500, #cc3366);
+         border-radius: 8px;
+         padding: 12px 36px 12px 36px;
+         display: flex;
+         flex-direction: row;
+         gap: 8px;
+         align-items: center;
+         justify-content: center;
+         flex: 1;
+         position: relative;
+         cursor: pointer;
+        }
+     
+     .button5Open {
+        color: var(--text-50, #fafafb);
+         text-align: left;
+         font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+         position: relative;
+        }
+     
+     .button6Open {
+        border-radius: 8px;
+         border-style: solid;
+         border-color: var(--border-divider-dark, #c3c6d2);
+         border-width: 1px;
+         padding: 12px 36px 12px 36px;
+         display: flex;
+         flex-direction: row;
+         gap: 8px;
+         align-items: center;
+         justify-content: center;
+         flex: 1;
+         position: relative;
+         cursor: pointer;
+        }
+     
+     .button7Open {
+        color: var(--text-400, #444a5b);
+         text-align: left;
+         font: var(--body-b-1-semi-bold, 600 16px/24px 'Inter', sans-serif);
+         position: relative;
+        }
+        .frameGroup {
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 16px;
+            color: #666f89;
+       
+        }
+
+        .idType {
+            position: relative;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+        }
+        .div {
+            flex: 1;
+            position: relative;
+            line-height: 22px;
+            color: #111217;
+        }
+        .idTypeParent {
+            align-self: stretch;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 4px;
+        }
+
+        .bvnParent {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 4px;
+            font-size: 14px;
+            color: #666f89;
+        }
+        .bvn {
+            position: relative;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            width: 200px;
+        }
+
+        .verificationPhoto {
+            position: relative;
+            line-height: 18px;
+        }
+        .verificationPhotoWrapper {
+            align-self: stretch;
+            border-radius: 8px;
+            background-color: #fafafb;
+            box-shadow: 0px 4px 6px -1px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.1);
+            border: 0.5px solid #d3d6de;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 12px;
+        }
+        .avatarsIcon {
+            position: relative;
+            border-radius: 10px;
+            width: 142px;
+            height: 142px;
+            overflow: hidden;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        .avatarsParent {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+        }
+        .frameDivv {
+            align-self: stretch;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+            font-size: 12px;
+        }
+
+        .address {
+            position: relative;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            width: 200px;
+            flex-shrink: 0;
+        }
+        .addressParent {
+            align-self: stretch;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 4px;
+        }
+        .kogi {
+            flex: 1;
+            position: relative;
+            line-height: 22px;
+            color: #111217;
+        }
+        .johnDoeElectricity1 {
+            flex: 1;
+            position: relative;
+            line-height: 22px;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .digitalMarketingServicesAgr1 {
+            align-self: stretch;
+            flex: 1;
+            position: relative;
+            border-radius: 4px;
+            max-width: 100%;
+            overflow: hidden;
+            max-height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .clickToView1 {
+            position: absolute;
+            top: calc(50% - 11px);
+            left: calc(50% - 43px);
+            line-height: 22px;
+        }
+        .clickToViewWrapper {
+            position: absolute;
+            margin: 0 !important;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0, 0, 0, 0.75);
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+            flex-shrink: 0;
+            z-index: 2;
+            color: #fafafb;
+        }
+        .doc {
+            border-radius: 8px;
+            background-color: #f4f5f7;
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 16px 12px 12px 12px;
+            box-sizing: border-box;
+            position: relative;
+            gap: 12px;
+            top: 20px;
+         
+            color: #111217;
+        }

@@ -3,11 +3,12 @@
     letter-spacing: -0.01em;
     line-height: 23px;
     font-weight: 600;
+    font-size: 16px;
 }
 .heading1 {
     align-self: stretch;
     position: relative;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 22px;
     color: #666f89;
 }

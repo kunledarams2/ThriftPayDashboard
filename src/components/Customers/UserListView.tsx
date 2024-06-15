@@ -55,10 +55,10 @@ const UserListView = ({ user }: Props) => {
         <div className={styles.div}>-</div>
       </div>
       <div className={styles.tableCell5}>
-        <div className={styles.div3}>2</div>
+        <div className={styles.div3}>{}</div>
       </div>
       <div className={styles.tableCell6}>
-        <div className={styles.n20000}>N20,000</div>
+        <div className={styles.n20000}>{}</div>
       </div>
     </div>
   );

@@ -3,10 +3,18 @@
   "private": true,
   "version": "0.0.0",
   "type": "commonjs",
+  "homepage": "https://kunledarams2.github.io/ThriftPayDashboard",
   "scripts": {
+    "start": "react-scripts start",
+
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && react-scripts build",
     "preview": "vite preview"
+  
   },
   "dependencies": {
     "@hookform/resolvers": "^3.2.0",
@@ -47,6 +55,7 @@
     "@types/react-simple-maps": "^3.0.4",
     "@vitejs/plugin-react": "^3.1.0",
     "esbuild": "^0.19.2",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.16",
     "postcss-cli": "^9.1.0",
     "postcss-preset-env": "^9.3.0",

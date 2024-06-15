@@ -1,0 +1,192 @@
+
+
+.overlayModel {
+  
+
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background: rgba(52, 51, 51, 0.7);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    transition: all 1.3s ease;
+
+   }
+
+
+.reviewRequestOpenFrame{
+    border-radius: 15px;
+     display: flex;
+     flex-direction: column;
+     gap: 0px;
+     align-items: center;
+     justify-content: flex-start;
+     width: 601px;
+     height: 900px;
+     position: relative;
+     overflow: scroll;
+     margin: 100px 250px 100px 0px;
+     /* border: 2px solid red; */
+    }
+
+
+    .reviewRequest2Open {
+        background: var(--bg-white, #fdfdfd);
+         padding: 20px;
+         display: flex;
+         flex-direction: column;
+         gap: 40px;
+         align-items: flex-start;
+         justify-content: flex-start;
+         align-self: stretch;
+        flex-shrink: 0;
+         position: relative;
+         overflow: hidden;
+       
+        }
+
+        .frameheader{
+            display: flex;
+             flex-direction: row;
+             gap: 10px;
+             top: 10px;
+             align-items: center;
+             justify-content: flex-start;
+             align-self: stretch;
+            flex-shrink: 0;
+             position: relative;
+           
+          
+            }
+
+
+            .headerText {
+                color: var(--text-500, #111217);
+                 text-align: left;
+                 font: var(--heading-h-4, 600 16px/20px 'Inter', sans-serif);
+                 position: relative;
+                 flex: 1;
+                }
+             
+             .buttonClose {
+                border-radius: 8px;
+                 border-style: solid;
+                 border-color: var(--border-divider-dark, #c3c6d2);
+                 border-width: 1px;
+                 padding: 10px;
+                 display: flex;
+                 flex-direction: row;
+                 gap: 4px;
+                 align-items: center;
+                 justify-content: center;
+                 flex-shrink: 0;
+                 position: relative;
+                 cursor: pointer;
+                }
+
+                .icon {
+                    flex-shrink: 0;
+                     position: relative;
+                     overflow: visible;
+                    
+                    }
+
+                    .frameInner {
+                        display: flex;
+                         flex-direction: column;
+                         gap: 40px;
+                         align-items: flex-start;
+                         justify-content: flex-start;
+                         align-self: stretch;
+                        flex-shrink: 0;
+                         position: relative;
+                         
+                        }
+                     
+                     .frameInner2{
+                        display: flex;
+                         flex-direction: column;
+                         gap: 24px;
+                         top: 0px;
+                         align-items: flex-start;
+                         justify-content: flex-start;
+                         align-self: stretch;
+                        flex-shrink: 0;
+                         position: relative;
+                         /* border: 2px solid rgb(72, 9, 190); */
+                        }
+
+
+                        .frameImage {
+                            align-self: stretch;
+                            flex-shrink: 0;
+                             height: 100px;
+                             position: relative;
+                            }
+                         
+                         .avatarsOpen {
+                            background: linear-gradient(to left, #ffffff, #ffffff);
+                             border-radius: 100px;
+                             width: 100px;
+                             height: 100px;
+                             position: absolute;
+                             left: calc(50% - 49.5px);
+                            top: 0px;
+                             overflow: hidden;
+                            }
+                         
+                         .frameName {
+                            display: flex;
+                             flex-direction: column;
+                             gap: 16px;
+                             align-items: flex-start;
+                             justify-content: flex-start;
+                             align-self: stretch;
+                            flex-shrink: 0;
+                             /* position: relative;
+                             display: flex;
+                             flex-direction: column;
+                             gap: 12px;
+                             align-items: center;
+                             justify-content: stretch;
+                             flex: 1;
+                             position: relative; */
+                            }
+
+                            .userName {
+                                color: var(--text-500, #111217);
+                                 text-align: center;
+                                 font: var(--heading-h-3, 600 24px/28px 'Inter', sans-serif);
+                                 position: relative;
+                                 align-self: stretch;
+                                }
+
+                                .userRequest {
+                                    color: var(--text-500, #666F89);
+                                     text-align: center;
+                                     font: var(--heading-h-3, 300 14px/16px 'Inter', sans-serif);
+                                     position: relative;
+                                     align-self: stretch;
+                                    }
+                                    .userRequest2 {
+                                        color: var(--text-500, #111217);
+                                         text-align: center;
+                                         font: var(--heading-h-3, 600 14px/16px 'Inter', sans-serif);
+                                         position: relative;
+                                         align-self: stretch;
+                                        }
+                                   .userRequestFrame{
+                                    display: flex;
+                                    flex-direction: row;
+                                    gap: 16px;
+                                    align-items: center;
+                                    justify-content: center;
+                                    align-self: stretch;
+                                   flex-shrink: 0;
+                                    position: relative;
+                                    /* border: 2px solid rgb(239, 87, 11); */
+                                    
+                                   }

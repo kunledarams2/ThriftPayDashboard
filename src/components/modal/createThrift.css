@@ -224,22 +224,22 @@
       box-sizing: border-box;
       }
  .add-thrift-plan {
-     background: var(--bg-white, #fdfdfd);
-      border-radius: 15px;
+     background: var(--bg-white, #fefefe);
+      border-radius: 5px;
       padding: 20px 20px 0px 20px;
       display: flex;
       flex-direction: column;
       gap: 20px;
       align-items: flex-start;
       justify-content: flex-start;
-      /* width: 520px; */
-      width: 440px;
-      height: 650px;
-      position: relative;
+      width: 450px;
+      /* width: 40%; */
+      height: 100%;
+      /* position: relative; */
       box-shadow: var(--shadow-xlarge-box-shadow, 0px 8px 10px -6px rgba(16, 24, 40, 0.10), 0px 20px 25px -5px rgba(16, 24, 40, 0.10));
       overflow: hidden;
       overflow:scroll;
-      margin: 200px 400px 200px 0px;
+      margin: 200px 250px 200px 200px;
      
      }
  
@@ -524,7 +524,7 @@
      top: 0;
      background: rgba(52, 51, 51, 0.7);
      display: flex;
-     justify-content: center;
+     justify-content: right;
      align-items: center;
      transition: all 1.3s ease;
 

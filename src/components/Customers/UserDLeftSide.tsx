@@ -16,7 +16,7 @@ const UserDLeftSide = ({ user }: Props) => {
         </div> */}
         <div className={styles.dorcasDaramola1}>
           {" "}
-          {user.first_name} {user.last_name}
+          {user?.first_name} {user?.last_name}
         </div>
         <div className={styles.registrationDate15092023Parent}>
           <div className={styles.registrationDate150920231}>

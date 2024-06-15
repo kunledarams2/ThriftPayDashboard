@@ -154,9 +154,6 @@
 
 // export default App;
 
-
-
-
 // import { useState } from "react";
 // import reactLogo from "./assets/react.svg";
 // import "./App.css";
@@ -207,12 +204,11 @@ import UserKYC from "./Pages/Customers/UserKYC";
 import { fetchDashboardStat } from "./services/dashboardService";
 
 import Wallet from "./Pages/Wallet/WalletOverview";
-import WalletOverview from "./Pages/Wallet/overview/Overview"
-import Transactions from "./Pages/Wallet/transactions/Transactions";
+import WalletOverview from "./Pages/Wallet/overview/Overview";
 
-// <!-- import Wallet from "./components/Wallet"; -->
+//  import Wallet from "./components/Wallet";
 import { fetchAllUser } from "./services/userServices";
-
+import { NotificationPage } from "./Pages/Notification/NotificationPage";
 
 const router = createBrowserRouter([
   {
@@ -262,7 +258,7 @@ const router = createBrowserRouter([
                 element: <UserContent />,
                 children: [
                   {
-                    loader: () => fetchAllUser(),
+                    // loader: () => fetchAllUser(),
                     path: "all",
                     element: <UserContentList />,
                   },
@@ -315,26 +311,30 @@ const router = createBrowserRouter([
             ],
           },
           {
-
             path: "/wallets",
             element: <Wallet />,
             // errorElement: <ErrorPage/>,
             children: [
               {
-              index: true,
-              element: <Navigate to="overview" replace/>
-            },
-            {
-              path:"overview",
-              element: <WalletOverview/>
-            },{
-              path:"transactions",
-              element: <Transactions />
-            }]
+                index: true,
+                element: <Navigate to="overview" replace />,
+              },
+              {
+                path: "overview",
+                element: <WalletOverview />,
+              },
+              {
+                path: "transactions",
+                element: <div>Transactions</div>,
+              },
+            ],
 
-// <!--             path: "/wallets",
-//             element: <Wallet />, -->
-
+            // <!--             path: "/wallets",
+            //             element: <Wallet />, -->
+          },
+          {
+            path: "/notifications",
+            element: <NotificationPage />,
           },
         ],
       },

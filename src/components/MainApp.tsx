@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import DashboardSlider from "./bin/dashboard/DashboardSlider";
-import InnerContent from "./bin/innerContent/InnerContent";
-import Header from "./bin/dashboard/Header";
+// import DashboardSlider from "./bin/dashboard/DashboardSlider";
+// import InnerContent from "./bin/innerContent/InnerContent";
+// import Header from "./bin/dashboard/Header";
 // import MainAppRoutes from "../MainAppRoutes";
 import SideBar from "./sideBar/SideBar";
 
@@ -18,7 +18,7 @@ const MainApp = () => {
          */}
 
         <div className="dashboard-inside-wrapper">
-          <Header headerTitle={title} />
+          {/* <Header headerTitle={title} /> */}
           {/* <MainAppRoutes /> */}
         </div>
       </div>

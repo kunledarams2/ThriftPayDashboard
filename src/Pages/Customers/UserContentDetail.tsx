@@ -1,4 +1,10 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, {
+  ReactNode,
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 import UserDLeftSide from "../../components/Customers/UserDLeftSide";
 import UserDRightSide from "../../components/Customers/UserDRightSide";
 import styles from "./usercontentdetails.module.css";
@@ -14,25 +20,42 @@ import {
 } from "react-router-dom";
 import { any, string } from "zod";
 import { User } from "../../services/userServices";
+import NextKinKYCModel from "../../components/modal/NextKinKYCModel";
+import { UserStateProvider } from "./UserStateProvider";
+// import { UserStateProvider } from "./UserContentList";
 
-type ContextType = { data: User | null };
+// export type ContextType = { data: User | null };
+
+// Define a custom hook to use the context
 
 const UserContentDetail = () => {
   let navigate: NavigateFunction = useNavigate();
 
   const { state } = useLocation();
-  const data = state ? state.data : null;
-  // console.log(data);
+  const result = state ? state.data : null;
+
+  console.log(result);
+
   const [wallet, setWallet] = useState(false);
   const [kyc, setKYC] = useState(false);
   const [plan, setPlan] = useState(true);
   const [transaction, setTransaction] = useState(false);
+
+  const [open, setOpen] = useState(false);
+
+  const closeModalHander = () => {
+    setOpen(false);
+  };
+  const openModalHander = () => {
+    setOpen(true);
+  };
+
   // type ContextType = { user: User | null };
 
-  // Define a context to pass data to components within the Outlet
+  //Define a context to pass data to components within the Outlet
   // const OutletDataContext = React.createContext(null);
 
-  // // Use OutletDataContext.Provider to wrap the components within Outlet
+  // Use OutletDataContext.Provider to wrap the components within Outlet
   // const OutletWithProps = ({ children }) => {
   //   const outlet = useOutlet();
   //   return (
@@ -48,14 +71,14 @@ const UserContentDetail = () => {
     setKYC(false);
     setPlan(false);
     setTransaction(false);
-    navigate("/users/info/detail/wallet");
+    navigate("/users/info/detail/wallet", { state: { data: result } });
   };
   const handelKYC = () => {
     setWallet(false);
     setKYC(true);
     setPlan(false);
     setTransaction(false);
-    navigate("/users/info/detail/kyc");
+    navigate("/users/info/detail/kyc", { state: { data: result } });
   };
 
   const handelTransaction = () => {
@@ -63,7 +86,7 @@ const UserContentDetail = () => {
     setKYC(false);
     setPlan(false);
     setTransaction(false);
-    navigate("users/detail/transactions");
+    navigate("users/detail/transactions", { state: { data: result } });
   };
 
   const handelPlanView = () => {
@@ -71,60 +94,86 @@ const UserContentDetail = () => {
     setKYC(false);
     setPlan(true);
     setTransaction(false);
-    navigate("/users/info/detail/plan");
+    navigate("/users/info/detail/plan", { state: { data: result } });
   };
 
   return (
-    <div className={styles.frameParent}>
-      <UserDLeftSide user={data} />
-      <div className={styles.tabsParent}>
-        <div className={styles.tabs}>
-          <div
-            onClick={handelPlanView}
-            className={plan ? styles.tab : styles.tab1}
-          >
-            <div className={styles.tabLabelWrapper}>
-              <div className={plan ? styles.tabLabel : styles.tabLabel1}>
-                Thrift Plans
+    <UserStateProvider>
+      <>
+        <div className={styles.frameParent}>
+          <UserDLeftSide user={result} />
+          <div className={styles.tabsParent}>
+            <div className={styles.tabs}>
+              <div
+                onClick={handelPlanView}
+                className={plan ? styles.tab : styles.tab1}
+              >
+                <div className={styles.tabLabelWrapper}>
+                  <div className={plan ? styles.tabLabel : styles.tabLabel1}>
+                    Thrift Plans
+                  </div>
+                </div>
+                <div className={plan ? styles.tabChild : styles.tabItem} />
+              </div>
+              <div
+                onClick={handelWalletView}
+                className={wallet ? styles.tab : styles.tab1}
+              >
+                <div className={styles.tabLabelWrapper}>
+                  <div className={wallet ? styles.tabLabel : styles.tabLabel1}>
+                    Wallet
+                  </div>
+                </div>
+                <div className={wallet ? styles.tabChild : styles.tabItem} />
+              </div>
+              <div
+                onClick={handelKYC}
+                className={kyc ? styles.tab : styles.tab1}
+              >
+                <div className={styles.tabLabelWrapper}>
+                  <div className={kyc ? styles.tabLabel : styles.tabLabel1}>
+                    KYC
+                  </div>
+                </div>
+                <div className={kyc ? styles.tabChild : styles.tabItem} />
+              </div>
+              <div className={styles.tab1}>
+                <div className={styles.tabLabelWrapper}>
+                  <div className={styles.tabLabel1}>Transactions</div>
+                </div>
+                <div className={styles.tabItem} />
               </div>
             </div>
-            <div className={plan ? styles.tabChild : styles.tabItem} />
-          </div>
-          <div
-            onClick={handelWalletView}
-            className={wallet ? styles.tab : styles.tab1}
-          >
-            <div className={styles.tabLabelWrapper}>
-              <div className={wallet ? styles.tabLabel : styles.tabLabel1}>
-                Wallet
-              </div>
-            </div>
-            <div className={wallet ? styles.tabChild : styles.tabItem} />
-          </div>
-          <div onClick={handelKYC} className={kyc ? styles.tab : styles.tab1}>
-            <div className={styles.tabLabelWrapper}>
-              <div className={kyc ? styles.tabLabel : styles.tabLabel1}>
-                KYC
-              </div>
-            </div>
-            <div className={kyc ? styles.tabChild : styles.tabItem} />
-          </div>
-          <div className={styles.tab1}>
-            <div className={styles.tabLabelWrapper}>
-              <div className={styles.tabLabel1}>Transactions</div>
-            </div>
-            <div className={styles.tabItem} />
-          </div>
-        </div>
+            {/* <UserStateProvider> */}
+            {/* <Outlet context={{ data } as ContextType} /> */}
 
-        <Outlet context={{ data } satisfies ContextType} />
-      </div>
-    </div>
+            <Outlet />
+
+            {/* <NextKinKYCModel /> */}
+            {/* </UserStateProvider> */}
+
+            {/* <Outlet context={{ data } satisfies ContextType} /> */}
+          </div>
+
+          {/* {open && (
+        <>
+          <NextKinKYCModel
+            open={open}
+            close={closeModalHander}
+            kyc=""
+            result={result}
+          />
+        </>
+      )} */}
+        </div>
+      </>
+    </UserStateProvider>
   );
 };
 
 export default UserContentDetail;
 
-export function useUser() {
-  return useOutletContext<ContextType>();
-}
+// export function useUser() {
+//   return useOutletContext<ContextType>();
+// }
+// export type ContextType = { data: User | null };

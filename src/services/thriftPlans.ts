@@ -3,7 +3,7 @@ import authHeader from "./authHeaders";
 
 
 const API_URL = "https://thriftpay.onrender.com/api/thrift/";
-
+// const API_URL = "http://127.0.0.1:8000/api/thrift/";
  export interface ThriftPlanResponse {
     count:    number;
     next:     null;
@@ -342,6 +342,166 @@ export async function updateJoinPlanRequest(request:JoinPlanRequest, join_id:str
   }
 
 }
+
+
+// Thrift notification 
+
+
+
+export type ThriftNotification = {
+  // success: boolean;
+  // message: string;
+  // data: NotificationDatum[];
+  success: boolean;
+  data:    ThriftNotificationDatum[];
+  message: string;
+}
+
+export type ThriftNotificationDatum = {
+  join_thrift:    JoinThrift;
+    user:           User;
+    coordinator:    ThriftCoordinator;
+    kyc_submission: null;
+    read_status:    string;
+}
+
+export type NotificationDatum = {
+  id:             number;
+  join_thrift:    JoinThrift;
+  // created_at:     Date;
+  // updated_at:     Date;
+  read_status:    string;
+  kyc_submission: undefined;
+  user:           User;
+}
+
+export type JoinThrift = {
+  id:                   number;
+  // created_at:           Date;
+  // updated_at:           Date;
+  name:                 string;
+  contribution_amount:  number;
+  available_slot:       number;
+  locked_slot:          number;
+  total_slot:           number;
+  // is_active:            boolean;
+  // is_open:              boolean;
+  // slots:                Slot[];
+  total_contribution:   number;
+  ongoing_contribution: number;
+  salary_range:         number;
+  start_date:           Date;
+  remittance_day:       string;
+  is_external:          boolean;
+  join_code:            string;
+  relationship:         undefined;
+}
+
+
+export type UserR = {
+  slot:         string;
+  status:       boolean;
+  contribution: string;
+}
+
+export type ThriftCoordinator = {
+  // id:                       null;
+  created_at:               Date;
+  updated_at:               Date;
+  coordinator_user_id:      string;
+  coordinator_contributing: boolean;
+  coordinator_slot:         number;
+  coordinator_phone:        string;
+  coordinator_relationship: string;
+  coordinator_thrift:       number;
+}
+
+
+export class NotificationConvert {
+  public static toNotification(json: string): ThriftNotification {
+      return JSON.parse(json);
+  }
+
+  public static NotificationToJson(value: ThriftNotification): string {
+      return JSON.stringify(value);
+  }
+}
+
+
+export type notificationQuery={
+  destination: string;
+ 
+
+}
+
+export async function fetchNotification(queryParams:notificationQuery){
+
+  try {
+   
+    
+    const { data, status } = await axios.get(
+      API_URL + "notifications", {
+        headers: authHeader(),
+        params: queryParams 
+         }
+    
+    );
+    const stringJson = JSON.stringify(data, null, 4);
+
+    const responseData = NotificationConvert.toNotification(stringJson);
+
+    // console.log( data);
+    return data;
+  } catch (error) {
+    if (axios.isAxiosError(error)) {
+      console.log('error message: ', error.message);
+      return error.message;
+    } else {
+      console.log('unexpected error: ', error);
+      return 'An unexpected error occurred';
+    }
+  }
+
+}
+
+
+export interface CreatePlanRequest{
+ 
+ approve: boolean,
+ user_id:number,
+ contributing: boolean,
+  thrift_id: string,
+  coordinator_slot?: string,
+  
+}
+
+export async function updateCreatePlanRequest(request:CreatePlanRequest){
+
+ try {
+  
+   
+   const  data = await axios.put( 
+     //thrift/plan/25/request
+       API_URL +"plan/"+request.thrift_id+"/request", request, { headers: authHeader() }
+   
+   );
+
+   console.log( data);
+   return data;
+ } catch (error) {
+   if (axios.isAxiosError(error)) {
+     console.log('error message: ', error.message);
+     return error.message;
+   } else {
+     console.log('unexpected error: ', error);
+     return 'An unexpected error occurred';
+   }
+ }
+
+}
+
+
+
 
 
 

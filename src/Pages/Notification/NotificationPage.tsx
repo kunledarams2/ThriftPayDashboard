@@ -70,7 +70,7 @@ export const NotificationPage = () => {
   console.log(tnotification?.length);
 
   const queryparams: notificationQuery = {
-    destination: "",
+    destination: "Dashboard",
   };
 
   useEffect(() => {

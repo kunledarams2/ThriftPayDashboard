@@ -2,8 +2,8 @@ import axios from "axios";
 import authHeader from "./authHeaders";
 
 
-const API_URL = "https://thriftpay.onrender.com/api/thrift/";
-// const API_URL = "http://127.0.0.1:8000/api/thrift/";
+// const API_URL = "https://thriftpay.onrender.com/api/thrift/";
+const API_URL = "http://127.0.0.1:8000/api/thrift/";
  export interface ThriftPlanResponse {
     count:    number;
     next:     null;
@@ -21,7 +21,9 @@ export interface IResult {
     is_active:           boolean;
     is_open:             boolean;
     slots: Slot[];
-   ongoing_contribution: number;
+  ongoing_contribution: number;
+  start_date: string;
+  created_at:string
 }
 
 export interface Slot {

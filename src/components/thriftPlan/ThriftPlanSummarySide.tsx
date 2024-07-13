@@ -5,6 +5,7 @@ import ThriftPlanRequest from "./ThriftPlanRequest";
 
 import ThriftPlanActivities from "./ThriftPlanActivities";
 import ThriftPlanMember from "./ThriftPlanMember";
+import moment from "moment";
 // import { useState } from "react";
 
 const ThriftPlanSummarySide = () => {
@@ -50,7 +51,10 @@ const ThriftPlanSummarySide = () => {
         <div className="bottom-summary-side">
           <div className="frame-1000002715">
             <div className="start-date-summary-side">Start Date: </div>
-            <div className="july-14-2023-summary-side">July 14, 2023 </div>
+            <div className="july-14-2023-summary-side">
+              {" "}
+              {moment(data.start_date).format("MMMM DD, yyyy")}{" "}
+            </div>
           </div>
           <div className="bagde-summary-side">
             <div className="renter-summary-side">Active </div>

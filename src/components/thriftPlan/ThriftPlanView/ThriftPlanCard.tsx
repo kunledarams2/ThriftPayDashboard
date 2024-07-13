@@ -5,6 +5,7 @@ import PlanMenu from "../dropdown/PlanMenu";
 import { IResult } from "../../../services/thriftPlans";
 import { colors } from "react-select/dist/declarations/src/theme";
 import { NavigateFunction, useNavigate } from "react-router-dom";
+import moment from "moment";
 
 interface Props {
   result: IResult;
@@ -30,6 +31,7 @@ const ThriftPlanCard = ({ result }: Props) => {
     // var status = true if (progress > 100) else false
 
     setStatus(Boolean(progress == 100));
+    //  active plan => is_active = true and is_open =false
   });
 
   const getProgressColors = () => {
@@ -48,9 +50,11 @@ const ThriftPlanCard = ({ result }: Props) => {
     <div>
       <div
         className="thriftplan-card"
-        onClick={() =>
-          navigate("/thrift/summary/overview", { state: { data: result } })
-        }
+        onClick={() => {
+          if (!result.is_open && result.is_active) {
+            navigate("/thrift/summary/overview", { state: { data: result } });
+          }
+        }}
       >
         <div className="thriftplan">
           <div className="frame-1000002717-card ">
@@ -123,7 +127,9 @@ const ThriftPlanCard = ({ result }: Props) => {
             </div>
             <div className="frame-1000002713-card ">
               <div className="created-card">Created: </div>
-              <div className="july-14-2023-card">{}July 14, 2023 </div>
+              <div className="july-14-2023-card">
+                {moment(result.created_at).format("MMMM DD, yyyy")}
+              </div>
             </div>
           </div>
           <div className="frame-625905-card ">
@@ -178,7 +184,10 @@ const ThriftPlanCard = ({ result }: Props) => {
         <div className="bottom-card">
           <div className="frame-1000002715-card">
             <div className="start-date-card">Start Date: </div>
-            <div className="july-14-20232-card">July 14, 2023 </div>
+            <div className="july-14-20232-card">
+              {" "}
+              {moment(result.start_date).format("MMMM DD, yyyy")}
+            </div>
           </div>
           <div
             className="bagde-card"
@@ -189,7 +198,11 @@ const ThriftPlanCard = ({ result }: Props) => {
               style={{ color: status ? "#016236" : "#111217" }}
             >
               {" "}
-              {status ? "Completed" : "Active"}{" "}
+              {status && !result.is_open && !result.is_active
+                ? "Completed"
+                : !result.is_open && result.is_active
+                ? "Active"
+                : "Pending"}{" "}
             </div>
           </div>
         </div>

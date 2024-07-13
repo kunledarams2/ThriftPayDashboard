@@ -23,7 +23,7 @@ const UserListView = ({ user }: Props) => {
         <div className={styles.checkbox}>
           <div className={styles.checkboxChild} />
         </div>
-        <img className={styles.avatarsIcon1} alt="" src="Avatars.png" />
+        {/* <img className={styles.avatarsIcon1} alt="" src="Avatars.png" /> */}
         <div className={styles.textAndSupportingText1}>
           <div className={styles.text5}>
             {user.first_name} {user.last_name}
@@ -52,13 +52,13 @@ const UserListView = ({ user }: Props) => {
         </div>
       </div>
       <div className={styles.tableCell3}>
-        <div className={styles.div}>-</div>
+        <div className={styles.div}>0:0:0</div>
       </div>
       <div className={styles.tableCell5}>
-        <div className={styles.div3}>{}</div>
+        <div className={styles.div3}>{2}</div>
       </div>
       <div className={styles.tableCell6}>
-        <div className={styles.n20000}>{}</div>
+        <div className={styles.n20000}>{0.0}</div>
       </div>
     </div>
   );

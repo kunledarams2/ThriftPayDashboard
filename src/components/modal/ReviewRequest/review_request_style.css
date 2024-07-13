@@ -2,17 +2,17 @@
     box-sizing: border-box;
     } */
 .review-request-open{
-   border-radius: 15px;
+   /* border-radius: 15px; */
     display: flex;
     flex-direction: column;
     gap: 0px;
     align-items: center;
     justify-content: flex-start;
-    width: 501px;
-    height: 700px;
+    width: 500px;
+    height: 820px;
     position: relative;
     overflow: scroll;
-    margin: 100px 400px 200px 0px;
+    margin: 100px 250px 200px 0px;
    }
 
 .review-request2-open {

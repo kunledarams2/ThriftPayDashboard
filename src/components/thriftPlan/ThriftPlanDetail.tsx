@@ -91,7 +91,7 @@ const ThriftPlanDetail = () => {
         <div className="loader-container">
           <div
             className="spinner"
-            style={{ margin: "20px 600px 300px 0px" }}
+            style={{ margin: "20px 300px 300px 0px" }}
           ></div>
         </div>
       ) : (

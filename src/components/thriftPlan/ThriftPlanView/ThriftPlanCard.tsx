@@ -135,7 +135,7 @@ const ThriftPlanCard = ({ result }: Props) => {
           <div className="frame-625905-card ">
             <div className="info-2-card ">
               <div className="_10-000-card ">
-                {result.contribution_amount.toLocaleString("en-NG", {
+                {(result.contribution_amount / 100).toLocaleString("en-NG", {
                   style: "currency",
                   currency: "NGN",
                 })}
@@ -151,7 +151,8 @@ const ThriftPlanCard = ({ result }: Props) => {
             <div className="info-3-card">
               <div className="_100-000-card ">
                 {(
-                  result.total_slot * result.contribution_amount
+                  (result.total_slot * result.contribution_amount) /
+                  100
                 ).toLocaleString("en-NG", {
                   style: "currency",
                   currency: "NGN",

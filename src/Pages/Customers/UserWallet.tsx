@@ -85,16 +85,21 @@ const UserWallet: React.FC = () => {
                   </div>
                   <div className={styles.div}>
                     {" "}
-                    {userWallet?.wallet.balance.toLocaleString("en-NG", {
-                      style: "currency",
-                      currency: userWallet?.wallet.currency,
-                    })}
+                    {userWallet?.wallet != null
+                      ? (userWallet?.wallet.balance / 100).toLocaleString(
+                          "en-NG",
+                          {
+                            style: "currency",
+                            currency: userWallet?.wallet.currency,
+                          }
+                        )
+                      : 0}
                   </div>
                 </div>
                 <div className={styles.wemaBank37837836383Wrapper}>
                   <div className={styles.wemaBank37837836383}>
-                    {userWallet?.virtual_account.bank_name.name}:{" "}
-                    {userWallet?.virtual_account.account_number}
+                    {userWallet?.wallet.bank_name}:{" "}
+                    {userWallet?.wallet.account_number}
                   </div>
                 </div>
               </div>
@@ -132,9 +137,9 @@ const UserWallet: React.FC = () => {
               </div>
               {userWallet?.wallet_transaction != null ? (
                 <>
-                  {userWallet?.wallet_transaction.map((result) => (
+                  {userWallet?.wallet_transaction.slice(0, 5).map((result) => (
                     <div className={styles.thriftplanCard}>
-                      <div className={styles.tableCell1} />
+                      {/* <div className={styles.tableCell1} /> */}
                       <div className={styles.tableCell2}>
                         <div className={styles.deposit}>{result.id}</div>
                       </div>
@@ -158,7 +163,7 @@ const UserWallet: React.FC = () => {
                       </div>
                       <div className={styles.tableCell7}>
                         <div className={styles.n20000}>
-                          {result.amount.toLocaleString("en-NG", {
+                          {(result.amount / 100).toLocaleString("en-NG", {
                             style: "currency",
                             currency: userWallet?.wallet.currency,
                           })}

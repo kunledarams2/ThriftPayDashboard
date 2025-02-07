@@ -82,11 +82,11 @@ const UserContentDetail = () => {
   };
 
   const handelTransaction = () => {
-    setWallet(true);
+    setWallet(false);
     setKYC(false);
     setPlan(false);
-    setTransaction(false);
-    navigate("users/detail/transactions", { state: { data: result } });
+    setTransaction(true);
+    navigate("/users/info/detail/transactions", { state: { data: result } });
   };
 
   const handelPlanView = () => {
@@ -137,11 +137,20 @@ const UserContentDetail = () => {
                 </div>
                 <div className={kyc ? styles.tabChild : styles.tabItem} />
               </div>
-              <div className={styles.tab1}>
+              <div
+                className={transaction ? styles.tab : styles.tab1}
+                onClick={handelTransaction}
+              >
                 <div className={styles.tabLabelWrapper}>
-                  <div className={styles.tabLabel1}>Transactions</div>
+                  <div
+                    className={transaction ? styles.tabLabel : styles.tabLabel1}
+                  >
+                    Transactions
+                  </div>
                 </div>
-                <div className={styles.tabItem} />
+                <div
+                  className={transaction ? styles.tabChild : styles.tabItem}
+                />
               </div>
             </div>
             {/* <UserStateProvider> */}

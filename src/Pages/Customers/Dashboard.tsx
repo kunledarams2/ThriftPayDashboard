@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import CustomerChart from "../../components/Customers/CustomerChart";
 // import CustomerOverview from "../../components/Customers/customerOverview";
 // import UserDistribution from "../../components/Customers/UserDistribution";
-import "../Customers/customer.css";
+// import "../Customers/customer.css";
 // import styles from "./usercontent.module.css";
 
 // import UserSubTab from "../../components/Customers/Usertab";
@@ -10,6 +10,7 @@ import "../Customers/customer.css";
 // import UserListView from "../../components/Customers/UserListView";
 import { NavigateFunction, Outlet, useNavigate } from "react-router-dom";
 import { UserStateProvider } from "./UserStateProvider";
+import UserTab from "./UserTab";
 
 const CustomerDashboard = () => {
   let navigate: NavigateFunction = useNavigate();
@@ -28,7 +29,8 @@ const CustomerDashboard = () => {
   };
   return (
     <div>
-      <div className="tabs">
+      <UserTab />
+      {/* <div className="tabs">
         <div className="tab" onClick={handelViewOverview}>
           <div className="frame-1000002689">
             <div className={overview ? "tab-label" : "tab-label2"}>
@@ -43,7 +45,7 @@ const CustomerDashboard = () => {
           </div>
           <div className={details ? "rectangle-3" : "rectangle-32"}></div>
         </div>
-      </div>
+      </div> */}
       <UserStateProvider>
         <Outlet />
       </UserStateProvider>

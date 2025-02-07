@@ -2,7 +2,9 @@ import axios from "axios";
 import authHeader from "./authHeaders";
 
 
-const API_URL = "https://thriftpay.onrender.com/api/thrift/";
+// const API_URL = "https://thriftpay.onrender.com/api/thrift/";
+const API_URL = "http://127.0.0.1:8000/api/thrift/";
+
 
 export type Dashboardstats = {
     success: boolean;
@@ -17,7 +19,11 @@ export type DashboardStatsData = {
     total_completed_thrift_plan:       number;
     total_virtual_account_transaction: number;
     total_virtual_account_Inflow:      number;
-    total_virtual_account_Outflow:     number;
+    total_wallet_balance: number;
+    total_thrift_balance: number;
+  total_virtual_account_Outflow: number;
+  total_contribution_inflow: number;
+  total_contribution_payout:     number;
 }
 
 // Converts JSON strings to/from your types

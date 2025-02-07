@@ -43,11 +43,11 @@ const NextOfKinVerified = ({ result }: Props) => {
               <div className={styles.frameDiv}>
                 <div className={styles.firstNameParent}>
                   <div className={styles.firstName}>First Name</div>
-                  <div className={styles.john}>{`John `}</div>
+                  <div className={styles.john}>{result.first_name}</div>
                 </div>
                 <div className={styles.firstNameParent}>
                   <div className={styles.firstName}>Last Name</div>
-                  <div className={styles.john}>Doe</div>
+                  <div className={styles.john}>{result.last_name} </div>
                 </div>
                 <div className={styles.lastNameGroup}>
                   <div className={styles.lastName1}>Last name</div>
@@ -55,21 +55,19 @@ const NextOfKinVerified = ({ result }: Props) => {
                 </div>
                 <div className={styles.firstNameParent}>
                   <div className={styles.firstName}>Email Address</div>
-                  <div className={styles.john}>Dorcasdaramola@example.com</div>
+                  <div className={styles.john}>{result.email} </div>
                 </div>
                 <div className={styles.firstNameParent}>
                   <div className={styles.firstName}>Phone Number</div>
-                  <div className={styles.john}>08059859595</div>
+                  <div className={styles.john}>{} </div>
                 </div>
                 <div className={styles.firstNameParent}>
                   <div className={styles.firstName}>Relationship</div>
-                  <div className={styles.john}>Spouse</div>
+                  <div className={styles.john}>{result.relationship}</div>
                 </div>
                 <div className={styles.firstNameParent}>
                   <div className={styles.firstName}>Residential Address</div>
-                  <div className={styles.john}>
-                    12, Kolawole street, Ogba, Lagos
-                  </div>
+                  <div className={styles.john}>{result.address}</div>
                 </div>
               </div>
             </div>

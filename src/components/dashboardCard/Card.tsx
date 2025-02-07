@@ -15,11 +15,9 @@ import { useLocation } from "react-router-dom";
 //   period: string
 // }
 const Card = ({ icon, title, amount, pnl, trend, period }: cardProps) => {
+  const location = useLocation().pathname.split("/");
+  const page = location[location.length - 1];
 
-  const location = useLocation().pathname.split('/')
-  const page = location[location.length - 1]
-  
-  
   return (
     <div className={classes.card}>
       <div className={classes[`${page}Card`]}>
@@ -28,10 +26,12 @@ const Card = ({ icon, title, amount, pnl, trend, period }: cardProps) => {
         <span className={classes.amount}>{amount}</span>
       </div>
 
-      {pnl && <div className={classes.right}>
-        <Pnl trend={trend} pnl={pnl} />
-        <span className={classes.period}>{period}</span>
-      </div>}
+      {pnl && (
+        <div className={classes.right}>
+          <Pnl trend={trend} pnl={pnl} />
+          <span className={classes.period}>{period}</span>
+        </div>
+      )}
     </div>
   );
 };

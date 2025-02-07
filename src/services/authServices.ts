@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "https://thriftpay.onrender.com/api/auth/";
+//const API_URL = "https://thriftpay.onrender.com/api/auth/";
+const API_URL = "http://127.0.0.1:8000/api/auth/";
 
 export const signup = (first_name: string, last_name: string, email: string, password: string, is_staff: boolean, username:string) => {
 

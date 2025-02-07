@@ -77,6 +77,7 @@
     line-height: 22px;
     font-weight: 600;
     font-size: 10px;
+    cursor: pointer;
     }
 
     .button2 {
@@ -119,7 +120,8 @@
             gap: 12px;
             }
             .headerCell1 {
-            width: 140px;
+            /* width: 140px; */
+            flex: 1;
             height: 42px;
             display: flex;
             flex-direction: row;
@@ -139,7 +141,8 @@
             box-sizing: border-box;
             }
             .headerCell5 {
-            width: 160px;
+            /* width: 160px; */
+            flex: 1;
             height: 42px;
             display: flex;
             flex-direction: row;
@@ -149,7 +152,8 @@
             box-sizing: border-box;
             }
             .headerCell6 {
-            width: 84px;
+            /* width: 84px; */
+            flex: 1;
             height: 42px;
             display: flex;
             flex-direction: row;
@@ -187,7 +191,7 @@
           }
           .tableCell2 {
                 width: 140px;
-                height: 64px;
+                /* height: 64px; */
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -198,20 +202,28 @@
           .deposit {
                 position: relative;
                 line-height: 18px;
+                white-space: nowrap;
+                overflow: hidden;
+                max-width: 120px; 
+                text-overflow: ellipsis; 
+                display: block;
+
           }
           .tableCell3 {
                 flex: 1;
-                height: 64px;
+                /* height: 64px; */
+                /* width: 20px; */
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
                 padding: 16px;
                 box-sizing: border-box;
+           
           }
           .completed {
                 position: relative;
-                line-height: 16px;
+                line-height: 18px;
                 text-transform: uppercase;
                 font-weight: 500;
           }
@@ -226,7 +238,8 @@
           }
           .tableCell5 {
                 flex: 1;
-                height: 64px;
+                /* height: 64px; */
+                width: 100px;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -235,16 +248,21 @@
                 box-sizing: border-box;
                 font-size: 10px;
                 color: #016236;
+                /* background-color: aqua; */
           }
           .tableCell6 {
-                width: 160px;
-                height: 64px;
+            flex: 1;
+                /* width: 60px; */
+                /* max-width: 160px; */
+                /* height: 64px; */
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-start;
                 padding: 16px;
                 box-sizing: border-box;
+                
+              
           }
           .n20000 {
                 position: relative;
@@ -252,13 +270,15 @@
                 font-weight: 600;
           }
           .tableCell7 {
-                height: 64px;
+            flex: 1;
+                /* height: 40px; */
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: flex-end;
-                padding: 16px;
+                padding: 6px;
                 box-sizing: border-box;
+             
           }
           .thriftplanCard {
                 width: 100%;
@@ -272,6 +292,7 @@
                 font-size: 12px;
                 color: #444a5b;
                 font-family: Inter;
+                /* background-color: #016236; */
           }
           
           

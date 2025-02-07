@@ -209,6 +209,7 @@ import WalletOverview from "./Pages/Wallet/overview/Overview";
 //  import Wallet from "./components/Wallet";
 import { fetchAllUser } from "./services/userServices";
 import { NotificationPage } from "./Pages/Notification/NotificationPage";
+import Transactions from "./Pages/Customers/Transactions";
 
 const router = createBrowserRouter([
   {
@@ -282,6 +283,10 @@ const router = createBrowserRouter([
                       {
                         path: "kyc",
                         element: <UserKYC />,
+                      },
+                      {
+                        path: "transactions",
+                        element: <Transactions />,
                       },
                     ],
                   },

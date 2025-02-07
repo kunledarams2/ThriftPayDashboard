@@ -168,13 +168,15 @@ const ThriftPlanDetail = () => {
                             <div className="frame-1000002763">
                               <div className="_10-000-of-50-000-plan-detail">
                                 {getCurrency(
-                                  Number(thriftPlanActive?.ongoing_contribution)
+                                  Number(
+                                    thriftPlanActive?.ongoing_contribution
+                                  ) / 100
                                 )}{" "}
                                 of{" "}
                                 {getCurrency(
                                   Number(
                                     thriftPlanActive?.expented_contribution
-                                  )
+                                  ) / 100
                                 )}{" "}
                               </div>
                               <div className="progress-plan-detail">

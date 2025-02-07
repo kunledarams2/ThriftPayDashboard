@@ -1,7 +1,8 @@
 import axios from "axios";
 import authHeader from "./authHeaders";
+const API_URL = "http://127.0.0.1:8000/api/";
 
-const API_URL = "https://thriftpay.onrender.com/api/";  //http://127.0.0.1:8000/ https://thriftpay.onrender.com
+// const API_URL = "https://thriftpay.onrender.com/api/";  //http://127.0.0.1:8000/ https://thriftpay.onrender.com
 
 export const getPublicContent = () => {
   return axios.get(API_URL + "all");
@@ -201,13 +202,15 @@ export type UserWallet = {
 
 export type UserWalletData = {
   wallet: Wallet;
-  virtual_account:    VirtualAccount;
+  // virtual_account:    VirtualAccount;
   wallet_transaction: WalletTransaction[];
 }
 
 export type Wallet = {
   currency: string;
-  balance:  number;
+  balance: number;
+  bank_name: string;
+  account_number: string;
 }
 
 export type VirtualAccount = {

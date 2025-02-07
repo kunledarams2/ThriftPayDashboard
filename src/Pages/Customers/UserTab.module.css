@@ -1,0 +1,70 @@
+
+.tabLabel {
+    position: relative;
+    line-height: 22px;
+}
+.tabLabelWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.tabChild {
+    align-self: stretch;
+    position: relative;
+    background-color: #d3d6de;
+    height: 1px;
+    opacity: 0;
+}
+.tab {
+    background-color: #fdfdfd;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 12px 0px;
+    gap: 12px;
+}
+.tabLabel1 {
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+}
+.tabItem {
+    align-self: stretch;
+    position: relative;
+    background-color: #02894b;
+    height: 2px;
+}
+.tab1 {
+    background-color: #fdfdfd;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 12px 0px;
+    gap: 12px;
+    color: #02894b;
+}
+.tabs {
+    width: 100%;
+    position: relative;
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #c3c6d2;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 12px 24px 0px 12px;
+    gap: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #90949e;
+    font-family: Inter;
+}
+

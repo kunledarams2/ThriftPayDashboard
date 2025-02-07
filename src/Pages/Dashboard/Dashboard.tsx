@@ -158,9 +158,28 @@ const Dashboard = () => {
               <span>{dashboardStat?.total_completed_thrift_plan}</span>
             </p>
           </div> */}
-          <div >
-      <DoughnutOverview options={[{dataTitle:'Active',dataColor:'#111217',data:dashboardStat?.total_active_thrift_plan!},{dataTitle:'Pending',dataColor:'#FFE999',data:dashboardStat?.total_pending_thrift_plan!},{dataTitle:'Completed',dataColor:'#B1E3FF',data:dashboardStat?.total_completed_thrift_plan!}]} title="Total Thrift Plans"></DoughnutOverview>
-      </div>
+          <div>
+            <DoughnutOverview
+              options={[
+                {
+                  dataTitle: "Active",
+                  dataColor: "#111217",
+                  data: dashboardStat?.total_active_thrift_plan!,
+                },
+                {
+                  dataTitle: "Pending",
+                  dataColor: "#FFE999",
+                  data: dashboardStat?.total_pending_thrift_plan!,
+                },
+                {
+                  dataTitle: "Completed",
+                  dataColor: "#B1E3FF",
+                  data: dashboardStat?.total_completed_thrift_plan!,
+                },
+              ]}
+              title="Total Thrift Plans"
+            ></DoughnutOverview>
+          </div>
         </div>
       </section>
       <section className={classes.walletActivities}>
@@ -168,8 +187,96 @@ const Dashboard = () => {
           <div className={classes.walletHeader}>
             <div>
               <p>
+                <span className={classes.balText}>Total Thrift Balance</span>
+                <span className={classes.balance}>
+                  {getCurrency(
+                    Number(dashboardStat?.total_thrift_balance) / 100
+                  )}
+                </span>
+              </p>
+              <Pnl badge={true} trend="up" pnl="+2.5" />
+            </div>
+            <div>
+              <Status type="sm" boxColor="#111217">
+                Total Contributions
+              </Status>
+              <Status type="sm" boxColor="#CC3366">
+                Total Payouts
+              </Status>
+            </div>
+          </div>
+          <div className={classes.flowContainer}>
+            <Flow
+              icon={inflow}
+              amount={getCurrency(
+                Number(dashboardStat?.total_contribution_inflow) / 100
+              )}
+              pnl={{ trend: "up", pnl: "+2.5" }}
+            >
+              Total Contributions
+            </Flow>
+            <Flow
+              icon={outflow}
+              amount={getCurrency(
+                Number(dashboardStat?.total_contribution_payout) / 100
+              )}
+              pnl={{ trend: "down", pnl: "-2.5" }}
+            >
+              Total Payouts
+            </Flow>
+          </div>
+          <LineChart />
+        </aside>
+        {/* <aside className={classes.activities}>
+          <div className={classes.activitiesHeader}>
+            <span>Recent Activities</span>
+            <span>See All</span>
+          </div>
+          <div className={classes.activitiesContent}>
+
+            <Activity time={new Date()}>
+              <strong>John Doe’s</strong> <span>request to join</span>{" "}
+              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
+              <span>approved</span>{" "}
+            </Activity>
+
+            <Activity time={new Date()}>
+              <strong>John Doe’s</strong> <span>request to join</span>{" "}
+              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
+              <span>approved</span>{" "}
+            </Activity>
+
+            <Activity time={new Date()}>
+              <strong>John Doe’s</strong> <span>request to join</span>{" "}
+              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
+              <span>approved</span>{" "}
+            </Activity>
+
+            <Activity time={new Date()}>
+              <strong>John Doe’s</strong> <span>request to join</span>{" "}
+              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
+              <span>approved</span>{" "}
+            </Activity>
+
+            <Activity time={new Date()}>
+              <strong>John Doe’s</strong> <span>request to join</span>{" "}
+              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
+              <span>approved</span>{" "}
+            </Activity>
+           
+          </div>
+        </aside> */}
+
+        <aside className={classes.wallet}>
+          <div className={classes.walletHeader}>
+            <div>
+              <p>
                 <span className={classes.balText}>Total Wallet Balance</span>
-                <span className={classes.balance}>N{"12,340"}</span>
+                <span className={classes.balance}>
+                  {getCurrency(
+                    Number(dashboardStat?.total_wallet_balance) / 100
+                  )}
+                </span>
               </p>
               <Pnl badge={true} trend="up" pnl="+2.5" />
             </div>
@@ -186,7 +293,7 @@ const Dashboard = () => {
             <Flow
               icon={inflow}
               amount={getCurrency(
-                Number(dashboardStat?.total_virtual_account_Inflow)
+                Number(dashboardStat?.total_virtual_account_Inflow) / 100
               )}
               pnl={{ trend: "up", pnl: "+2.5" }}
             >
@@ -195,7 +302,7 @@ const Dashboard = () => {
             <Flow
               icon={outflow}
               amount={getCurrency(
-                Number(dashboardStat?.total_virtual_account_Outflow)
+                Number(dashboardStat?.total_virtual_account_Outflow) / 100
               )}
               pnl={{ trend: "down", pnl: "-2.5" }}
             >
@@ -203,46 +310,6 @@ const Dashboard = () => {
             </Flow>
           </div>
           <LineChart />
-        </aside>
-        <aside className={classes.activities}>
-          <div className={classes.activitiesHeader}>
-            <span>Recent Activities</span>
-            <span>See All</span>
-          </div>
-          <div className={classes.activitiesContent}>
-            {/* Backend should send activity in an html template using this format inside the Activity component */}
-            {/* thrift plan should be kept in <bold></bold> and other important texts should be kept in <strong> while the rest should be wrapped in span */}
-            <Activity time={new Date()}>
-              <strong>John Doe’s</strong> <span>request to join</span>{" "}
-              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
-              <span>approved</span>{" "}
-            </Activity>
-
-            <Activity time={new Date()}>
-              <strong>John Doe’s</strong> <span>request to join</span>{" "}
-              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
-              <span>approved</span>{" "}
-            </Activity>
-
-            <Activity time={new Date()}>
-              <strong>John Doe’s</strong> <span>request to join</span>{" "}
-              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
-              <span>approved</span>{" "}
-            </Activity>
-
-            <Activity time={new Date()}>
-              <strong>John Doe’s</strong> <span>request to join</span>{" "}
-              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
-              <span>approved</span>{" "}
-            </Activity>
-
-            <Activity time={new Date()}>
-              <strong>John Doe’s</strong> <span>request to join</span>{" "}
-              <strong>Thrift plan</strong> <b>"Summer Savings"</b>{" "}
-              <span>approved</span>{" "}
-            </Activity>
-            {/* <Activity activity='hello' time={new Date(Date.now() - 864e5)}/> */}
-          </div>
         </aside>
       </section>
     </div>

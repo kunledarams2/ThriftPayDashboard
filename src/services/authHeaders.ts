@@ -9,10 +9,20 @@ export default function authHeader() {
       return {
         Authorization: 'Bearer ' + user.token,
         // 'Content-Type': 'text/plain',
-        'Content-Type': 'application/json'};
+        // "access-control-allow-origin": "*",
+        'Content-Type': 'application/json',
+        'operator': '',
+        // 'Access-Control-Allow-Headers': 'Content-Type, Authorization, operator',
+
+      };
     } else {
       return {
         Authorization: '', 
-        'Content-Type': 'application/json'  };
+        // "access-control-allow-origin": "*",
+        'Content-Type': 'application/json',
+        'operator': '',
+        // 'Access-Control-Allow-Headers': 'Content-Type, Authorization, operator',
+      }
+        ;
     }
   }

@@ -2,15 +2,36 @@ import React from "react";
 import styles from "./usedleftside.module.css";
 import { User } from "../../services/userServices";
 import moment from "moment";
+import { generateInitials } from "../utils/util";
 
 interface Props {
   user: User;
 }
+const getRandomColor = () => {
+  const letters = "0123456789ABCDEF";
+  let color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
 const UserDLeftSide = ({ user }: Props) => {
   return (
     <div className={styles.frameParent}>
       <div className={styles.avatarsParent}>
-        <img className={styles.avatarsIcon} alt="" src="Avatars.png" />
+        <div
+          className={styles.avatars}
+          style={{
+            backgroundColor: getRandomColor(),
+          }}
+        >
+          <div className={styles.initial}>
+            {" "}
+            {generateInitials(user.first_name)}{" "}
+            {generateInitials(user.last_name)}{" "}
+          </div>
+        </div>
+        {/* <img className={styles.avatarsIcon} alt="" src="Avatars.png" /> */}
         {/* <div className={styles.dorcasDaramola}>
           {user.first_name},{user.last_name}
         </div> */}
@@ -20,8 +41,7 @@ const UserDLeftSide = ({ user }: Props) => {
         </div>
         <div className={styles.registrationDate15092023Parent}>
           <div className={styles.registrationDate150920231}>
-            Registration Date: {moment(user.date_joined).format("YYYY-MM-DD")},
-            14:30
+            Registration Date: {moment(user.date_joined).format("MMM DD, yyyy")}
           </div>
           <div className={styles.registrationDate150920231}>Last Login:</div>
         </div>
@@ -46,11 +66,13 @@ const UserDLeftSide = ({ user }: Props) => {
             </div>
             <div className={styles.genderParent}>
               <div className={styles.firstName}>Gender</div>
-              <div className={styles.dorcas}>{"Gender"}</div>
+              <div className={styles.dorcas}>{user.gender}</div>
             </div>
             <div className={styles.genderParent}>
               <div className={styles.firstName}>Date of Birth</div>
-              <div className={styles.dorcas}>August 25, 1998</div>
+              <div className={styles.dorcas}>
+                {moment(user.date_of_birth).format("MMMM DD, yyyy")}
+              </div>
             </div>
           </div>
         </div>
@@ -65,14 +87,6 @@ const UserDLeftSide = ({ user }: Props) => {
             <div className={styles.emailParent}>
               <div className={styles.firstName}>Phone Number</div>
               <div className={styles.dorcas}>{user.phone_number}</div>
-            </div>
-            <div className={styles.genderGroup}>
-              <div className={styles.gender1}>Gender</div>
-              <div className={styles.female1}>Female</div>
-            </div>
-            <div className={styles.genderGroup}>
-              <div className={styles.gender1}>Date of Birth</div>
-              <div className={styles.female1}>August 25, 1998</div>
             </div>
           </div>
         </div>

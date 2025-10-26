@@ -112,7 +112,7 @@ const Map = ({ setTooltipContent }: Props) => {
                       data-tooltip-id={stateName ? "my-tooltip" : ""}
                       key={geo.rsmKey}
                       geography={geo}
-                      fill={stateName ? "#E085A3" : "#FAEBF0"}
+                      fill={stateName ? "#4BBCFF" : "#D6EFFF"}
                       // style={{
                       //   hover: {
                       //     fill: "#E085A3",
@@ -134,7 +134,7 @@ const Map = ({ setTooltipContent }: Props) => {
                       }}
                       style={{
                         hover: {
-                          fill: stateName ? "#CC3366" : "",
+                          fill: stateName ? "#0B53CB" : "",
                           outline: "none",
                         },
                         pressed: {

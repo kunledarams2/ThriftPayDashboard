@@ -1,11 +1,11 @@
-import dashboard from './dashboard.png'
-import dashboardAc from './dashboardAc.png'
-import thriftPlans from './thriftPlans.png'
-import thriftPlansAc from './thriftPlansAc.png'
-import users from './users.png'
-import usersAc from './usersAc.png'
-import wallet from './wallet.png'
-import walletAc from './walletAc.png'
+import dashboard from './dashboard.svg'
+import dashboardAc from './dashboardAc.svg'
+import thriftPlans from './thriftPlans.svg'
+import thriftPlansAc from './thriftPlansAc.svg'
+import users from './users.svg'
+import usersAc from './usersAc.svg'
+import wallet from './wallet.svg'
+import walletAc from './walletAc.svg'
 
 
 export {dashboard,dashboardAc,thriftPlans,thriftPlansAc,users,usersAc,wallet,walletAc}

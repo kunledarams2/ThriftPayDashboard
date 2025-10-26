@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { IResult } from "../../../services/thriftPlans";
 import PlanMenu from "../dropdown/PlanMenu";
 import { NavigateFunction, useNavigate } from "react-router-dom";
+import moment from "moment";
 
 interface Props {
   result: IResult;
@@ -23,7 +24,7 @@ const PlanListItem = ({ result }: Props) => {
   useEffect(() => {
     setProgress(
       (result.contribution_amount /
-        (result.contribution_amount * result.total_slot)) *
+        (result.contribution_amount * result.total_slot * result.total_slot)) *
         100
     );
     setStatus(Boolean(progress == 100));
@@ -46,7 +47,10 @@ const PlanListItem = ({ result }: Props) => {
       }
     >
       <div className="basic-thrift-plan-list">{result.name}</div>
-      <div className="july-14-2023">July 14, 2023 </div>
+      <div className="july-14-2023">
+        {" "}
+        {moment(result.created_at).format("MMMM DD, yyyy")}
+      </div>
       <div className="frame-2688">
         <div
           className="bagde"
@@ -56,11 +60,18 @@ const PlanListItem = ({ result }: Props) => {
             className="renter"
             style={{ color: status ? "#016236" : "#111217" }}
           >
-            {status ? "Completed" : "Active"}{" "}
+            {status && !result.is_open && !result.is_active
+              ? "Completed"
+              : !result.is_open && result.is_active
+              ? "Active"
+              : "Pending"}
           </div>
         </div>
       </div>
-      <div className="july-14-2023">July 14, 2023 </div>
+      <div className="july-14-2023">
+        {" "}
+        {moment(result.start_date).format("MMMM DD, yyyy")}{" "}
+      </div>
       <div className="n-50-000">
         {" "}
         {result.contribution_amount.toLocaleString("en-NG", {

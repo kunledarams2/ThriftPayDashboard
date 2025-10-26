@@ -9,6 +9,7 @@ import {
 } from "../../services/userServices";
 import EmptyContainer from "../../components/utils/EmptyContainer";
 import NoContentSVG from "../../assets/no_content_backup.svg";
+import moment from "moment";
 
 const UserWallet: React.FC = () => {
   // const { state } = useLocation();
@@ -141,20 +142,29 @@ const UserWallet: React.FC = () => {
                     <div className={styles.thriftplanCard}>
                       {/* <div className={styles.tableCell1} /> */}
                       <div className={styles.tableCell2}>
-                        <div className={styles.deposit}>{result.id}</div>
+                        <div className={styles.deposit}>{result.source}</div>
                       </div>
                       <div className={styles.tableCell3}>
                         <div className={styles.deposit}>
-                          {result.transaction_type}
+                          {result.transaction_type == "payin"
+                            ? "Payin"
+                            : "Payout"}
                         </div>
                       </div>
                       <div className={styles.tableCell3}>
-                        <div className={styles.deposit}>15/09/2023, 14:30</div>
+                        <div className={styles.deposit}>
+                          {" "}
+                          {moment(result.created_at).format("YYYY-MM-DD")},
+                          14:30
+                        </div>
                       </div>
                       <div className={styles.tableCell5}>
                         <div className={styles.bagde}>
                           <div className={styles.completed}>
-                            {result.metadata.status}
+                            {result.status == "successful"
+                              ? "Completed"
+                              : result.status}
+                            {/* {result.status} */}
                           </div>
                         </div>
                       </div>

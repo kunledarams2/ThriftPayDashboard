@@ -5,7 +5,7 @@
 }
 .pill4 {
     border-radius: 24px;
-    background-color: #02894b;
+    background: linear-gradient(90deg, #0b53cb, #a023fa);
     height: 34px;
     overflow: hidden;
     display: flex;
@@ -280,7 +280,7 @@
         font-family: Inter;
         }
 
-        .gridWrapper{
+   .gridWrapper{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
@@ -291,7 +291,7 @@
           }
 
 
-          .frameParent {
+   .frameParent {
             height: 400px;
             flex: 1;
             width: 100%;

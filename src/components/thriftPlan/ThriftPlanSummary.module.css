@@ -1,0 +1,669 @@
+.tabLabel {
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+}
+.tabLabelWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.tabChild {
+    align-self: stretch;
+    position: relative;
+    background-color: #0b53cb;
+    height: 2px;
+}
+.tab {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 12px 0px;
+    gap: 12px;
+    color: #0b53cb;
+}
+.tabLabel1 {
+    position: relative;
+    line-height: 22px;
+}
+.tabItem {
+    align-self: stretch;
+    position: relative;
+    background-color: #d3d6de;
+    height: 1px;
+    opacity: 0;
+}
+.tab1 {
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 12px 12px 0px;
+    gap: 12px;
+}
+.icons {
+    width: 20px;
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.back {
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1);
+    border-radius: 20px;
+    background-color: #fafafb;
+    border: 1px solid #d3d6de;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 8px;
+}
+.icons1 {
+    width: 16px;
+    position: relative;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.button {
+    border-radius: 8px;
+    background-color: #e4e5eb;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    gap: 8px;
+}
+.button2 {
+    width: 38px;
+    border-radius: 8px;
+    border: 1px solid #c3c6d2;
+    box-sizing: border-box;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+}
+.backParent {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 0px 12px;
+    gap: 16px;
+    text-align: left;
+}
+.tabs {
+    width: 814px;
+    background-color: #fff;
+    border-bottom: 1px solid #c3c6d2;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 12px 20px 0px 0px;
+    gap: 8px;
+}
+.label {
+    position: relative;
+    line-height: 18px;
+}
+.seperator {
+    width: 20px;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #90949e;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    flex-shrink: 0;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.breadcrumbMaster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.breadcrumb2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #666f89;
+}
+.breadcrumb {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.backGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0px 20px;
+    gap: 24px;
+    font-size: 12px;
+    color: #0b53cb;
+}
+.planSummary {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    letter-spacing: -0.01em;
+    line-height: 23px;
+    font-weight: 600;
+}
+.icon {
+    border-radius: 50px;
+    background-color: #fff3c6;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+}
+.totalContribution {
+    align-self: stretch;
+    position: relative;
+    line-height: 18px;
+}
+.div {
+    align-self: stretch;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: -0.01em;
+    line-height: 23px;
+    font-weight: 600;
+    color: #111217;
+}
+.totalContributionParent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.icons5 {
+    width: 12px;
+    position: relative;
+    height: 12px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.div1 {
+    position: relative;
+    line-height: 16px;
+}
+.change1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.last7Days {
+    position: relative;
+    line-height: 16px;
+    color: #90949e;
+}
+.change {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4px;
+    font-size: 10px;
+    color: #f50202;
+}
+.frameGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.frameParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.totalThriftPlans {
+    flex: 1;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 0.5px solid #c3c6d2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+}
+.icon1 {
+    border-radius: 50px;
+    background-color: #dff1ff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+}
+.change3 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.frameContainer {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.activethriftPlans {
+    flex: 1;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 0.5px solid #c3c6d2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px;
+}
+.icon2 {
+    border-radius: 50px;
+    background-color: #ffdede;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+}
+.icon3 {
+    border-radius: 50px;
+    background-color: #e3e4fc;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+}
+.overview {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+    font-size: 12px;
+    color: #666f89;
+}
+.planSummaryParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0px 20px;
+    gap: 16px;
+}
+.recentTransactions {
+    align-self: stretch;
+    width: 686px;
+    position: relative;
+    letter-spacing: -0.01em;
+    line-height: 23px;
+    font-weight: 600;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.pill {
+    border-radius: 24px;
+    background: linear-gradient(90deg, #0b53cb, #a023fa);
+    height: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    color: #fafafb;
+}
+.pill1 {
+    border-radius: 24px;
+    background-color: #fafafb;
+    border: 0.5px solid #d3d6de;
+    box-sizing: border-box;
+    height: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+}
+.pill4 {
+    width: 109px;
+    border-radius: 24px;
+    background-color: #fafafb;
+    border: 0.5px solid #d3d6de;
+    box-sizing: border-box;
+    height: 34px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+}
+.pillParent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.pillsChild {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 29px;
+    background: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0));
+    width: 37px;
+    transform:  rotate(180deg);
+    transform-origin: 0 0;
+    opacity: 0;
+}
+.iconschevronLeft {
+    position: absolute;
+    height: calc(100% - 10px);
+    top: 5px;
+    bottom: 5px;
+    left: -23px;
+    max-height: 100%;
+    width: 24px;
+    opacity: 0;
+}
+.arrowChild {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0));
+    width: 45px;
+}
+.iconschevronRight {
+    position: absolute;
+    height: calc(100% - 10px);
+    top: 5px;
+    right: 0px;
+    bottom: 5px;
+    max-height: 100%;
+    width: 24px;
+}
+.arrow {
+    position: absolute;
+    top: calc(50% - 17px);
+    right: 0px;
+    width: 45px;
+    height: 34px;
+    display: none;
+}
+.pills {
+    flex: 1;
+    position: relative;
+    height: 34px;
+    overflow: hidden;
+}
+.searchField {
+    width: 133px;
+    border-radius: 8px;
+    background-color: #fafafb;
+    border: 0.5px solid #d3d6de;
+    box-sizing: border-box;
+    height: 38px;
+    display: none;
+}
+.icons11 {
+    width: 14px;
+    position: relative;
+    height: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.button4 {
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+}
+.button3 {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px 8px 16px;
+    gap: 4px;
+}
+.searchFieldParent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: #444a5b;
+}
+.pillsParent {
+    align-self: stretch;
+    width: 774px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #666f89;
+}
+.button5 {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 16px;
+    font-size: 12px;
+    color: #444a5b;
+}
+.recentTransactionsParent {
+    align-self: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.member {
+    width: 160px;
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.transactionType {
+    flex: 1;
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.paymentMethod {
+    width: 120px;
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.headingChild {
+    width: 201px;
+    height: 23px;
+    display: none;
+}
+.amount {
+    width: 100px;
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: right;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.heading {
+    align-self: stretch;
+    background-color: #fafafb;
+    border-top: 0.5px solid #c3c6d2;
+    border-bottom: 0.5px solid #c3c6d2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 20px;
+    font-size: 10px;
+}
+.frankLampard {
+    width: 160px;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #111217;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.februaryContribution {
+    flex: 1;
+    position: relative;
+    line-height: 18px;
+}
+.mar32023 {
+    width: 160px;
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.wallet {
+    width: 120px;
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.n10000 {
+    width: 100px;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #02894b;
+    text-align: right;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.thriftplanCard {
+    align-self: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 20px;
+}
+.headingParent {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: #444a5b;
+}
+.frameParent4 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0px 20px;
+    gap: 16px;
+}
+.content {
+    width: 814px;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 16px 0px 24px;
+    box-sizing: border-box;
+    gap: 20px;
+    text-align: left;
+    font-size: 20px;
+    color: #111217;
+}
+.tabsParent {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 14px;
+    color: #90949e;
+    font-family: Urbanist;
+}
+

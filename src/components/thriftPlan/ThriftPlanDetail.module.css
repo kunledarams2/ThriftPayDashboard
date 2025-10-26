@@ -1,0 +1,912 @@
+.icons {
+    width: 20px;
+    position: relative;
+    height: 20px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.back {
+    box-shadow: 0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px -1px rgba(16, 24, 40, 0.1);
+    border-radius: 20px;
+    background-color: #fafafb;
+    border: 1px solid #d3d6de;
+    display: none;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 8px;
+}
+.label {
+    position: relative;
+    line-height: 18px;
+}
+.seperator {
+    width: 20px;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #90949e;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    flex-shrink: 0;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.breadcrumbMaster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.breadcrumbStyleActive {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.breadcrumb2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #666f89;
+}
+.breadcrumb {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.backParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 24px;
+}
+.happyStudentcuateIcon {
+    width: 23.48%;
+    position: absolute;
+    margin: 0 !important;
+    height: 102.72%;
+    top: -1.39%;
+    right: 71.93%;
+    bottom: -1.33%;
+    left: 4.59%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    z-index: 0;
+}
+.icons1 {
+    width: 24px;
+    position: relative;
+    height: 24px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+}
+.februaryCycleCompleted {
+    align-self: stretch;
+    position: relative;
+    letter-spacing: -0.01em;
+    line-height: 23px;
+    font-weight: 600;
+}
+.greatNewsThe {
+    align-self: stretch;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444a5b;
+}
+.februaryCycleCompletedSucceParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.bannerInner {
+    width: 488px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    z-index: 2;
+}
+.banner {
+    align-self: stretch;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    background-color: #edf9ff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 20px 20px 40px 40px;
+    position: relative;
+    gap: 10px;
+}
+.icons2 {
+    width: 16px;
+    position: relative;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.icon {
+    border-radius: 50px;
+    background-color: #edf9ff;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 4px;
+}
+.totalAmountContributed {
+    align-self: stretch;
+    position: relative;
+    line-height: 20px;
+}
+.totalAmountContributedForFWrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.frameContainer {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.of50000 {
+    align-self: stretch;
+    position: relative;
+    line-height: 24px;
+    font-weight: 600;
+}
+.progressBarChild {
+    align-self: stretch;
+    flex: 1;
+    position: relative;
+    background-color: #02894b;
+}
+.progressBarItem {
+    align-self: stretch;
+    width: 0px;
+    position: relative;
+    background-color: #f4f5f7;
+}
+.progressBar {
+    flex: 1;
+    border-radius: 1000px;
+    height: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+.div {
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+}
+.progress {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #02894b;
+}
+.of50000Parent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    font-size: 16px;
+    color: #111217;
+}
+.paymentDueDate {
+    align-self: stretch;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    gap: 16px;
+}
+.mar42023 {
+    align-self: stretch;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #111217;
+}
+.paymentDueDateContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.paymentDueDate1 {
+    align-self: stretch;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background-color: #fff;
+    height: 99px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+    box-sizing: border-box;
+}
+.avatarsIcon {
+    width: 32px;
+    position: relative;
+    border-radius: 50px;
+    height: 32px;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.johnDoe {
+    position: relative;
+    line-height: 22px;
+    font-weight: 600;
+}
+.johndoeexamplecom {
+    position: relative;
+    font-size: 10px;
+    line-height: 16px;
+    color: #666f89;
+    display: none;
+}
+.johnDoeParent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.payOutReceived {
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.bagde {
+    border-radius: 20px;
+    background-color: #eefff6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    font-size: 10px;
+    color: #087343;
+}
+.avatarsParent {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    color: #111217;
+}
+.memberReceivingPayoutParent {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+.memberReceivingPayment {
+    align-self: stretch;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background-color: #fff;
+    border: 0.5px solid #e4e5eb;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 16px;
+}
+.paymentDueDateGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.paymentDueDateParent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.heading {
+    flex: 1;
+    position: relative;
+    line-height: 24px;
+    font-weight: 600;
+}
+.headingWrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.johnDoeWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.avatarsGroup {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+.bagde1 {
+    border-radius: 20px;
+    background-color: #eefff6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    font-size: 10px;
+    color: #02894b;
+}
+.thriftMember {
+    align-self: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 0px;
+    text-align: left;
+    font-size: 12px;
+    color: #111217;
+}
+.jd {
+    position: absolute;
+    top: calc(50% - 11px);
+    left: calc(50% - 7px);
+    line-height: 22px;
+    font-weight: 600;
+}
+.avatars {
+    width: 32px;
+    position: relative;
+    border-radius: 50px;
+    background-color: #a491d3;
+    height: 32px;
+}
+.johnDoeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    font-size: 12px;
+    color: #111217;
+}
+.bagde2 {
+    border-radius: 20px;
+    background-color: #eefff6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 8px;
+    text-align: left;
+    font-size: 10px;
+    color: #02894b;
+}
+.thriftMember1 {
+    align-self: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 12px 0px;
+}
+.jd1 {
+    position: absolute;
+    top: calc(50% - 11px);
+    left: calc(50% - 8px);
+    line-height: 22px;
+    font-weight: 600;
+}
+.avatars1 {
+    width: 32px;
+    position: relative;
+    border-radius: 50px;
+    background-color: #b347ff;
+    height: 32px;
+}
+.jd2 {
+    position: absolute;
+    top: calc(50% - 11px);
+    left: calc(50% - 11px);
+    line-height: 22px;
+    font-weight: 600;
+}
+.avatars3 {
+    width: 32px;
+    position: relative;
+    border-radius: 50px;
+    background-color: #0a7bff;
+    height: 32px;
+}
+/* .thriftMemberParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    font-size: 14px;
+    color: #fafafb;
+} */
+.thriftMemberParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: #fafafb;
+    height: 300px;
+    max-height: 100vh; /* or any fixed value like 500px */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Optional: for Firefox */
+    scrollbar-color: #ccc transparent; /* Optional */
+}
+.thriftMemberParent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.thriftMemberParent::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+.recentActivities {
+    align-self: stretch;
+    width: 360px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    background-color: #fff;
+    border: 0.5px solid #e4e5eb;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px;
+    gap: 16px;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+.frameGroup {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.frameWrapper {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.transactions {
+    align-self: stretch;
+    width: 686px;
+    position: relative;
+    line-height: 24px;
+    font-weight: 600;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.transactionsParent {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: #444a5b;
+    height: 220px;
+    max-height: 100vh; /* or any fixed value like 500px */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Optional: for Firefox */
+    scrollbar-color: #ccc transparent; /* Optional */
+}
+
+.pill {
+    border-radius: 24px;
+    background: linear-gradient(90deg, #0b53cb, #a023fa);
+    height: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    color: #fafafb;
+}
+.buttonLabel1 {
+    position: relative;
+    line-height: 20px;
+}
+.pill1 {
+    border-radius: 24px;
+    background-color: #fff;
+    border: 0.5px solid #d3d6de;
+    box-sizing: border-box;
+    height: 34px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+}
+.pill4 {
+    width: 109px;
+    border-radius: 24px;
+    background-color: #fff;
+    border: 0.5px solid #d3d6de;
+    box-sizing: border-box;
+    height: 34px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+}
+.pillParent {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+}
+.pillsChild {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    left: 29px;
+    background: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0));
+    width: 37px;
+    transform:  rotate(180deg);
+    transform-origin: 0 0;
+    opacity: 0;
+}
+.iconschevronLeft {
+    position: absolute;
+    height: calc(100% - 10px);
+    top: 5px;
+    bottom: 5px;
+    left: -23px;
+    max-height: 100%;
+    width: 24px;
+    opacity: 0;
+}
+.arrowChild {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: linear-gradient(-90deg, #fff, rgba(255, 255, 255, 0));
+    width: 45px;
+}
+.iconschevronRight {
+    position: absolute;
+    height: calc(100% - 10px);
+    top: 5px;
+    right: 0px;
+    bottom: 5px;
+    max-height: 100%;
+    width: 24px;
+}
+.arrow {
+    position: absolute;
+    top: calc(50% - 17px);
+    right: 0px;
+    width: 45px;
+    height: 34px;
+    display: none;
+}
+.pills {
+    flex: 1;
+    position: relative;
+    height: 34px;
+    overflow: hidden;
+}
+.searchField {
+    width: 133px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 0.5px solid #d3d6de;
+    box-sizing: border-box;
+    height: 38px;
+    display: none;
+}
+.icons4 {
+    width: 14px;
+    position: relative;
+    height: 14px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.button {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px 8px 16px;
+    gap: 4px;
+}
+.searchFieldParent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: #444a5b;
+}
+.pillsParent {
+    align-self: stretch;
+    width: 774px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: #666f89;
+}
+.member {
+    width: 160px;
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.transactionType {
+    flex: 1;
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.paymentMethod {
+    width: 120px;
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.headingChild {
+    width: 201px;
+    height: 23px;
+    display: none;
+}
+.amount {
+    width: 100px;
+    position: relative;
+    line-height: 16px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: right;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.heading1 {
+    align-self: stretch;
+    background-color: #fafafb;
+    border-top: 0.5px solid #e4e5eb;
+    border-bottom: 0.5px solid #e4e5eb;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px 20px;
+    font-size: 10px;
+    color: #111217;
+}
+.contribution {
+    flex: 1;
+    position: relative;
+    line-height: 18px;
+}
+.mar32023 {
+    width: 160px;
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.bankTransfer {
+    width: 120px;
+    position: relative;
+    line-height: 18px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.n10000 {
+    width: 100px;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #02894b;
+    text-align: right;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.thriftplanCard {
+    align-self: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 20px;
+}
+.frankLampard {
+    width: 160px;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #111217;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.n50000 {
+    width: 100px;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #f85656;
+    text-align: right;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.n100000 {
+    width: 100px;
+    position: relative;
+    line-height: 18px;
+    font-weight: 600;
+    color: #f50202;
+    text-align: right;
+    display: inline-block;
+    flex-shrink: 0;
+}
+.thriftplanCard6 {
+    width: 774px;
+    background-color: #fff;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+.headingParent {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 12px;
+    color: #444a5b;
+}
+.frameParent1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 16px;
+    color: #111217;
+}
+.frameParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 14px;
+    color: #666f89;
+}
+.bannerParent {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 20px;
+    font-size: 20px;
+    color: #111217;
+}
+.content {
+    width: 100%;
+    position: relative;
+    background-color: #f4f5f7;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 16px 20px 24px;
+    box-sizing: border-box;
+    gap: 16px;
+    text-align: left;
+    font-size: 12px;
+    color: #0b53cb;
+    /* font-family: Urbanist; */
+}
+

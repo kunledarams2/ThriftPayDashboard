@@ -23,7 +23,9 @@ export type DashboardStatsData = {
     total_thrift_balance: number;
   total_virtual_account_Outflow: number;
   total_contribution_inflow: number;
-  total_contribution_payout:     number;
+  total_contribution_payout: number;
+  total_income: number;
+  total_charges:     number;
 }
 
 // Converts JSON strings to/from your types

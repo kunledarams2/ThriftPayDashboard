@@ -210,6 +210,7 @@ import WalletOverview from "./Pages/Wallet/overview/Overview";
 import { fetchAllUser } from "./services/userServices";
 import { NotificationPage } from "./Pages/Notification/NotificationPage";
 import Transactions from "./Pages/Customers/Transactions";
+import PlanSummary from "./components/thriftPlan/PlanSummary";
 
 const router = createBrowserRouter([
   {
@@ -304,7 +305,7 @@ const router = createBrowserRouter([
                 children: [
                   {
                     path: "overview",
-                    element: <ThriftPlanSummary />,
+                    element: <PlanSummary />,
                   },
                   {
                     path: "detail",

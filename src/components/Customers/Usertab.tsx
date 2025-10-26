@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./Usertab.module.css";
+import searchIcon from "../../assets/header/search_icon.svg";
+import exportIcon from "../../assets/header/export.svg";
+import filterIcon from "../../assets/header/filter.svg";
 
 const UserSubTab = () => {
   return (
     <div className={styles.usersParent}>
       <div className={styles.users}>Users</div>
-      <div className={styles.pillsParent}>
+      {/* <div className={styles.pillsParent}>
         <div className={styles.pills}>
           <div className={styles.pillParent}>
             <div className={styles.pill4}>
@@ -47,19 +50,19 @@ const UserSubTab = () => {
             <div className={styles.button1}>Filters</div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className={styles.searchFieldGroup}>
         <div className={styles.searchField2}>
-          <img className={styles.icons5} alt="" src="Icons.png" />
+          <img className={styles.icons5} alt="" src={searchIcon} />
           <div className={styles.search}>Search</div>
         </div>
         <div className={styles.button2}>
-          <img className={styles.icons6} alt="" src="Icons.png" />
+          <img className={styles.icons6} alt="" src={filterIcon} />
           <div className={styles.buttonLabel}>Filters</div>
         </div>
       </div>
       <div className={styles.button4}>
-        <img className={styles.icons6} alt="" src="Icons.png" />
+        <img className={styles.icons6} alt="" src={exportIcon} />
         <div className={styles.buttonLabel}>Export</div>
       </div>
     </div>

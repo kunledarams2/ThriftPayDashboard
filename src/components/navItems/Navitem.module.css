@@ -6,8 +6,10 @@
     position: relative;
     /* column-gap: 20px; */
     border-radius:0 5px 5px 0;
-    color: white;
+    color: #897566;
 }
+
+
 .navItem {
     width: 80%;
     height:100%;
@@ -20,6 +22,7 @@
     cursor: pointer;
     position: absolute;
     left: 33px;
+    /* color: #0B53CB; */
     /* z-index: 1000; */
 }
 
@@ -39,7 +42,7 @@
    .active::before {
       content: "";
       display: block;
-      background-color:white;
+      background-color:#0B53CB;
       width: 5px;
       height: 70%;
       border-radius:0 5px 5px 0;
@@ -49,6 +52,6 @@
   }
   
   .active {
-      background-color:#444A5B;
-      color: white;
+      background-color:#EDF9FF;
+      color: #0B53CB;
   }

@@ -188,13 +188,12 @@ const UserThriftPlan = () => {
                         <div className={styles.info2Parent}>
                           <div className={styles.info2}>
                             <div className={styles.div}>
-                              {result.thrift.contribution_amount.toLocaleString(
-                                "en-NG",
-                                {
-                                  style: "currency",
-                                  currency: "NGN",
-                                }
-                              )}
+                              {(
+                                result.thrift.contribution_amount / 100
+                              ).toLocaleString("en-NG", {
+                                style: "currency",
+                                currency: "NGN",
+                              })}
                             </div>
                             <div className={styles.targetRemitmonthly}>
                               Amount Per Member
@@ -214,8 +213,9 @@ const UserThriftPlan = () => {
                             <div className={styles.div}>
                               {" "}
                               {(
-                                result.thrift.total_slot *
-                                result.thrift.contribution_amount
+                                (result.thrift.total_slot *
+                                  result.thrift.contribution_amount) /
+                                100
                               ).toLocaleString("en-NG", {
                                 style: "currency",
                                 currency: "NGN",

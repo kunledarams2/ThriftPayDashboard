@@ -12,7 +12,7 @@ const Flow = ({ icon, amount, children, pnl }: flowProps) => {
           <span>{amount}</span>
         </p>
       </div>
-      <Pnl trend={pnl.trend} pnl={pnl.pnl} />
+      {/* <Pnl trend={pnl.trend} pnl={pnl.pnl} /> */}
     </div>
   );
 };

@@ -24,8 +24,8 @@ const ThriftPlanCard = ({ result }: Props) => {
   const [progress, setProgress] = useState(0);
   useEffect(() => {
     setProgress(
-      (result.ongoing_contribution /
-        (result.contribution_amount * result.total_slot)) *
+      (result.total_contribution /
+        (result.contribution_amount * result.total_slot * result.total_slot)) *
         100
     );
     // var status = true if (progress > 100) else false
@@ -158,9 +158,7 @@ const ThriftPlanCard = ({ result }: Props) => {
                   currency: "NGN",
                 })}{" "}
               </div>
-              <div className="target-remit-monthly-card">
-                Target Remit/Monthly{" "}
-              </div>
+              <div className="target-remit-monthly-card">Target Remit</div>
             </div>
             <div className="info-4-card">
               <div className="_5-10-card ">

@@ -57,9 +57,10 @@ type FormSchemaType = z.infer<typeof formSchema>;
 
 const CreateThriftPlanModal = ({ close, open }: Props) => {
   const planType = [
-    { value: "7", label: "Weekly" },
-    { value: "30", label: "Monthly" },
-    { value: "120", label: "Quarterly" },
+    { value: "daily", label: "Daily" },
+    { value: "weekly", label: "Weekly" },
+    { value: "monthly", label: "Monthly" },
+    { value: "quarterly", label: "Quarterly" },
   ];
 
   const remittanceDays = [
@@ -69,9 +70,11 @@ const CreateThriftPlanModal = ({ close, open }: Props) => {
   ];
 
   const companyMember = [
-    { value: "kunledarams@gmail.com", label: "John Evan" },
-    { value: "kunledarams2@gmail.com", label: "Oluranti Daramola" },
-    { value: "thriftpaydarams@gmail.com", label: "Eniola Bamidele" },
+    { value: "remi@gmail.com", label: "Remi Ojo" },
+    { value: "kolamoney@yopmail.com", label: "Kola Money" },
+    { value: "thriftpaydarams@gmail.com", label: "Enoch Darams" },
+    { value: "kunledarams3@gmail.com", label: "Adeniyi Adekola" },
+    { value: "kunledarams2@gmail.com", label: "Ojo Kdarams" },
   ];
   // const handleTypeSelected = () => {
   //   console.log("Okay");
@@ -200,12 +203,14 @@ const CreateThriftPlanModal = ({ close, open }: Props) => {
 
     const request_data: createPlanRequest = {
       name: data.name,
-      contribution_amount: Number(data.contributionAmount),
-      salary_range: Number(data.salaryRange),
+      contribution_amount: Number(data.contributionAmount) * 100,
+      salary_range: Number(data.salaryRange) * 100,
       start_date: moment(data.startDate).format("YYYY-MM-DD"),
       remittance_day: data.remittanceDay.value,
       total_slot: data.totalSlot,
       company_users: data.companyUsers?.map((result) => result.value)!,
+      tenure: data.planTypeSelected.value,
+      is_external_plan: false,
     };
 
     console.log(request_data);

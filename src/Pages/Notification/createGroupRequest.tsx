@@ -41,12 +41,16 @@ export const CreateGroupRequest = ({
     const requestBody: CreatePlanRequest = {
       approve: isApprove,
       user_id: Number(notificationData?.user.id),
-      coordinator_slot: notificationData?.coordinator.coordinator_contributing
-        ? String(notificationData?.coordinator.coordinator_slot)
-        : undefined,
-      contributing: Boolean(
-        notificationData?.coordinator.coordinator_contributing
-      ),
+      coordinator_slot:
+        notificationData?.coordinator != null
+          ? notificationData?.coordinator.coordinator_contributing
+            ? String(notificationData?.coordinator.coordinator_slot)
+            : undefined
+          : undefined,
+      contributing:
+        notificationData?.coordinator != null
+          ? Boolean(notificationData?.coordinator.coordinator_contributing)
+          : false,
       thrift_id: String(notificationData?.join_thrift.id),
     };
 
@@ -195,13 +199,14 @@ export const CreateGroupRequest = ({
                   />
                   <FieldHolderItem
                     title={"Monthly Contribution Amount"}
-                    dec={notificationData?.join_thrift.contribution_amount.toLocaleString(
-                      "en-NG",
-                      {
-                        style: "currency",
-                        currency: "NGN",
-                      }
-                    )}
+                    dec={(
+                      Number(
+                        notificationData?.join_thrift.contribution_amount
+                      ) / 100
+                    ).toLocaleString("en-NG", {
+                      style: "currency",
+                      currency: "NGN",
+                    })}
                     divide={true}
                   />
                 </div>
@@ -218,26 +223,41 @@ export const CreateGroupRequest = ({
                     divide={true}
                   />
                 </div>
+
                 <div className="frame-1000002783">
-                  <FieldHolderItem
-                    title={"Relationship with Group Members"}
-                    dec={notificationData?.coordinator.coordinator_relationship}
-                    divide={false}
-                  />
-                  <FieldHolderItem
-                    title={"Are you going to participate? "}
-                    dec={
-                      notificationData?.coordinator.coordinator_contributing
-                        ? "Yes ( I will pick a slot and and be actively involved)"
-                        : "No ( I will just oversee and manage the group)"
-                    }
-                    divide={false}
-                  />
-                  <FieldHolderItem
-                    title={"Phone Number"}
-                    dec={notificationData?.coordinator.coordinator_phone}
-                    divide={false}
-                  />
+                  {notificationData?.coordinator != null ? (
+                    <FieldHolderItem
+                      title={"Relationship with Group Members"}
+                      dec={""}
+                      divide={false}
+                    />
+                  ) : (
+                    <></>
+                  )}
+
+                  {notificationData?.coordinator != null ? (
+                    <FieldHolderItem
+                      title={"Are you going to participate? "}
+                      dec={
+                        notificationData?.coordinator.coordinator_contributing
+                          ? "Yes ( I will pick a slot and and be actively involved)"
+                          : "No ( I will just oversee and manage the group)"
+                      }
+                      divide={false}
+                    />
+                  ) : (
+                    <></>
+                  )}
+
+                  {notificationData?.coordinator != null ? (
+                    <FieldHolderItem
+                      title={"Phone Number"}
+                      dec={notificationData?.coordinator.coordinator_phone}
+                      divide={false}
+                    />
+                  ) : (
+                    <></>
+                  )}
 
                   {/* <div className="frame-10000027813">
                     <div className="preferred-payment-method-open">

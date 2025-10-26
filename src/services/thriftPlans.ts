@@ -22,6 +22,7 @@ export interface IResult {
     is_open:             boolean;
     slots: Slot[];
   ongoing_contribution: number;
+  total_contribution: number;
   start_date: string;
   created_at:string
 }
@@ -104,10 +105,13 @@ export type Data = {
 }
 
 export type ContributionData = {
-    amount:     string;
+    amount:     number;
     thrift:     Thrift;
     user:       User;
-    created_at: Date;
+  created_at: Date;
+  penalty: number;
+  service_charges: number;
+  coordinator_charges:number;
 }
 
 export type Thrift = {
@@ -282,6 +286,8 @@ export interface createPlanRequest{
   remittance_day: string;
   total_slot: number;
   company_users: string[];
+  tenure: string;
+  is_external_plan:boolean
 
 }
 export async function CreatePlan(request:createPlanRequest){

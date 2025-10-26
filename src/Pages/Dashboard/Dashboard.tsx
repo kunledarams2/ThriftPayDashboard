@@ -4,14 +4,14 @@ import Select from "../../components/select/Select";
 // import DoughnutChart from "../../components/Charts/DoughnutChart";
 import DoughnutOverview from "../../components/fullDoughnutChart/DoughnutOverview";
 import Status from "../../components/status/Status";
-import totalUsers from "../../assets/dashboard/totalUsers.png";
-import activeUsers from "../../assets/dashboard/activeUsers.png";
-import thrift from "../../assets/dashboard/thrift.png";
-import wallet from "../../assets/dashboard/wallet.png";
+import totalUsers from "../../assets/dashboard/activeUsers.svg";
+import activeUsers from "../../assets/dashboard/activeUsers.svg";
+import thrift from "../../assets/dashboard/totalIncome.svg";
+import wallet from "../../assets/dashboard/totalExpense.svg";
 import Pnl from "../../components/profit-n-loss/Pnl";
 import Flow from "../../components/flow/Flow";
-import inflow from "../../assets/dashboard/inflow.png";
-import outflow from "../../assets/dashboard/outflow.png";
+import inflow from "../../assets/dashboard/inflow.svg";
+import outflow from "../../assets/dashboard/outflow.svg";
 import LineChart from "../../components/Charts/LineChart";
 import Activity from "../../components/activity/Activity";
 import { DashboardStateProvider } from "../../components/thriftPlan/state_provider/DashboardStateContext";
@@ -29,6 +29,7 @@ import {
   useLoaderData,
 } from "react-router-dom";
 import { getCurrency } from "../../components/utils/util";
+import { string } from "zod";
 
 const Dashboard = () => {
   // const { state } = useLocation();
@@ -98,7 +99,7 @@ const Dashboard = () => {
             title="Total Users"
             amount={dashboardStat?.total_users!}
             trend="up"
-            period="Last 7 days"
+            period=""
             pnl="+2.5"
           />
 
@@ -107,24 +108,24 @@ const Dashboard = () => {
             title="Active Users"
             amount={dashboardStat?.total_active_users!}
             trend="down"
-            period="Last 7 days"
+            period=""
             pnl="-2.5"
           />
 
           <Card
             icon={wallet}
-            title="Total Wallet Transactions"
-            amount={dashboardStat?.total_virtual_account_transaction!}
+            title="Total Expenses"
+            amount={200}
             trend="down"
-            period="Last 7 days"
+            period=""
             pnl="-2.5"
           />
           <Card
             icon={thrift}
-            title="Active Thrift Plans"
-            amount={dashboardStat?.total_active_thrift_plan!}
+            title="Total  Income"
+            amount={getCurrency(Number(dashboardStat?.total_income) / 100)}
             trend="down"
-            period="Last 7 days"
+            period=""
             pnl="-2.5"
           />
         </div>
@@ -163,17 +164,17 @@ const Dashboard = () => {
               options={[
                 {
                   dataTitle: "Active",
-                  dataColor: "#111217",
+                  dataColor: "#0B53CB",
                   data: dashboardStat?.total_active_thrift_plan!,
                 },
                 {
                   dataTitle: "Pending",
-                  dataColor: "#FFE999",
+                  dataColor: "#B7E4FF",
                   data: dashboardStat?.total_pending_thrift_plan!,
                 },
                 {
                   dataTitle: "Completed",
-                  dataColor: "#B1E3FF",
+                  dataColor: "#E4E5EB",
                   data: dashboardStat?.total_completed_thrift_plan!,
                 },
               ]}
@@ -281,10 +282,10 @@ const Dashboard = () => {
               <Pnl badge={true} trend="up" pnl="+2.5" />
             </div>
             <div>
-              <Status type="sm" boxColor="#111217">
+              <Status type="sm" boxColor="#A023FA">
                 Inflow
               </Status>
-              <Status type="sm" boxColor="#CC3366">
+              <Status type="sm" boxColor="#0B53CB">
                 Outflow
               </Status>
             </div>
@@ -307,6 +308,14 @@ const Dashboard = () => {
               pnl={{ trend: "down", pnl: "-2.5" }}
             >
               Total Outflow
+            </Flow>
+
+            <Flow
+              icon={outflow}
+              amount={getCurrency(Number(dashboardStat?.total_charges) / 100)}
+              pnl={{ trend: "down", pnl: "-2.5" }}
+            >
+              Total Charges
             </Flow>
           </div>
           <LineChart />

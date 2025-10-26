@@ -12,6 +12,7 @@
 flex-grow: 1;
 overflow: scroll; 
 height: 790px;
+background: var(--BG-Medium, #F4F5F7);
 /* overflow: hidden; */
 /* max-height: 50vh;
 bottom: 200px; */
@@ -894,7 +895,9 @@ bottom: 200px; */
   .plan-summary {
      color: var(--text-500, #111217);
       text-align: left;
-      font: var(--heading-h-4, 600 20px/23px 'Inter', sans-serif);
+      /* font: var(--heading-h-4, 600 32px/55px, 'Urbanist' ); */
+      font-size:18px ;
+      font-weight: 500;
       position: relative;
       align-self: stretch;
      flex: 1;
@@ -913,10 +916,13 @@ bottom: 200px; */
  
   .total-thrift-plans-summary-card  {
      background: var(--bg-white, #fdfdfd);
+      /* border-radius: 10px;
+      border-style: solid; */
+      /* border-color: var(--border-divider-dark, #c3c6d2); */
+      /* border-width: 0.5px; */
       border-radius: 10px;
-      border-style: solid;
-      border-color: var(--border-divider-dark, #c3c6d2);
-      border-width: 0.5px;
+background: var(--BG-White, #FFF);
+box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
       padding: 16px;
       display: flex;
       flex-direction: column;
@@ -1882,7 +1888,8 @@ overflow: hidden;
      }
 
      .summary-content-empty {
-      /* background: #ffffff; */
+      border: 0px solid var(--Border-Divider-Dark, #E4E5EB);
+      background: var(--BG-Medium, #F4F5F7);      
       display: flex;
       flex-direction: row;
       gap: 0px;

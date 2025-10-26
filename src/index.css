@@ -5,7 +5,18 @@
   /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&display=swap'); */
 
   
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;400&display=swap');
+  /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Poppins:wght@100;200;400&display=swap'); */
+  
+
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap'); */
+
+  /* @import url('https://fonts.googleapis.com/css2?family=Urbanist&display=swap'); */
+  
+/* body {
+  	margin: 0; 
+    line-height: normal;
+} */
 
 
 * {
@@ -16,7 +27,13 @@
 
 
 body {
-  font-family:'Inter', sans-serif;
+  /* font-family:'Inter', sans-serif,"Urbanist" ; */
+  /* font-family: 'Urbanist'; */
+
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 
 }
 

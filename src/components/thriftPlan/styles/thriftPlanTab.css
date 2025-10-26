@@ -93,7 +93,7 @@
    }
 
 .button-tab {
-   background: var(--primary-500, #cc3366);
+background: var(--Primary-500, #0B53CB);
     border-radius: 8px;
     padding: 8px 16px 8px 24px;
     display: flex;

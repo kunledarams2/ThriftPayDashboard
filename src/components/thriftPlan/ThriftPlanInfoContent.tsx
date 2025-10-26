@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import ThriftPlanSummary from "./ThriftPlanSummary";
+// import ThriftPlanSummary from "./ThriftPlanSummary";
 import { Link, NavigateFunction, useNavigate } from "react-router-dom";
 import ThriftPlanMember from "./ThriftPlanMember";
 import ThriftPlanRequest from "./ThriftPlanRequest";

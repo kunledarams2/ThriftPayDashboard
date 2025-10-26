@@ -63,15 +63,13 @@ const AddressVerified = ({ result }: Props) => {
                         alt=""
                         src={result.valid_address_doc}
                       />
-                      <div className={styles.johnDoeElectricity1}>
-                        John Doe Electricity Bill. PDF
-                      </div>
+                      <div className={styles.johnDoeElectricity1}></div>
                       <div className={styles.icons5} />
                     </div>
                     <img
                       className={styles.digitalMarketingServicesAgr1}
                       alt=""
-                      src="Digital Marketing Services Agreement Example.pdf - Page 1 of 11.png"
+                      src={result.valid_address_doc}
                     />
                     <div className={styles.clickToViewWrapper}>
                       <div className={styles.clickToView1}>Click to view</div>

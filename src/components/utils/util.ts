@@ -19,7 +19,13 @@ export var getInitials = function (string: string) {
       }
     );
  };
-  
+
+ export var generateInitials =  function (name: string) {
+  const names = name.split(' ');
+  const initials = names.map(name => name.charAt(0).toUpperCase()).join('');
+  return initials;
+ };
+
 
  export var range = function(start: number, end: number, step: number = 1): number[] {
   const result: number[] = [];

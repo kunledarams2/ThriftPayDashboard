@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./nextkinkycmodel.module.css";
 import {
   KYCUpdateRequest,
@@ -11,6 +11,7 @@ import {
 } from "../../services/userServices";
 import { useUser } from "../../Pages/Customers/UserStateProvider";
 import { RequestStatus } from "../utils/constants/constants";
+import ViewDoc from "./ViewDoc";
 
 interface Props {
   open?: boolean;
@@ -36,6 +37,11 @@ const NextKinKYCModel = () =>
   //     }: Props
   {
     const { parentState, setParentState } = useUser();
+
+    const [open, setOpen] = useState<boolean>(false);
+    const closeModalHander = () => {
+      setOpen(false);
+    };
 
     const handleApprove = (status: string) => {
       const requestBody: KYCUpdateRequest = {
@@ -210,67 +216,103 @@ const NextKinKYCModel = () =>
                         <>
                           {parentState.kycAddress != null ? (
                             <>
-                              <div className={styles.frameGroup}>
-                                <div className={styles.addressParent}>
-                                  <div className={styles.address}>Address</div>
-                                  <div className={styles.kogi}>
-                                    {parentState.kycAddress.address}
-                                  </div>
-                                </div>
-                                <div className={styles.addressParent}>
-                                  <div className={styles.address}>Landmark</div>
-                                  <div className={styles.kogi}>
-                                    {parentState.kycAddress.landmark}
-                                  </div>
-                                </div>
-                                <div className={styles.addressParent}>
-                                  <div className={styles.address}>State</div>
-                                  <div className={styles.kogi}>
-                                    {" "}
-                                    {parentState.kycAddress.state}
-                                  </div>
-                                </div>
-                                <div className={styles.addressParent}>
-                                  <div className={styles.address}>LGA</div>
-                                  <div className={styles.kogi}>
-                                    {" "}
-                                    {parentState.kycAddress.local_gov}
-                                  </div>
-                                </div>
-                                <div className={styles.utilityBillParent}>
-                                  <div className={styles.address}>Doc</div>
-                                  <div className={styles.doc}>
-                                    <div className={styles.bxsfilePdfParent}>
-                                      <img
-                                        className={styles.icons3}
-                                        alt=""
-                                        src={
-                                          parentState.kycAddress
-                                            .valid_address_doc
-                                        }
-                                      />
-                                      <div
-                                        className={styles.johnDoeElectricity1}
-                                      ></div>
-                                      <div className={styles.icons5} />
+                              {open ? (
+                                <></>
+                              ) : (
+                                <>
+                                  <div className={styles.frameGroup}>
+                                    <div className={styles.addressParent}>
+                                      <div className={styles.address}>
+                                        Address
+                                      </div>
+                                      <div className={styles.kogi}>
+                                        {parentState.kycAddress.address}
+                                      </div>
                                     </div>
-                                    <img
-                                      className={
-                                        styles.digitalMarketingServicesAgr1
-                                      }
-                                      alt=""
-                                      src={
-                                        parentState.kycAddress.valid_address_doc
-                                      }
-                                    />
-                                    <div className={styles.clickToViewWrapper}>
-                                      <div className={styles.clickToView1}>
-                                        Click to view
+                                    <div className={styles.addressParent}>
+                                      <div className={styles.address}>
+                                        Landmark
+                                      </div>
+                                      <div className={styles.kogi}>
+                                        {parentState.kycAddress.landmark}
+                                      </div>
+                                    </div>
+                                    <div className={styles.addressParent}>
+                                      <div className={styles.address}>
+                                        State
+                                      </div>
+                                      <div className={styles.kogi}>
+                                        {" "}
+                                        {parentState.kycAddress.state}
+                                      </div>
+                                    </div>
+                                    <div className={styles.addressParent}>
+                                      <div className={styles.address}>LGA</div>
+                                      <div className={styles.kogi}>
+                                        {" "}
+                                        {parentState.kycAddress.local_gov}
+                                      </div>
+                                    </div>
+                                    <div className={styles.utilityBillParent}>
+                                      <div className={styles.address}>Doc</div>
+                                      <div className={styles.doc}>
+                                        <div
+                                          className={styles.bxsfilePdfParent}
+                                        >
+                                          <img
+                                            className={styles.icons3}
+                                            alt=""
+                                            src={
+                                              parentState.kycAddress
+                                                .valid_address_doc
+                                            }
+                                          />
+                                          <div
+                                            className={
+                                              styles.johnDoeElectricity1
+                                            }
+                                          ></div>
+                                          <div className={styles.icons5} />
+                                        </div>
+                                        <img
+                                          className={
+                                            styles.digitalMarketingServicesAgr1
+                                          }
+                                          alt=""
+                                          src={
+                                            parentState.kycAddress
+                                              .valid_address_doc
+                                          }
+                                        />
+                                        <div
+                                          className={styles.clickToViewWrapper}
+                                        >
+                                          <div
+                                            className={styles.clickToView1}
+                                            onClick={() => setOpen(true)}
+                                          >
+                                            Click to view
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              </div>
+                                </>
+                              )}
+
+                              <>
+                                {open && (
+                                  <>
+                                    <ViewDoc
+                                      open={open}
+                                      close={closeModalHander}
+                                      docuPath={
+                                        parentState.kycAddress.valid_address_doc
+                                      }
+                                    />
+                                  </>
+                                )}
+                              </>
                             </>
                           ) : (
                             <></>
@@ -283,28 +325,33 @@ const NextKinKYCModel = () =>
               )}
             </>
           </div>
-
-          <div className={styles.frameBut}>
-            <div
-              className={styles.button6Open}
-              onClick={() => {
-                handleApprove(RequestStatus.Decline);
-              }}
-            >
-              <div className={styles.button7Open}>Decline </div>
-            </div>
-            <div
-              className={styles.button4Open}
-              onClick={() => {
-                // setParentState({
-                //   openReview: false,
-                // });
-                handleApprove(RequestStatus.Approve);
-              }}
-            >
-              <div className={styles.button5Open}>Approve </div>
-            </div>
-          </div>
+          {open ? (
+            <></>
+          ) : (
+            <>
+              <div className={styles.frameBut}>
+                <div
+                  className={styles.button6Open}
+                  onClick={() => {
+                    handleApprove(RequestStatus.Decline);
+                  }}
+                >
+                  <div className={styles.button7Open}>Decline </div>
+                </div>
+                <div
+                  className={styles.button4Open}
+                  onClick={() => {
+                    // setParentState({
+                    //   openReview: false,
+                    // });
+                    handleApprove(RequestStatus.Approve);
+                  }}
+                >
+                  <div className={styles.button5Open}>Approve </div>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     );

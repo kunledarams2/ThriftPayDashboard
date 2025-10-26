@@ -34,24 +34,67 @@ export type UserData = {
 }
 
 export type User = {
-  id:                   number;
-  first_name:           string;
-  last_name:            string;
-  phone_number:         string;
-  date_of_birth:        Date;
-  username:             string;
-  date_joined:          Date;
-  last_login:           null;
-  email:                string;
-  email_verified:       boolean;
-  is_staff:             boolean;
-  is_active_plan:       boolean;
-  is_active:            boolean;
-  is_bank_verify:       boolean;
-  has_virtual_account:  boolean;
-  virtual_account:      number;
-  virtual_account_name: VirtualAccountName;
-  is_kyc_verify:        boolean;
+
+
+   id:                   number;
+    first_name:           string;
+    last_name:            string;
+    phone_number:         string;
+    date_of_birth:        Date  | null;
+    username:             string;
+    date_joined:          Date;
+    last_login:           null;
+    email:                string;
+    email_verified:       boolean;
+    is_staff:             boolean;
+    is_active_plan:       boolean;
+    is_active:            boolean;
+    is_bank_verify:       boolean;
+    has_virtual_account:  boolean;
+    virtual_account:      number;
+    virtual_account_name: string;
+    bank_name:            string;
+    is_kyc_verify:        boolean;
+    role:                 string;
+    has_secured_pin:      boolean;
+    profile_image:        string;
+    gender:               string;
+    tier:                 string;
+    virtualAccountWallet: VirtualAccountWallet | null;
+  // id:                   number;
+  // first_name:           string;
+  // last_name:            string;
+  // phone_number:         string;
+  // date_of_birth:        Date;
+  // username:             string;
+  // date_joined:          Date;
+  // last_login:           null;
+  // email:                string;
+  // email_verified:       boolean;
+  // is_staff:             boolean;
+  // is_active_plan:       boolean;
+  // is_active:            boolean;
+  // is_bank_verify:       boolean;
+  // has_virtual_account:  boolean;
+  // virtual_account:      number;
+  // virtual_account_name: VirtualAccountName;
+  // is_kyc_verify: boolean;
+  // gender:string
+}
+
+export interface VirtualAccountWallet {
+    created_at:       Date;
+    updated_at:       Date;
+    id:               number | null;
+    user_id:          number;
+    currency:         string;
+    balance:          number;
+    previous_balance: number | null;
+    account_id:       string;
+    account_number:   string;
+    bank_name:        string;
+    name:             string;
+    provider:         string;
 }
 
 export enum VirtualAccountName {
@@ -232,7 +275,8 @@ export type WalletTransaction = {
   source:           string;
   created_at:       Date;
   amount:           number;
-  reference:        string;
+  reference: string;
+  status: String;
 }
 
 export type Metadata = {

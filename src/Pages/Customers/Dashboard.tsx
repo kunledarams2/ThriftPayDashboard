@@ -30,43 +30,10 @@ const CustomerDashboard = () => {
   return (
     <div>
       <UserTab />
-      {/* <div className="tabs">
-        <div className="tab" onClick={handelViewOverview}>
-          <div className="frame-1000002689">
-            <div className={overview ? "tab-label" : "tab-label2"}>
-              Overview{" "}
-            </div>
-          </div>
-          <div className={overview ? "rectangle-3" : "rectangle-32"}></div>
-        </div>
-        <div className="tab" onClick={handelViewDetail}>
-          <div className="frame-1000002690">
-            <div className={details ? "tab-label" : "tab-label2"}>Users </div>
-          </div>
-          <div className={details ? "rectangle-3" : "rectangle-32"}></div>
-        </div>
-      </div> */}
+
       <UserStateProvider>
         <Outlet />
       </UserStateProvider>
-
-      {/* <div className={styles.content}>
-        <UserSubTab />
-        <UserListHeader />
-        <UserListView />
-      </div> */}
-
-      {/* <div className="info">
-        <CustomerOverview />
-      </div>
-      <div className="user">
-        <div className="userchart">
-          <CustomerChart />
-        </div>
-        <div className="userdistribution">
-          <UserDistribution />
-        </div>
-      </div> */}
     </div>
   );
 };

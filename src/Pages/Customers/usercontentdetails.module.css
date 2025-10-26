@@ -53,7 +53,7 @@
       .tabChild {
             align-self: stretch;
             position: relative;
-            background-color: #02894b;
+            background-color: #0b53cb;
             height: 2px;
       }
       .tab {
@@ -65,7 +65,7 @@
             justify-content: flex-start;
             padding: 12px 12px 0px;
             gap: 12px;
-            color: #02894b;
+            color: #0b53cb;
       }
       .tabLabel1 {
             position: relative;

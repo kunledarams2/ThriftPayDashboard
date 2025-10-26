@@ -7,7 +7,7 @@ export interface pnlProps {
 export interface cardProps extends pnlProps {
     icon: string,
     title:string,
-    amount: number,
+    amount: any,
     period?: string,
     
   }

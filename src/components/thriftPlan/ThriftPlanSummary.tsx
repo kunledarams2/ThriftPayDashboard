@@ -16,12 +16,394 @@ import { useStateContext } from "./state_provider/OverviewStateContext";
 import NoContentSVG from "../../assets/no_content_backup.svg";
 import ThriftPlanSummarySide from "./ThriftPlanSummarySide";
 import ThriftPlanSummaryTab from "./ThriftPlanSummaryTab";
+import { getCurrency } from "../utils/util";
 // import "./styles/thrift_plan_style.css";
 
 interface Props {
   thriftPlan: IResult;
   // dataResult : Data
 }
+
+// import { FunctionComponent } from "react";
+// import styles from "./ThriftPlanSummary.module.css";
+
+// const ThriftPlanSummary = () => {
+//   const [loading, setLoading] = useState(false);
+//   const [empty, setEmpty] = useState(false);
+//   const { state } = useLocation();
+//   const { data } = state;
+//   // console.log(data.id);
+//   const [filter, setFilterTransaction] = useState(false);
+
+//   const clickFilterHandle = () => {
+//     if (filter) {
+//       setFilterTransaction(false);
+//     } else setFilterTransaction(true);
+//   };
+
+//   const [seeAll, setSeeAllTransaction] = useState(false);
+
+//   const clickSeeAllHandle = () => {
+//     if (seeAll) {
+//       setSeeAllTransaction(false);
+//     } else setSeeAllTransaction(true);
+//   };
+
+//   const { parentState, setParentState } = useStateContext();
+//   // console.log(parentState.response);
+//   // setLoading(false);
+//   // setLoading(parentState.loading);
+//   console.log(parentState.openReview);
+
+//   const totalPenalty = parentState.response?.data.contributions.reduce(
+//     (sum, item) => sum + item.penalty,
+//     0
+//   );
+
+//   return (
+//     <div className={styles.tabsParent}>
+//       <div className={styles.tabs}>
+//         <div className={styles.tab}>
+//           <div className={styles.tabLabelWrapper}>
+//             <div className={styles.tabLabel}>Overview</div>
+//           </div>
+//           <div className={styles.tabChild} />
+//         </div>
+//         <div className={styles.tab1}>
+//           <div className={styles.tabLabelWrapper}>
+//             <div className={styles.tabLabel1}>Plan Details</div>
+//           </div>
+//           <div className={styles.tabItem} />
+//         </div>
+//         <div className={styles.backParent}>
+//           <div className={styles.back}>
+//             <img className={styles.icons} alt="" src="Icons.svg" />
+//           </div>
+//           <div className={styles.button}>
+//             <img className={styles.icons1} alt="" src="Icons.svg" />
+//             <div className={styles.tabLabel}>Edit Plan</div>
+//           </div>
+//           <div className={styles.button2}>
+//             <img className={styles.icons1} alt="" src="Icons.svg" />
+//           </div>
+//         </div>
+//       </div>
+//       <div className={styles.content}>
+//         <div className={styles.backGroup}>
+//           <div className={styles.back}>
+//             <img className={styles.icons} alt="" src="Icons.svg" />
+//           </div>
+//           <div className={styles.breadcrumb}>
+//             <div className={styles.tabLabelWrapper}>
+//               <div className={styles.tabLabelWrapper}>
+//                 <div className={styles.breadcrumbMaster}>
+//                   <div className={styles.container}>
+//                     <div className={styles.tabLabelWrapper}>
+//                       <div className={styles.label}>Thrift Plans</div>
+//                     </div>
+//                     <div className={styles.seperator}>/</div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//             <div className={styles.breadcrumb2}>
+//               <div className={styles.tabLabelWrapper}>
+//                 <div className={styles.breadcrumbMaster}>
+//                   <div className={styles.container}>
+//                     <div className={styles.tabLabelWrapper}>
+//                       <div className={styles.label}>Basic Thrift Plan I</div>
+//                     </div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//         <div className={styles.planSummaryParent}>
+//           <div className={styles.planSummary}>Plan Summary</div>
+//           <div className={styles.overview}>
+//             <div className={styles.totalThriftPlans}>
+//               <div className={styles.frameParent}>
+//                 <div className={styles.container}>
+//                   <div className={styles.icon}>
+//                     <img className={styles.icons1} alt="" src="Icons.svg" />
+//                   </div>
+//                 </div>
+//                 <div className={styles.frameGroup}>
+//                   <div className={styles.totalContributionParent}>
+//                     <div className={styles.totalContribution}>
+//                       Total Contribution
+//                     </div>
+//                     <div className={styles.div}>
+//                       {getCurrency(
+//                         Number(parentState.response?.data.total_contribution) /
+//                           100
+//                       )}
+//                     </div>
+//                   </div>
+//                   <div className={styles.change}>
+//                     <div className={styles.change1}>
+//                       <img className={styles.icons5} alt="" src="Icons.svg" />
+//                       <div className={styles.div1}>-2.5%</div>
+//                     </div>
+//                     <div className={styles.last7Days}>Last 7 Days</div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//             <div className={styles.activethriftPlans}>
+//               <div className={styles.frameContainer}>
+//                 <div className={styles.container}>
+//                   <div className={styles.icon1}>
+//                     <img className={styles.icons1} alt="" src="Icons.svg" />
+//                   </div>
+//                 </div>
+//                 <div className={styles.frameGroup}>
+//                   <div className={styles.totalContributionParent}>
+//                     <div className={styles.totalContribution}>Total Payout</div>
+//                     <div className={styles.div}>
+//                       {getCurrency(
+//                         Number(parentState.response?.data.total_payout) / 100
+//                       )}
+//                     </div>
+//                   </div>
+//                   <div className={styles.change}>
+//                     <div className={styles.change3}>
+//                       <img className={styles.icons5} alt="" src="Icons.svg" />
+//                       <div className={styles.div1}>+2.5%</div>
+//                     </div>
+//                     <div className={styles.last7Days}>Last 7 Days</div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//             <div className={styles.totalThriftPlans}>
+//               <div className={styles.frameParent}>
+//                 <div className={styles.container}>
+//                   <div className={styles.icon2}>
+//                     <img className={styles.icons1} alt="" src="Icons.svg" />
+//                   </div>
+//                 </div>
+//                 <div className={styles.totalContributionParent}>
+//                   <div className={styles.totalContribution}>
+//                     Total Penalties
+//                   </div>
+//                   <div className={styles.div}>
+//                     {getCurrency(Number(totalPenalty) / 100)}
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//             <div className={styles.totalThriftPlans}>
+//               <div className={styles.frameParent}>
+//                 <div className={styles.container}>
+//                   <div className={styles.icon3}>
+//                     <img className={styles.icons1} alt="" src="Icons.svg" />
+//                   </div>
+//                 </div>
+//                 <div className={styles.frameGroup}>
+//                   <div className={styles.totalContributionParent}>
+//                     <div className={styles.totalContribution}>
+//                       Months Completed
+//                     </div>
+//                     <div className={styles.div}>
+//                       {" "}
+//                       {parentState.response?.data?.complete_month} of{" "}
+//                       {data.total_slot}{" "}
+//                     </div>
+//                   </div>
+//                   <div className={styles.change}>
+//                     <div className={styles.change1}>
+//                       <img className={styles.icons5} alt="" src="Icons.svg" />
+//                       <div className={styles.div1}>-2.5%</div>
+//                     </div>
+//                     <div className={styles.last7Days}>Last 7 Days</div>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//         <div className={styles.frameParent4}>
+//           <div className={styles.recentTransactionsParent}>
+//             <div className={styles.recentTransactions}>Recent Transactions</div>
+//             <div className={styles.pillsParent}>
+//               <div className={styles.pills}>
+//                 <div className={styles.pillParent}>
+//                   <div className={styles.pill}>
+//                     <div className={styles.tabLabel}>All</div>
+//                   </div>
+//                   <div className={styles.pill1}>
+//                     <div className={styles.tabLabel1}>February</div>
+//                   </div>
+//                   <div className={styles.pill1}>
+//                     <div className={styles.tabLabel1}>March</div>
+//                   </div>
+//                   <div className={styles.pill1}>
+//                     <div className={styles.tabLabel1}>April</div>
+//                   </div>
+//                   <div className={styles.pill4} />
+//                   <div className={styles.pill4} />
+//                   <div className={styles.pill4} />
+//                   <div className={styles.pill4} />
+//                 </div>
+//                 <div className={styles.pillsChild} />
+//                 <img
+//                   className={styles.iconschevronLeft}
+//                   alt=""
+//                   src="Icons/chevron-left.svg"
+//                 />
+//                 <div className={styles.arrow}>
+//                   <div className={styles.arrowChild} />
+//                   <img
+//                     className={styles.iconschevronRight}
+//                     alt=""
+//                     src="Icons/chevron-right.svg"
+//                   />
+//                 </div>
+//               </div>
+//               <div className={styles.searchFieldParent}>
+//                 <div className={styles.searchField} />
+//                 <div className={styles.button3}>
+//                   <img className={styles.icons11} alt="" src="Icons.svg" />
+//                   <div className={styles.button4}>Filters</div>
+//                 </div>
+//               </div>
+//             </div>
+//             <div className={styles.button5}>
+//               <div className={styles.button4}>See All</div>
+//             </div>
+//           </div>
+//           <div className={styles.headingParent}>
+//             <div className={styles.heading}>
+//               <div className={styles.member}>Member</div>
+//               {/* <div className={styles.transactionType}>Transaction type</div> */}
+//               <div className={styles.member}>Date</div>
+//               <div className={styles.paymentMethod}>Payment Method</div>
+//               <div className={styles.headingChild} />
+//               <div className={styles.amount}>Amount</div>
+//             </div>
+
+//             <div className={styles.thriftplanCard}>
+//               {parentState.response?.data?.contributions.length == 0 && (
+//                 <EmptyContainer
+//                   title={"No Data Yet"}
+//                   body={
+//                     "More details about the thrift will be displayed here once the plan starts."
+//                   }
+//                   imagePath={NoContentSVG}
+//                 />
+//               )}
+//               {parentState.response?.data?.contributions.map((contribution) => (
+//                 // <div className="heading_wrapper-recent-transaction">
+//                 //   <div className="thriftplan-card-recent-transaction ">
+//                 //     <div className="frank-lampard-recent-transaction ">
+//                 //       {contribution.user.first_name}{" "}
+//                 //       {contribution.user.last_name}
+//                 //     </div>
+//                 //     {/* <div className="february-contribution-recent-transaction ">
+//                 //           Contribution{" "}
+//                 //         </div> */}
+//                 //     <div className="mar-3-2023-recent-transaction ">
+//                 //       {moment(contribution.created_at).format("MMM, Do YYYY")}{" "}
+//                 //     </div>
+//                 //     <div className="wallet-recent-transaction ">Wallet </div>
+//                 //     <div className="n-10-000-recent-transaction ">
+//                 //       {getCurrency(contribution.service_charges / 100)}
+//                 //     </div>
+//                 //     <div className="n-10-000-recent-transaction ">
+//                 //       {getCurrency(contribution.coordinator_charges / 100)}
+//                 //     </div>
+//                 //     <div className="n-10-000-recent-transaction ">
+//                 //       {getCurrency(contribution.penalty / 100)}
+//                 //     </div>
+//                 //     <div className="n-10-000-recent-transaction ">
+//                 //       {getCurrency(contribution.amount / 100)}
+//                 //     </div>
+//                 //   </div>
+//                 // </div>
+
+//                 <>
+//                   <div className={styles.thriftplanCard}>
+//                     <div className={styles.frankLampard}>
+//                       {contribution.user.first_name}{" "}
+//                       {contribution.user.last_name}
+//                     </div>
+//                     {/* <div className={styles.februaryContribution}></div> */}
+//                     <div className={styles.mar32023}>
+//                       {moment(contribution.created_at).format("MMM, Do YYYY")}{" "}
+//                     </div>
+//                     <div className={styles.wallet}>Wallet</div>
+//                     <div className={styles.n10000}>
+//                       +{getCurrency(contribution.amount / 100)}
+//                     </div>
+//                   </div>
+//                 </>
+//               ))}
+//             </div>
+
+//             {/* <div className={styles.thriftplanCard}>
+//               <div className={styles.frankLampard}>Jane Doe</div>
+//               <div className={styles.februaryContribution}>
+//                 February Contribution
+//               </div>
+//               <div className={styles.mar32023}>Mar 3, 2023</div>
+//               <div className={styles.wallet}>Bank Transfer</div>
+//               <div className={styles.n10000}>+N10,000</div>
+//             </div>
+//             <div className={styles.thriftplanCard}>
+//               <div className={styles.frankLampard}>John Doe</div>
+//               <div className={styles.februaryContribution}>
+//                 February Contribution
+//               </div>
+//               <div className={styles.mar32023}>Mar 3, 2023</div>
+//               <div className={styles.wallet}>Card</div>
+//               <div className={styles.n10000}>+N10,000</div>
+//             </div>
+//             <div className={styles.thriftplanCard}>
+//               <div className={styles.frankLampard}>Ahmed Musa</div>
+//               <div className={styles.februaryContribution}>
+//                 February Contribution
+//               </div>
+//               <div className={styles.mar32023}>Mar 3, 2023</div>
+//               <div className={styles.wallet}>Bank Transfer</div>
+//               <div className={styles.n10000}>+N10,000</div>
+//             </div>
+//             <div className={styles.thriftplanCard}>
+//               <div className={styles.frankLampard}>Olawale Jumoke</div>
+//               <div className={styles.februaryContribution}>
+//                 February Contribution
+//               </div>
+//               <div className={styles.mar32023}>Mar 3, 2023</div>
+//               <div className={styles.wallet}>Bank Transfer</div>
+//               <div className={styles.n10000}>+N10,000</div>
+//             </div>
+//             <div className={styles.thriftplanCard}>
+//               <div className={styles.frankLampard}>Jane Doe</div>
+//               <div className={styles.februaryContribution}>
+//                 February Contribution
+//               </div>
+//               <div className={styles.mar32023}>Mar 3, 2023</div>
+//               <div className={styles.wallet}>Bank Transfer</div>
+//               <div className={styles.n10000}>+N10,000</div>
+//             </div>
+//             <div className={styles.thriftplanCard}>
+//               <div className={styles.frankLampard}>Jane Doe</div>
+//               <div className={styles.februaryContribution}>
+//                 February Contribution
+//               </div>
+//               <div className={styles.mar32023}>Mar 3, 2023</div>
+//               <div className={styles.wallet}>Bank Transfer</div>
+//               <div className={styles.n10000}>+N10,000</div>
+//             </div> */}
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ThriftPlanSummary;
 
 const ThriftPlanSummary = () => {
   const [loading, setLoading] = useState(false);
@@ -87,9 +469,13 @@ const ThriftPlanSummary = () => {
   const [thriftPlanOverview, setthriftPlanOverview] = useState<
     Data | undefined
   >(undefined);
-  const totalContribution =
-    parentState.response?.data.total_contribution! +
-    parentState.response?.data?.total_payout!;
+  const totalContribution = parentState.response?.data.total_contribution!;
+  const totalPenalty = parentState.response?.data.contributions.reduce(
+    (sum, item) => sum + item.penalty,
+    0
+  );
+  // +
+  // parentState.response?.data?.total_payout!;
 
   return (
     <>
@@ -142,16 +528,13 @@ const ThriftPlanSummary = () => {
                                 Total Contribution{" "}
                               </div>
                               <div className="_260-000-summary-card ">
-                                {totalContribution.toLocaleString("en-NG", {
-                                  style: "currency",
-                                  currency: "NGN",
-                                })}{" "}
+                                {getCurrency(Number(totalContribution) / 100)}
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div className="active-thrift-plans-summary-card ">
+                      <div className="total-thrift-plans-summary-card">
                         <div className="frame-1000002748-summary-card">
                           <div className="frame-1000002690-summary-card">
                             <div className="icon2-summary-card">
@@ -189,12 +572,10 @@ const ThriftPlanSummary = () => {
                               </div>
                               <div className="_200-000-summary-card ">
                                 {" "}
-                                {parentState.response?.data?.total_payout.toLocaleString(
-                                  "en-NG",
-                                  {
-                                    style: "currency",
-                                    currency: "NGN",
-                                  }
+                                {getCurrency(
+                                  Number(
+                                    parentState.response?.data?.total_payout
+                                  ) / 100
                                 )}{" "}
                               </div>
                             </div>
@@ -231,7 +612,9 @@ const ThriftPlanSummary = () => {
                             <div className="total-penalties-summary-card ">
                               Total Penalties{" "}
                             </div>
-                            <div className="_0">₦0 </div>
+                            <div className="_0">
+                              {getCurrency(Number(totalPenalty) / 100)}
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -501,13 +884,16 @@ const ThriftPlanSummary = () => {
                   {" "}
                   <div className="heading-transaction">
                     <div className="member-heading">Member </div>
-                    <div className="transaction-type-heading">
+                    {/* <div className="transaction-type-heading">
                       Transaction type{" "}
-                    </div>
+                    </div> */}
                     <div className="date-heading">Date </div>
                     <div className="payment-method-heading">
                       Payment Method{" "}
                     </div>
+                    <div className="amount-heading">Service charges </div>
+                    <div className="amount-heading">Coord charges </div>
+                    <div className="amount-heading">Penalty </div>
                     <div className="amount-heading">Amount </div>
                   </div>
                 </div>
@@ -529,9 +915,9 @@ const ThriftPlanSummary = () => {
                           {contribution.user.first_name}{" "}
                           {contribution.user.last_name}
                         </div>
-                        <div className="february-contribution-recent-transaction ">
-                          February Contribution{" "}
-                        </div>
+                        {/* <div className="february-contribution-recent-transaction ">
+                          Contribution{" "}
+                        </div> */}
                         <div className="mar-3-2023-recent-transaction ">
                           {moment(contribution.created_at).format(
                             "MMM, Do YYYY"
@@ -541,14 +927,16 @@ const ThriftPlanSummary = () => {
                           Wallet{" "}
                         </div>
                         <div className="n-10-000-recent-transaction ">
-                          +
-                          {contribution.thrift.contribution_amount.toLocaleString(
-                            "en-NG",
-                            {
-                              style: "currency",
-                              currency: "NGN",
-                            }
-                          )}
+                          {getCurrency(contribution.service_charges / 100)}
+                        </div>
+                        <div className="n-10-000-recent-transaction ">
+                          {getCurrency(contribution.coordinator_charges / 100)}
+                        </div>
+                        <div className="n-10-000-recent-transaction ">
+                          {getCurrency(contribution.penalty / 100)}
+                        </div>
+                        <div className="n-10-000-recent-transaction ">
+                          {getCurrency(contribution.amount / 100)}
                         </div>
                       </div>
                     </div>

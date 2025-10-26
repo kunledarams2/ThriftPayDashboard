@@ -19,11 +19,12 @@ a{
 } */
 body{
 
-   background: #ffffff;
+   /* background: #ffffff; */
    /* border: 3px solid chocolate; */
    height: 100% !important;
    overflow: hidden;
    display: flex;
+   background: var(--BG-Medium, #F4F5F7);
 }
 .sign-up-empty {
   background: #ffffff;
@@ -75,7 +76,7 @@ body{
    box-sizing: border-box;
    } */
    .sidebar {
-   background: var(--text-500, #111217);
+   background: var(--text-500, #FFFFFF);
    width: 20%;
    height: 100vh;
    left: 0;
@@ -671,7 +672,7 @@ body{
       width: 64px;
       height: 64px;
       border: 8px solid;
-      border-color: #cc3366 transparent #cc3366 transparent;
+      border-color: #3338cc transparent #5654d4 transparent;
       border-radius: 50%;
       animation: spin-anim 1.2s linear infinite;
       margin: 00px 300px 300px 0px;

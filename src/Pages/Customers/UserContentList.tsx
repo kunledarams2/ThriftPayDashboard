@@ -101,18 +101,6 @@ const UserContentList = () => {
   const { parentState, setParentState } = useUser();
   console.log(parentState.result);
 
-  // useEffect(() => {
-  //   const stringJson = JSON.stringify(loaderData, null, 4);
-  //   const responseData = Convert.toUserResponse(stringJson);
-  //   if (responseData.success) {
-  //     setUsers(responseData.data);
-
-  //     // setStatus(Boolean(progress == 100));
-  //   } else {
-  //     // setEmpty(true);
-  //   }
-  // }, []);
-
   return (
     <UserStateProvider>
       <>
@@ -120,9 +108,19 @@ const UserContentList = () => {
           <UserSubTab />
           <UserListHeader />
           <div className={styles.contentList}>
-            {parentState.result?.user.map((results) => (
-              <UserListView user={results} />
-            ))}
+            {parentState.result?.user
+              .slice()
+              .sort((a, b) =>
+                b.is_active_plan === a.is_active_plan
+                  ? 0
+                  : b.is_active_plan
+                  ? -1
+                  : 1
+              )
+              .reverse()
+              .map((results) => (
+                <UserListView user={results} />
+              ))}
           </div>
         </div>
       </>

@@ -1,8 +1,8 @@
 .flow {
     width:50%;
     /* background-color: pink; */
-    border: 1px solid #C3C6D2;
-    border-radius:10px;
+    /* border: 1px solid #C3C6D2; */
+    /* border-radius:10px; */
     display: flex;
     justify-content: space-between;
     padding: 10px 20px 10px 10px;
@@ -26,7 +26,7 @@
     flex-direction: column;
     height: 100%;
     /* background-color: green; */
-    gap: 10px;
+    gap: 2px;
     /* align-items: center; */
     /* justify-content: space-between; */
     margin: 0;
@@ -34,13 +34,13 @@
 }
 .total > p span:first-of-type {
     /* background-color:tomato; */
-    font-size: 12px;
+    font-size: 10px;
     font-weight:400;
     color: #90949E;
 }
 
 .total > p span:last-of-type {
-    font-size: 16px;
+    font-size: 12px;
     /* background-color: #90949E; */
     font-weight:600;
 }

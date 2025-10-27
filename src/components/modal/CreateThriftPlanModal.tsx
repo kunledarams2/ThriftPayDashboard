@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./createThrift.css";
-import { Button, Dropdown, Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import Select from "react-select";
 import "bootstrap/dist/css/bootstrap.css";
 import DatePicker from "react-datepicker";
@@ -9,11 +9,7 @@ import CurrencyInput from "react-currency-input-field";
 import { number, z } from "zod";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  companyUserJoinPlan,
-  createPlanRequest,
-  CreatePlan,
-} from "../../services/thriftPlans";
+import { createPlanRequest, CreatePlan } from "../../services/thriftPlans";
 import moment from "moment";
 
 //
@@ -81,7 +77,6 @@ const CreateThriftPlanModal = ({ close, open }: Props) => {
   // };
   const customStyles = {
     option: (defaultStyles: any, state: { isSelected: any }) => ({
-      // ...defaultStyles,
       color: state.isSelected ? "#212529" : "#c3c6d2",
       backgroundColor: state.isSelected ? "#fff" : "#eeee",
       padding: "10px",
@@ -89,12 +84,6 @@ const CreateThriftPlanModal = ({ close, open }: Props) => {
     }),
 
     control: (defaultStyles: any) => ({
-      // ...defaultStyles,
-      // backgroundColor: "#212529",
-      // padding: "10px",
-      // border: "none",
-      // boxShadow: "none",
-
       backgroundColor: " #fafafb",
       borderRadius: "8px",
       borderStyle: "solid",
@@ -129,18 +118,12 @@ const CreateThriftPlanModal = ({ close, open }: Props) => {
     option: (defaultStyles: any, state: { isSelected: any }) => ({
       // ...defaultStyles,
       color: state.isSelected ? "#212529" : "#c3c6d2",
-      // backgroundColor: state.isSelected ? "#ffff" : "#c3c6d2",
+
       padding: "10px",
       cursor: "pointer",
     }),
 
     control: (defaultStyles: any) => ({
-      // ...defaultStyles,
-      // backgroundColor: "#212529",
-      // padding: "10px",
-      // border: "none",
-      // boxShadow: "none",
-
       backgroundColor: " #fafafb",
       borderRadius: "8px",
       borderStyle: "solid",
@@ -196,10 +179,6 @@ const CreateThriftPlanModal = ({ close, open }: Props) => {
   const onSubmit: SubmitHandler<FormSchemaType> = (data) => {
     console.log(data);
     console.log("Okay");
-
-    // const users: companyUserJoinPlan = {
-    //   email: data.companyUsers?.map((result)=>result.value)!
-    // }
 
     const request_data: createPlanRequest = {
       name: data.name,
@@ -285,17 +264,12 @@ const CreateThriftPlanModal = ({ close, open }: Props) => {
               <Controller
                 control={control}
                 name="planTypeSelected"
-                // {...register("planTypeSelected")}
                 render={({ field: { onChange } }) => (
                   <Select
                     onChange={onChange}
                     options={planType}
                     styles={customStyles}
                     placeholder="Select"
-                    // styles={{ control: (baseStyles) => ({...baseStyles, width: '150px'})}}
-                    // onChange={() => {
-                    //   register("planType");
-                    // }}
                   />
                 )}
               />
@@ -488,12 +462,6 @@ const CreateThriftPlanModal = ({ close, open }: Props) => {
             </div>
           )}
         </div>
-
-        {/* <div className="frame-1000002724-create-thrift ">
-          <div className="button2-create-thrift">
-            <div className="button3-create-thrift">Create Plan </div>
-          </div>
-        </div> */}
 
         <Button
           className="button"
